@@ -1,0 +1,11 @@
+<style>
+  .code { font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid var(--line); white-space: pre-wrap; }
+  .b { block-size: 3rem; border-radius: 6px; margin-block-start: 0.5rem; background: repeating-conic-gradient(var(--swatch) 0 25%, transparent 0 50%) 0 0 / 16px 16px, var(--sunken); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="code">CSS.paintWorklet.addModule('checkers.js');
+background-image: paint(checkers);</div>
+<div class="b"></div>
+<p class="note">The Paint API lets a worklet draw a background with canvas
+commands. The box above fakes it with a gradient — a real worklet needs an
+external module, which this page deliberately has none of.</p>

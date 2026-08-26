@@ -1,0 +1,10 @@
+<style>
+  .tag { display: inline-block; padding: 0.35rem 0.7rem; border-radius: 6px; font-family: var(--mono); font-size: 0.75rem; background: var(--sunken); }
+  @media (width < 40rem) { .tag { background: color-mix(in oklab, var(--swatch-2) 25%, transparent); } .tag::after { content: " — narrow viewport"; } }
+  @media (40rem <= width < 64rem) { .tag { background: color-mix(in oklab, var(--swatch) 25%, transparent); } .tag::after { content: " — medium viewport"; } }
+  @media (width >= 64rem) { .tag { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); } .tag::after { content: " — wide viewport"; } }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<span class="tag">@media (40rem &lt;= width &lt; 64rem)</span>
+<p class="note">Resize the window. Comparison operators replace
+<code>min-width</code> / <code>max-width</code> and the off-by-one-pixel dance.</p>

@@ -1,0 +1,20 @@
+<style>
+  .ramp { display: grid; grid-template-columns: repeat(11, 1fr); gap: 2px; }
+  .ramp i { block-size: 2.4rem; border-radius: 3px; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="ramp">
+  <i style="background: color-mix(in oklab, var(--swatch) 100%, var(--swatch-2))"></i>
+  <i style="background: color-mix(in oklab, var(--swatch) 90%, var(--swatch-2))"></i>
+  <i style="background: color-mix(in oklab, var(--swatch) 80%, var(--swatch-2))"></i>
+  <i style="background: color-mix(in oklab, var(--swatch) 70%, var(--swatch-2))"></i>
+  <i style="background: color-mix(in oklab, var(--swatch) 60%, var(--swatch-2))"></i>
+  <i style="background: color-mix(in oklab, var(--swatch) 50%, var(--swatch-2))"></i>
+  <i style="background: color-mix(in oklab, var(--swatch) 40%, var(--swatch-2))"></i>
+  <i style="background: color-mix(in oklab, var(--swatch) 30%, var(--swatch-2))"></i>
+  <i style="background: color-mix(in oklab, var(--swatch) 20%, var(--swatch-2))"></i>
+  <i style="background: color-mix(in oklab, var(--swatch) 10%, var(--swatch-2))"></i>
+  <i style="background: color-mix(in oklab, var(--swatch) 0%, var(--swatch-2))"></i>
+</div>
+<p class="note">Mixing two custom properties, in any colour space, with no
+preprocessor and no build step.</p>

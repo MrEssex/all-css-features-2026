@@ -1,0 +1,13 @@
+<style>
+  .row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+  button { padding: 0.4rem 0.9rem; border-radius: 8px; border: 1px solid var(--line); background: var(--sunken); font-size: 0.78rem; }
+  button:focus-visible { outline: 3px solid var(--swatch); outline-offset: 3px; }
+  .thick:focus-visible { outline-width: 5px; outline-color: var(--swatch-3); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <button type="button">Tab to me</button>
+  <button type="button" class="thick">And me</button>
+</div>
+<p class="note">Because an outline sits outside the border box and takes no space,
+adding one on focus never shifts the layout.</p>

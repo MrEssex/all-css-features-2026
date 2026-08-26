@@ -1,0 +1,13 @@
+<style>
+  .row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .tag { --level: info; padding: 0.3rem 0.7rem; border-radius: 2rem; font-size: 0.75rem; font-weight: 600;
+    background: if(style(--level: danger): color-mix(in oklab, var(--swatch-2) 25%, transparent); else: color-mix(in oklab, var(--swatch) 20%, transparent)); }
+  .danger { --level: danger; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <span class="tag">--level: info</span>
+  <span class="tag danger">--level: danger</span>
+</div>
+<p class="note">One declaration branching inline on a custom property. Chromium
+only for now — the fallback is simply the <code>else</code> colour.</p>

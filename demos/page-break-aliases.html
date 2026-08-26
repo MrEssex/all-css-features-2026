@@ -1,0 +1,10 @@
+<style>
+  .code { font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid var(--line); white-space: pre-wrap; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="code">page-break-before: always;  →  break-before: page;
+page-break-after: avoid;    →  break-after: avoid-page;
+page-break-inside: avoid;   →  break-inside: avoid-page;</div>
+<p class="note">The <code>page-break-*</code> properties are legacy aliases kept
+for compatibility. They still work; <code>break-*</code> is the property to write,
+because it covers columns and regions as well as pages.</p>

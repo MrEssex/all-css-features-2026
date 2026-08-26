@@ -1,0 +1,12 @@
+<style>
+  .row { display: grid; gap: 0.3rem; font-size: 0.85rem; }
+  q::before { content: open-quote; } q::after { content: close-quote; }
+  .custom { quotes: "«\00a0" "\00a0»" "‹" "›"; }
+  .none { quotes: none; }
+  span { font-size: 0.62rem; color: var(--ink-faint); font-family: var(--mono); }
+</style>
+<div class="row">
+  <div><q>Nested <q>quotation</q> marks</q> <span>default</span></div>
+  <div class="custom"><q>Nested <q>quotation</q> marks</q> <span>custom pairs</span></div>
+  <div class="none"><q>No marks at all</q> <span>quotes: none</span></div>
+</div>

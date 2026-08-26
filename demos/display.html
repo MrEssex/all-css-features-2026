@@ -1,0 +1,14 @@
+<style>
+  .row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .row > * { padding: 0.3rem 0.6rem; border-radius: 4px; background: color-mix(in oklab, var(--swatch) 18%, transparent); font-family: var(--mono); font-size: 0.7rem; }
+  .b { display: block; }
+  .i { display: inline; }
+  .ib { display: inline-block; inline-size: 6rem; }
+  .none { display: none; }
+</style>
+<div class="row">
+  <span class="ib">inline-block</span>
+  <span class="i">inline</span>
+  <span class="b">block — takes the whole line</span>
+  <span class="none">display: none</span>
+</div>

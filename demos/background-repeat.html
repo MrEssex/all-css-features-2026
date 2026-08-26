@@ -1,0 +1,13 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; text-align: center; }
+  .f { block-size: 3.5rem; border-radius: 6px; background-color: var(--sunken); background-image: radial-gradient(circle, var(--swatch) 45%, transparent 46%); background-size: 1.4rem 1.4rem; }
+  .a { background-repeat: repeat; } .b { background-repeat: repeat-x; }
+  .c { background-repeat: space; } .d { background-repeat: round; }
+  figcaption { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="row">
+  <figure><div class="f a"></div><figcaption>repeat</figcaption></figure>
+  <figure><div class="f b"></div><figcaption>repeat-x</figcaption></figure>
+  <figure><div class="f c"></div><figcaption>space</figcaption></figure>
+  <figure><div class="f d"></div><figcaption>round</figcaption></figure>
+</div>

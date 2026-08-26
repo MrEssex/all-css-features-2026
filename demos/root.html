@@ -1,0 +1,10 @@
+<style>
+  .box { padding: 0.6rem 0.8rem; border-radius: 6px; font-size: 0.78rem;
+    background: color-mix(in oklab, var(--swatch) 14%, transparent); }
+  .box code { font-family: var(--mono); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="box">Custom properties on <code>:root</code> are inherited by every
+element on the page — which is why <code>:root</code> is where design tokens live.</div>
+<p class="note"><code>:root</code> is <code>&lt;html&gt;</code> in HTML, but with
+a class's specificity rather than a tag's.</p>

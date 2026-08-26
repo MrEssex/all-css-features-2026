@@ -1,0 +1,19 @@
+<style>
+  ol { counter-reset: step; list-style: none; padding: 0; display: grid; gap: 0.35rem; }
+  li { counter-increment: step; display: flex; gap: 0.6rem; align-items: baseline; font-size: 0.78rem; }
+  li::before {
+    content: counters(step, ".") ".";
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--swatch);
+    font-weight: 600;
+  }
+  ol ol { margin-block-start: 0.35rem; }
+</style>
+<ol>
+  <li>Select the elements
+    <ol><li>By tag</li><li>By class</li></ol>
+  </li>
+  <li>Apply the styles</li>
+  <li>Ship it</li>
+</ol>

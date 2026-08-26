@@ -1,0 +1,10 @@
+<style>
+  details { border: 1px solid var(--line); border-radius: 6px; padding: 0.4rem 0.6rem; font-size: 0.78rem; }
+  details:open { border-color: var(--swatch); background: color-mix(in oklab, var(--swatch) 10%, transparent); }
+  summary { cursor: pointer; font-weight: 600; }
+  details:open summary::after { content: " — open"; font-weight: 400; color: var(--swatch); }
+</style>
+<details><summary>Toggle me</summary>
+  <p style="margin-block-start:.4rem">The <code>:open</code> pseudo-class matches
+  any open disclosure widget, dialog or popover — one selector for all of them.</p>
+</details>

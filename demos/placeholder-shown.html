@@ -1,0 +1,22 @@
+<style>
+  .field { position: relative; display: block; padding-block-start: 0.85rem; }
+  .field input { inline-size: 100%; }
+  .field input::placeholder { color: transparent; }
+  .field span {
+    position: absolute;
+    inset-block-start: 0;
+    font-size: 0.68rem;
+    color: var(--swatch);
+    transition: all 150ms ease;
+  }
+  .field:has(input:placeholder-shown:not(:focus)) span {
+    inset-block-start: 1.15rem;
+    inset-inline-start: 0.65rem;
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+  }
+</style>
+<label class="field">
+  <span>Email address</span>
+  <input type="email" placeholder="Email address">
+</label>

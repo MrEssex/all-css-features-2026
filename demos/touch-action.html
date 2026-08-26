@@ -1,0 +1,15 @@
+<style>
+  .row { display: flex; gap: 0.6rem; }
+  .b { flex: 1; block-size: 5rem; overflow: auto; border: 1px solid var(--line); border-radius: 6px; padding: 0.4rem; font-size: 0.72rem; }
+  .pan-y { touch-action: pan-y; }
+  .none { touch-action: none; }
+  .tall { block-size: 10rem; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.64rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="b"><div class="tall">auto — pan and pinch-zoom</div></div>
+  <div class="b pan-y"><div class="tall">pan-y — vertical panning only</div></div>
+  <div class="b none"><div class="tall">none — the app handles all gestures</div></div>
+</div>
+<code>Declares which gestures the browser may handle, so a custom gesture does not
+fight the scroller. Most visible on a touchscreen.</code>

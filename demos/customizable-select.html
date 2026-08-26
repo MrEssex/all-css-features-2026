@@ -1,0 +1,17 @@
+<style>
+  select, ::picker(select) { appearance: base-select; }
+  select { padding: 0.35rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; background: var(--sunken); font-size: 0.78rem; }
+  ::picker(select) { border: 1px solid var(--line); border-radius: 8px; background: var(--raised); padding: 0.25rem; }
+  option { padding: 0.3rem 0.5rem; border-radius: 5px; font-size: 0.78rem; }
+  option:checked { background: color-mix(in oklab, var(--swatch) 22%, transparent); }
+  option::checkmark { content: "✓ "; color: var(--swatch); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<select>
+  <option>Widely available</option>
+  <option>Newly available</option>
+  <option>Not yet Baseline</option>
+</select>
+<p class="note">A real <code>&lt;select&gt;</code> whose dropdown is styleable —
+including rich markup in options — while keeping native keyboard behaviour and
+accessibility. Chromium only so far.</p>

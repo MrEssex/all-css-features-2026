@@ -1,0 +1,14 @@
+<style>
+  .set { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; text-align: center; }
+  .frame { block-size: 4rem; border-radius: 6px; overflow: clip; background: var(--sunken); }
+  svg { inline-size: 100%; block-size: 100%; object-fit: none; }
+  .a svg { object-position: left top; } .b svg { object-position: center; }
+  .c svg { object-position: right bottom; } .d svg { object-position: 20% 80%; }
+  figcaption { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="set">
+  <figure><div class="frame a"><svg viewBox="0 0 60 40" width="60" height="40" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="40" fill="oklch(62% .17 275)"/><circle cx="30" cy="20" r="9" fill="oklch(85% .13 90)"/></svg></div><figcaption>left top</figcaption></figure>
+  <figure><div class="frame b"><svg viewBox="0 0 60 40" width="60" height="40" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="40" fill="oklch(62% .17 275)"/><circle cx="30" cy="20" r="9" fill="oklch(85% .13 90)"/></svg></div><figcaption>center</figcaption></figure>
+  <figure><div class="frame c"><svg viewBox="0 0 60 40" width="60" height="40" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="40" fill="oklch(62% .17 275)"/><circle cx="30" cy="20" r="9" fill="oklch(85% .13 90)"/></svg></div><figcaption>right bottom</figcaption></figure>
+  <figure><div class="frame d"><svg viewBox="0 0 60 40" width="60" height="40" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="40" fill="oklch(62% .17 275)"/><circle cx="30" cy="20" r="9" fill="oklch(85% .13 90)"/></svg></div><figcaption>20% 80%</figcaption></figure>
+</div>

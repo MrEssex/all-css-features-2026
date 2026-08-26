@@ -1,0 +1,10 @@
+<style>
+  .source { padding: 0.4rem 0.6rem; border-radius: 6px; background: linear-gradient(120deg, var(--swatch), var(--swatch-2)); color: oklch(100% 0 0); font-size: 0.78rem; }
+  .mirror { margin-block-start: 0.5rem; block-size: 2.4rem; border-radius: 6px; border: 1px dashed var(--line); background: element(#source-el); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="source" id="source-el">A live element used as an image</div>
+<div class="mirror"></div>
+<p class="note"><code>element()</code> paints a live element as a background image,
+reflections and previews included. Firefox-only, and the box above falls back to
+empty elsewhere.</p>

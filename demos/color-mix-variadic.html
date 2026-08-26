@@ -1,0 +1,10 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+  .row i { block-size: 2.6rem; border-radius: 5px; }
+  .a { background: color-mix(in oklab, var(--swatch), var(--swatch-2), var(--swatch-3)); }
+  .b { background: color-mix(in oklab, var(--swatch) 60%, var(--swatch-2) 20%, var(--swatch-3) 20%); }
+  .c { background: color-mix(in oklab, var(--swatch) 20%, var(--swatch-2) 20%, var(--swatch-3) 60%); }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row"><i class="a"></i><i class="b"></i><i class="c"></i></div>
+<code>Three colours in one mix, with optional per-colour weights.</code>

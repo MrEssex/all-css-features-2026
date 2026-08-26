@@ -1,0 +1,11 @@
+<style>
+  .b { padding: 0.4rem 0.6rem; border-radius: 5px; font-size: 0.74rem; margin-block-end: 4px; background: color-mix(in oklab, var(--swatch) 14%, transparent); }
+  .p { border-left: 4px solid var(--swatch); }
+  .l { border-inline-start: 4px solid var(--swatch-3); }
+  .rtl { direction: rtl; }
+  code { display: block; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="b p">border-left — always the left edge</div>
+<div class="b p rtl">‏نفس القاعدة في اتجاه اليمين إلى اليسار — ما زال على اليسار</div>
+<div class="b l rtl">‏border-inline-start — ينتقل إلى اليمين تلقائيًا</div>
+<code>Physical properties stay put; logical ones follow the writing mode.</code>

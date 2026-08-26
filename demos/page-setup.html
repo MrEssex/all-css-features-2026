@@ -1,0 +1,13 @@
+<style>
+  .code { font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid var(--line); white-space: pre-wrap; }
+  .sheet { margin-block-start: 0.5rem; border: 1px solid var(--line); border-radius: 4px; background: var(--raised); block-size: 5rem; padding: 0.8rem 0.6rem; position: relative; font-size: 0.7rem; }
+  .sheet::before { content: "margin box"; position: absolute; inset: 0.35rem; border: 1px dashed var(--swatch); border-radius: 3px; color: var(--ink-faint); font-size: 0.6rem; padding: 0.1rem 0.2rem; }
+</style>
+<div class="code">@page {
+  size: A4 portrait;
+  margin: 2cm 1.5cm;
+}</div>
+<div class="sheet"></div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>@page</code> sets the sheet size and margins for print. The box above
+  stands in for a page.</p>

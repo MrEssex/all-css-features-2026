@@ -1,0 +1,15 @@
+<style>
+  .row { display: grid; gap: 0.15rem; font-size: 1.05rem; }
+  span { font-size: 0.62rem; color: var(--ink-faint); font-family: var(--mono); letter-spacing: normal; }
+  .tight { letter-spacing: -0.03em; } .loose { letter-spacing: 0.12em; }
+  .caps { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.8rem; }
+</style>
+<div class="row">
+  <div class="tight">Tighter display type <span>-0.03em</span></div>
+  <div>Normal <span>normal</span></div>
+  <div class="loose">Looser tracking <span>0.12em</span></div>
+  <div class="caps">Spaced small caps <span>uppercase + 0.14em</span></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Use <code>em</code> so tracking scales with the type. Large text usually wants
+  negative tracking; uppercase usually wants positive.</p>

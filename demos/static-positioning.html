@@ -1,0 +1,11 @@
+<style>
+  .stage { position: relative; border: 1px dashed var(--line); border-radius: 6px; padding: 0.5rem; }
+  .box { padding: 0.3rem 0.5rem; border-radius: 4px; background: color-mix(in oklab, var(--swatch) 18%, transparent); font-size: 0.74rem; margin-block-end: 4px; }
+  .s { position: static; inset-block-start: 3rem; }
+  code { display: block; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="stage">
+  <div class="box s">position: static with inset-block-start: 3rem</div>
+  <div class="box">Unmoved — static ignores inset entirely</div>
+</div>
+<code>The default. Insets and z-index have no effect until position changes.</code>

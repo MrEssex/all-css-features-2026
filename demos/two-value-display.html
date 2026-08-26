@@ -1,0 +1,13 @@
+<style>
+  .set { display: grid; gap: 0.4rem; font-size: 0.75rem; }
+  .a { display: inline flow-root; padding: 0.3rem 0.6rem; background: color-mix(in oklab, var(--swatch) 18%, transparent); border-radius: 4px; }
+  .b { display: block flex; gap: 0.4rem; }
+  .b > span { padding: 0.2rem 0.5rem; background: color-mix(in oklab, var(--swatch-3) 20%, transparent); border-radius: 4px; }
+  code { font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="set">
+  <div><span class="a">display: inline flow-root</span></div>
+  <code>outer type = inline, inner type = flow-root (an inline-block)</code>
+  <div class="b"><span>block</span><span>flex</span></div>
+  <code>display: block flex — the same thing as display: flex, said explicitly</code>
+</div>

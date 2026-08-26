@@ -1,0 +1,22 @@
+<style>
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 2rem;
+    border: 1px solid currentcolor;
+    background: color-mix(in oklab, currentcolor 12%, transparent);
+    font-size: 0.75rem;
+  }
+  .tag svg { fill: currentcolor; inline-size: 0.8rem; }
+  .a { color: var(--swatch); }
+  .b { color: var(--swatch-2); }
+  .c { color: var(--swatch-3); }
+  .set { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+</style>
+<div class="set">
+  <span class="tag a"><svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/></svg>Info</span>
+  <span class="tag b"><svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/></svg>Warning</span>
+  <span class="tag c"><svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/></svg>Success</span>
+</div>

@@ -1,0 +1,23 @@
+<style>
+  .stage { position: relative; padding: 2.2rem 0.5rem; display: flex; justify-content: center; }
+  .anchor { anchor-name: --demo-anchor; padding: 0.35rem 0.8rem; border-radius: 6px; background: var(--swatch); color: oklch(100% 0 0); font-size: 0.78rem; }
+  .tip {
+    position: absolute;
+    position-anchor: --demo-anchor;
+    position-area: block-start center;
+    margin-block-end: 0.4rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 5px;
+    background: var(--swatch-3);
+    color: oklch(15% 0 0);
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="stage">
+  <span class="anchor">anchor-name: --demo-anchor</span>
+  <span class="tip">tethered with position-area</span>
+</div>
+<p class="note">The tooltip positions against the button with no JavaScript and no
+shared ancestor. Chromium and Firefox today; Safari 26 is landing it.</p>

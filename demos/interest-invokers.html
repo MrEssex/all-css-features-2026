@@ -1,0 +1,14 @@
+<style>
+  .stage { padding: 0.5rem 0; }
+  [popover] { padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; background: var(--raised); color: var(--ink); font-size: 0.75rem; max-inline-size: 14rem; }
+  button { padding: 0.35rem 0.8rem; border-radius: 6px; font-size: 0.78rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="stage">
+  <button type="button" interesttarget="ii-tip">Hover or focus me</button>
+  <div id="ii-tip" popover>Shown on "interest" — hover, long-press or keyboard
+  focus — with the timing and dismissal handled by the browser.</div>
+</div>
+<p class="note">Declarative hover-cards and tooltips. The
+<code>interesttarget</code> attribute replaces a pile of mouseenter, focus and
+timeout handling that most implementations get wrong for touch and keyboard.</p>

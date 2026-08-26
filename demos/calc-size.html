@@ -1,0 +1,11 @@
+<style>
+  .panel { block-size: 0; overflow: clip; transition: block-size 300ms ease; background: color-mix(in oklab, var(--swatch) 15%, transparent); border-radius: 6px; }
+  .panel > div { padding: 0.6rem 0.8rem; font-size: 0.78rem; }
+  .stage:has(input:checked) .panel { block-size: calc-size(auto, size); }
+  label { font-size: 0.78rem; display: inline-flex; gap: 0.4rem; align-items: center; margin-block-end: 0.5rem; }
+</style>
+<div class="stage">
+  <label><input type="checkbox"> Expand</label>
+  <div class="panel"><div>Animating to <code>auto</code> — the intrinsic height
+  becomes a number <code>calc-size()</code> can interpolate towards.</div></div>
+</div>

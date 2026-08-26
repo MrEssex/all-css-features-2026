@@ -1,0 +1,14 @@
+<style>
+  .list { display: grid; gap: 3px; font-size: 0.76rem; }
+  .list a { padding: 0.25rem 0.5rem; border-radius: 4px; background: var(--sunken); text-decoration: none; color: inherit; }
+  .list a[href$=".PDF" i] { background: color-mix(in oklab, var(--swatch-2) 20%, transparent); }
+  .list a[href$=".PDF" i]::before { content: "PDF "; font-weight: 700; color: var(--swatch-2); font-size: 0.7rem; }
+</style>
+<div class="list">
+  <a href="/report.pdf">report.pdf</a>
+  <a href="/SUMMARY.PDF">SUMMARY.PDF</a>
+  <a href="/notes.Pdf">notes.Pdf</a>
+  <a href="/index.html">index.html</a>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  One selector with the <code>i</code> flag matches all three spellings.</p>

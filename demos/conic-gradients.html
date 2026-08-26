@@ -1,0 +1,12 @@
+<style>
+  .set { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+  .g { aspect-ratio: 1; border-radius: 8px; }
+  .wheel { background: conic-gradient(in oklch longer hue, oklch(70% .18 0), oklch(70% .18 360)); border-radius: 50%; }
+  .pie { background: conic-gradient(var(--swatch) 0 35%, var(--swatch-2) 0 60%, var(--swatch-3) 0); border-radius: 50%; }
+  .checks { background: repeating-conic-gradient(var(--swatch) 0 25%, transparent 0 50%) 0 0 / 40% 40%; }
+</style>
+<div class="set">
+  <div class="g wheel"></div>
+  <div class="g pie"></div>
+  <div class="g checks"></div>
+</div>

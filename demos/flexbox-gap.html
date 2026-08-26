@@ -1,0 +1,20 @@
+<style>
+  .row { display: flex; flex-wrap: wrap; gap: var(--g, 12px); transition: gap 200ms ease; }
+  .row > span {
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    background: color-mix(in oklab, var(--swatch) 18%, transparent);
+    font-size: 0.75rem;
+  }
+  .ctl { display: flex; align-items: center; gap: 0.5rem; margin-block-start: 0.75rem; font-size: 0.75rem; }
+</style>
+<div class="row" id="row"><span>gap</span><span>works</span><span>on</span><span>flex</span><span>too</span></div>
+<label class="ctl">gap <input type="range" min="0" max="32" value="12" id="g"> <output id="out">12px</output></label>
+<script>
+  const row = root.querySelector('#row');
+  const out = root.querySelector('#out');
+  root.querySelector('#g').addEventListener('input', (e) => {
+    row.style.setProperty('--g', e.target.value + 'px');
+    out.textContent = e.target.value + 'px';
+  });
+</script>

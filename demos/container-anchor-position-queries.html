@@ -1,0 +1,13 @@
+<style>
+  .stage { position: relative; padding: 2.2rem 0.5rem 0.5rem; display: flex; justify-content: center; container-type: anchored; }
+  .anchor { anchor-name: --cq-anchor; padding: 0.3rem 0.7rem; border-radius: 6px; background: var(--swatch); color: oklch(100% 0 0); font-size: 0.76rem; }
+  .tip { position: absolute; position-anchor: --cq-anchor; position-area: block-start center; margin-block-end: 0.35rem; padding: 0.2rem 0.5rem; border-radius: 5px; background: var(--swatch-3); color: oklch(15% 0 0); font-size: 0.7rem; }
+  @container anchored(fallback: flip-block) { .tip { background: var(--swatch-2); color: oklch(100% 0 0); } }
+</style>
+<div class="stage">
+  <span class="anchor">anchor</span>
+  <span class="tip">restyles when it flips</span>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Lets a tethered element restyle itself when it falls back to a different
+  position — an arrow can point the other way, for instance.</p>

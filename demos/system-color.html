@@ -1,0 +1,20 @@
+<style>
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3px; font-family: var(--mono); font-size: 0.66rem; }
+  .grid div { padding: 0.4rem 0.5rem; border-radius: 4px; border: 1px solid; }
+  .a { background: Canvas; color: CanvasText; border-color: GrayText; }
+  .b { background: Field; color: FieldText; border-color: GrayText; }
+  .c { background: ButtonFace; color: ButtonText; border-color: ButtonBorder; }
+  .d { background: AccentColor; color: AccentColorText; border-color: AccentColor; }
+  .e { background: Highlight; color: HighlightText; border-color: Highlight; }
+  .f { background: Canvas; color: LinkText; border-color: GrayText; }
+</style>
+<div class="grid">
+  <div class="a">Canvas / CanvasText</div>
+  <div class="b">Field / FieldText</div>
+  <div class="c">ButtonFace / ButtonText</div>
+  <div class="d">AccentColor</div>
+  <div class="e">Highlight</div>
+  <div class="f">LinkText</div>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  These follow the operating system, so they stay correct in forced-colours mode.</p>

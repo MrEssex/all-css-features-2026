@@ -1,0 +1,14 @@
+<style>
+  p { font-size: 0.85rem; padding: 0.3rem 0.5rem; border-radius: 4px; background: var(--sunken); margin-block-end: 3px; }
+  :lang(fr) { quotes: "«\00a0" "\00a0»"; }
+  :lang(de) { quotes: "„" "“"; }
+  :lang(en) { quotes: "“" "”"; }
+  q::before { content: open-quote; }
+  q::after { content: close-quote; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<p lang="en">English: <q>quotation marks</q></p>
+<p lang="fr">Français : <q>guillemets</q></p>
+<p lang="de">Deutsch: <q>Anführungszeichen</q></p>
+<p class="note">One <code>q</code> rule; <code>:lang()</code> picks the right
+marks per language.</p>

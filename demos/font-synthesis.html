@@ -1,0 +1,14 @@
+<style>
+  .row { display: grid; gap: 0.2rem; font-size: 1.05rem; }
+  .off { font-synthesis: none; }
+  .b { font-weight: 800; font-style: italic; }
+  span { font-size: 0.62rem; color: var(--ink-faint); font-family: var(--mono); }
+</style>
+<div class="row">
+  <div class="b">Synthesised bold italic <span>font-synthesis: auto</span></div>
+  <div class="b off">Real faces only <span>font-synthesis: none</span></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  When a family has no bold or italic file, browsers fake one by smearing or
+  slanting. <code>none</code> forbids that — usually what you want with a proper
+  variable font.</p>

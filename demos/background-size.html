@@ -1,0 +1,13 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; text-align: center; }
+  .f { block-size: 3.5rem; border-radius: 6px; background-image: radial-gradient(circle, var(--swatch) 40%, var(--swatch-2) 41%); background-repeat: no-repeat; background-position: center; }
+  .a { background-size: auto; } .b { background-size: cover; }
+  .c { background-size: contain; } .d { background-size: 40% 80%; }
+  figcaption { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="row">
+  <figure><div class="f a"></div><figcaption>auto</figcaption></figure>
+  <figure><div class="f b"></div><figcaption>cover</figcaption></figure>
+  <figure><div class="f c"></div><figcaption>contain</figcaption></figure>
+  <figure><div class="f d"></div><figcaption>40% 80%</figcaption></figure>
+</div>

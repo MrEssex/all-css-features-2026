@@ -1,0 +1,15 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; text-align: center; }
+  .f { block-size: 3rem; border-radius: 1rem; background: var(--swatch); }
+  .a { corner-shape: round; } .b { corner-shape: bevel; }
+  .c { corner-shape: scoop; } .d { corner-shape: squircle; }
+  figcaption { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="row">
+  <figure><div class="f a"></div><figcaption>round</figcaption></figure>
+  <figure><div class="f b"></div><figcaption>bevel</figcaption></figure>
+  <figure><div class="f c"></div><figcaption>scoop</figcaption></figure>
+  <figure><div class="f d"></div><figcaption>squircle</figcaption></figure>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Same radius, four corner geometries.</p>

@@ -1,0 +1,12 @@
+<style>
+  .b { font-size: 1.05rem; padding: 0.35rem 0.5rem; background: var(--sunken); border-radius: 5px; margin-block-end: 4px; }
+  .trim { text-spacing-trim: trim-start; }
+  code { font-size: 0.62rem; color: var(--ink-faint); }
+</style>
+<code>space-all — full-width punctuation keeps its built-in space</code>
+<div class="b" lang="ja" style="text-spacing-trim: space-all">「引用」と（括弧）。</div>
+<code>trim-start</code>
+<div class="b trim" lang="ja">「引用」と（括弧）。</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Full-width brackets carry half an em of blank space inside the glyph; trimming
+  it removes the gaps that otherwise open up in Japanese text.</p>

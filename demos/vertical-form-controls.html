@@ -1,0 +1,15 @@
+<style>
+  .row { display: flex; gap: 1.2rem; align-items: start; }
+  .v { writing-mode: vertical-lr; block-size: 5rem; }
+  meter, progress, input[type="range"] { accent-color: var(--swatch); }
+  figcaption { font-family: var(--mono); font-size: 0.62rem; color: var(--ink-faint); margin-block-start: 0.3rem; }
+</style>
+<div class="row">
+  <figure><input type="range" value="60"><figcaption>horizontal</figcaption></figure>
+  <figure><input type="range" class="v" value="60"><figcaption>vertical-lr</figcaption></figure>
+  <figure><progress class="v" value="0.6"></progress><figcaption>progress</figcaption></figure>
+  <figure><meter class="v" value="0.7"></meter><figcaption>meter</figcaption></figure>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Native controls honour <code>writing-mode</code>, so a vertical slider no longer
+  needs a rotated wrapper.</p>

@@ -1,0 +1,14 @@
+<style>
+  .rows { display: grid; gap: 3px; font-family: var(--mono); font-size: 0.68rem; }
+  .rows div { display: grid; grid-template-columns: 8rem 1fr; align-items: center; gap: 0.5rem; }
+  .bar { block-size: 1.2rem; border-radius: 3px; background: var(--swatch); }
+  .a { inline-size: 50%; } .b { inline-size: 12rem; }
+  .c { inline-size: fit-content; padding-inline: 0.5rem; color: oklch(100% 0 0); }
+  .d { inline-size: min-content; }
+</style>
+<div class="rows">
+  <div><span>50%</span><span class="bar a"></span></div>
+  <div><span>12rem</span><span class="bar b"></span></div>
+  <div><span>fit-content</span><span class="bar c">text decides</span></div>
+  <div><span>min-content</span><span class="bar d"></span></div>
+</div>

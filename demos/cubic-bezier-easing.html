@@ -1,0 +1,15 @@
+<style>
+  @keyframes cubic-bezier-easing-run { to { translate: calc(100cqi - 1.4rem) 0; } }
+  .track { container-type: inline-size; padding-block: 0.3rem; }
+  .ball { inline-size: 1.4rem; aspect-ratio: 1; border-radius: 50%; background: var(--swatch); animation: cubic-bezier-easing-run 2s infinite alternate; }
+  .a { animation-timing-function: cubic-bezier(.25,.1,.25,1); }
+  .b { animation-timing-function: cubic-bezier(.68,-.55,.27,1.55); }
+  .c { animation-timing-function: cubic-bezier(.9,0,.1,1); }
+  code { display: block; font-size: 0.64rem; color: var(--ink-faint); }
+</style>
+<code>cubic-bezier(.25,.1,.25,1) — ease</code>
+<div class="track"><div class="ball a"></div></div>
+<code>cubic-bezier(.68,-.55,.27,1.55) — overshoots past both ends</code>
+<div class="track"><div class="ball b"></div></div>
+<code>cubic-bezier(.9,0,.1,1) — sharp in and out</code>
+<div class="track"><div class="ball c"></div></div>

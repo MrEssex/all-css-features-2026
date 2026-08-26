@@ -1,0 +1,11 @@
+<style>
+  [popover] { padding: 0.7rem 0.9rem; border: 1px solid var(--line); border-radius: 8px; background: var(--raised); color: var(--ink); font-size: 0.78rem; max-inline-size: 15rem;
+    opacity: 0; scale: 0.9;
+    transition: opacity 250ms ease, scale 250ms ease, display 250ms allow-discrete, overlay 250ms allow-discrete; }
+  [popover]:popover-open { opacity: 1; scale: 1; }
+  @starting-style { [popover]:popover-open { opacity: 0; scale: 0.9; } }
+  button { padding: 0.35rem 0.8rem; border-radius: 6px; font-size: 0.78rem; }
+</style>
+<button type="button" popovertarget="ov">Open</button>
+<div id="ov" popover>Without <code>overlay</code> in the transition list this would
+vanish from the top layer instantly and the exit animation would be invisible.</div>

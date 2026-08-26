@@ -1,0 +1,10 @@
+<style>
+  .stage { position: relative; block-size: 5.5rem; }
+  .plate { position: absolute; inline-size: 5rem; block-size: 3.5rem; border-radius: 6px; display: grid; place-items: center; font-family: var(--mono); font-size: 0.7rem; color: oklch(100% 0 0); }
+  .a { background: var(--swatch); inset-block-start: 0; inset-inline-start: 0; z-index: 3; }
+  .b { background: var(--swatch-2); inset-block-start: 0.8rem; inset-inline-start: 3rem; z-index: 2; }
+  .c { background: var(--swatch-3); color: oklch(15% 0 0); inset-block-start: 1.6rem; inset-inline-start: 6rem; z-index: 1; }
+</style>
+<div class="stage">
+  <div class="plate a">z: 3</div><div class="plate b">z: 2</div><div class="plate c">z: 1</div>
+</div>

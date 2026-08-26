@@ -1,0 +1,10 @@
+<style>
+  .box { border: 1px dashed var(--line); border-radius: 6px; padding: 0.5rem; font-size: 0.75rem; }
+  .f { float: inline-start; inline-size: 3.5rem; aspect-ratio: 1; background: var(--swatch); border-radius: 4px; margin-inline-end: 0.5rem; margin-block-end: 0.3rem; }
+  .cleared { clear: both; padding-block-start: 0.3rem; border-block-start: 1px solid var(--line); margin-block-start: 0.3rem; }
+</style>
+<div class="box">
+  <div class="f"></div>
+  Text flows around a floated box, which is what floats were invented for.
+  <div class="cleared">clear: both — starts below the float.</div>
+</div>

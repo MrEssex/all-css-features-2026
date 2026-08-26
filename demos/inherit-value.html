@@ -1,0 +1,13 @@
+<style>
+  .stage { color: var(--swatch); border: 2px solid var(--swatch); padding: 0.4rem; border-radius: 6px; }
+  .stage p { font-size: 0.78rem; border: 2px solid; padding: 0.3rem 0.5rem; border-radius: 5px; }
+  .stage p.first { border-color: var(--ink-faint); }
+  .stage p.second { border-color: inherit; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="stage">
+  <p class="first">border-color set explicitly</p>
+  <p class="second">border-color: inherit — takes the parent's</p>
+</div>
+<p class="note"><code>inherit</code> pulls a value down even for properties that
+do not inherit by default.</p>

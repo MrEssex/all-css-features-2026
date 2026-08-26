@@ -1,0 +1,12 @@
+<style>
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; rule-color: var(--swatch); rule-width: 2px; rule-style: solid; }
+  .grid > div { padding: 0.4rem; border-radius: 4px; background: color-mix(in oklab, var(--swatch) 14%, transparent); font-size: 0.72rem; text-align: center; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="grid">
+  <div>one</div><div>two</div><div>three</div>
+  <div>four</div><div>five</div><div>six</div>
+</div>
+<p class="note">Rules drawn in the gaps of a grid or flex container —
+<code>column-rule</code> and <code>row-rule</code> beyond multi-column, with no
+separator elements in the markup.</p>

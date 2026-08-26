@@ -1,0 +1,13 @@
+<style>
+  .row { display: flex; gap: 0.6rem; }
+  .stage { flex: 1; position: relative; block-size: 4rem; border-radius: 6px; background: linear-gradient(90deg, var(--swatch), var(--swatch-3)); }
+  .iso { isolation: isolate; }
+  .blob { position: absolute; inset: 0.6rem; border-radius: 50%; background: oklch(80% .18 60); mix-blend-mode: difference; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="stage"><div class="blob"></div></div>
+  <div class="stage iso"><div class="blob"></div></div>
+</div>
+<code>Both blobs use difference. isolation: isolate confines the blend to its own
+stacking context so it cannot reach further back.</code>

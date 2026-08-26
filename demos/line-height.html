@@ -1,0 +1,10 @@
+<style>
+  .row { display: grid; gap: 0.5rem; }
+  p { font-size: 0.8rem; max-inline-size: 22rem; background: linear-gradient(var(--sunken) 50%, transparent 50%); background-size: 100% 2em; }
+  .tight { line-height: 1.1; } .normal { line-height: 1.5; } .loose { line-height: 2; }
+  code { font-size: 0.62rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div><code>1.1</code><p class="tight">Line height is unitless so it scales with the font size of each element rather than being inherited as a fixed length.</p></div>
+  <div><code>1.5</code><p class="normal">Line height is unitless so it scales with the font size of each element rather than being inherited as a fixed length.</p></div>
+</div>

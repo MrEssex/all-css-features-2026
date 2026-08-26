@@ -1,0 +1,12 @@
+<style>
+  .mark::before { content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M2 7l4 4 6-8' stroke='%2322aa77' stroke-width='2' fill='none'/%3E%3C/svg%3E") / "Passed"; vertical-align: -2px; }
+  .bad::before { content: "✕" / "Failed"; color: var(--swatch-2); font-weight: 700; margin-inline-end: 0.3rem; }
+  .row { display: grid; gap: 0.3rem; font-size: 0.8rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="mark"> Build 4821</div>
+  <div class="bad">Build 4820</div>
+</div>
+<p class="note">The text after the slash is what a screen reader announces. Without
+it, a decorative glyph is read literally — "black heavy check mark" — or not at all.</p>

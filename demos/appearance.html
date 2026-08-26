@@ -1,0 +1,21 @@
+<style>
+  .set { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+  .native { appearance: auto; }
+  .stripped {
+    appearance: none;
+    inline-size: 1.1rem;
+    aspect-ratio: 1;
+    border: 2px solid var(--swatch);
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    background: transparent;
+  }
+  .stripped:checked { background: var(--swatch); }
+  .stripped:checked::after { content: "✓"; color: oklch(100% 0 0); font-size: 0.75rem; line-height: 1; }
+  label { display: flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; }
+</style>
+<div class="set">
+  <label><input type="checkbox" class="native" checked> native</label>
+  <label><input type="checkbox" class="stripped" checked> appearance: none</label>
+</div>

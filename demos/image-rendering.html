@@ -1,0 +1,13 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; text-align: center; }
+  .f { block-size: 3.4rem; border-radius: 6px; background-image: conic-gradient(var(--swatch) 0 25%, var(--swatch-3) 0 50%, var(--swatch) 0 75%, var(--swatch-3) 0); background-size: 8px 8px; image-rendering: auto; }
+  .b { image-rendering: pixelated; } .c { image-rendering: crisp-edges; }
+  figcaption { font-family: var(--mono); font-size: 0.58rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="row">
+  <figure><div class="f"></div><figcaption>auto</figcaption></figure>
+  <figure><div class="f b"></div><figcaption>pixelated</figcaption></figure>
+  <figure><div class="f c"></div><figcaption>crisp-edges</figcaption></figure>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Controls the scaling algorithm — essential for pixel art and QR codes.</p>

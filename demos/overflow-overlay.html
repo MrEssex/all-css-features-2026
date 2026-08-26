@@ -1,0 +1,9 @@
+<style>
+  .b { block-size: 4.5rem; overflow: auto; border: 1px solid var(--line); border-radius: 5px; padding: 0.4rem 0.6rem; font-size: 0.74rem; scrollbar-gutter: stable; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="b">The legacy <code>overflow: overlay</code> laid the scrollbar over the
+content instead of reserving space for it. It is deprecated and now behaves as
+<code>auto</code>; <code>scrollbar-gutter</code> is the supported way to control
+whether that space is reserved.</div>
+<code>Kept for compatibility — reach for scrollbar-gutter instead.</code>

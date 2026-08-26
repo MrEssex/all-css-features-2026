@@ -1,0 +1,12 @@
+<style>
+  .row { display: grid; gap: 0.15rem; }
+  .row div { font-family: var(--mono); }
+  .a { font-size: 0.7rem; } .b { font-size: 1rem; } .c { font-size: 1.4rem; }
+  .d { font-size: larger; } .e { font-size: clamp(0.8rem, 3cqi, 1.6rem); }
+  .wrap { container-type: inline-size; }
+</style>
+<div class="row wrap">
+  <div class="a">0.7rem</div><div class="b">1rem</div><div class="c">1.4rem</div>
+  <div class="d">larger — relative to the parent</div>
+  <div class="e">clamp(0.8rem, 3cqi, 1.6rem) — fluid</div>
+</div>

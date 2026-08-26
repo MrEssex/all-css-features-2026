@@ -1,0 +1,15 @@
+<style>
+  .row { display: flex; gap: 3px; align-items: end; block-size: 6rem; }
+  .bar { flex: 1; border-radius: 3px 3px 0 0; background: var(--swatch); block-size: calc(pow(var(--i), 2) * 1.1%); }
+  .sqrt { background: var(--swatch-2); block-size: calc(sqrt(var(--i)) * 20%); }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="bar" style="--i:1"></div><div class="bar" style="--i:3"></div>
+  <div class="bar" style="--i:5"></div><div class="bar" style="--i:7"></div>
+  <div class="bar" style="--i:9"></div>
+  <div class="bar sqrt" style="--i:1"></div><div class="bar sqrt" style="--i:4"></div>
+  <div class="bar sqrt" style="--i:9"></div><div class="bar sqrt" style="--i:16"></div>
+  <div class="bar sqrt" style="--i:25"></div>
+</div>
+<code>blue: pow(n, 2) &nbsp; pink: sqrt(n)</code>

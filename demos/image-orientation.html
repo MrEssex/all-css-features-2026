@@ -1,0 +1,10 @@
+<style>
+  .row { display: flex; gap: 0.6rem; align-items: center; }
+  .code { font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); padding: 0.5rem 0.7rem; border-radius: 6px; border: 1px solid var(--line); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="code">image-orientation: from-image;  /* default */
+image-orientation: none;        /* ignore EXIF */</div>
+<p class="note">Photographs carry an EXIF orientation flag. Browsers honour it by
+default, which is why a portrait phone photo no longer appears sideways;
+<code>none</code> opts out when you have already baked the rotation in.</p>

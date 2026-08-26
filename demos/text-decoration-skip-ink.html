@@ -1,0 +1,12 @@
+<style>
+  .row { display: grid; gap: 0.3rem; font-size: 1.15rem; }
+  u { text-decoration: underline 2px var(--swatch); text-underline-offset: 2px; }
+  .skip { text-decoration-skip-ink: auto; } .no { text-decoration-skip-ink: none; }
+  span { font-size: 0.6rem; color: var(--ink-faint); font-family: var(--mono); }
+</style>
+<div class="row">
+  <div><u class="skip">Typography judging quality</u> <span>auto</span></div>
+  <div><u class="no">Typography judging quality</u> <span>none</span></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Look at the descenders in g, y, j, q — the underline breaks around them.</p>

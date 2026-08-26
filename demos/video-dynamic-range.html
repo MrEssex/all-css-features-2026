@@ -1,0 +1,11 @@
+<style>
+  .opts { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .opts span { padding: 0.25rem 0.6rem; border-radius: 2rem; font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); border: 1px solid var(--line); color: var(--ink-faint); }
+  @media (video-dynamic-range: standard) { .o1 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o1::after { content: ' ✓'; } }
+  @media (video-dynamic-range: high) { .o2 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o2::after { content: ' ✓'; } }
+</style>
+<div class="opts">
+  <span class="o1">standard</span>
+  <span class="o2">high</span>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">Your browser right now, live via <code>video-dynamic-range</code>.</p>

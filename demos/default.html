@@ -1,0 +1,14 @@
+<style>
+  form { display: grid; gap: 0.35rem; font-size: 0.78rem; }
+  label { display: flex; align-items: center; gap: 0.45rem; }
+  input:default + span { font-weight: 700; color: var(--swatch); }
+  input:default + span::after { content: " ← :default"; font-weight: 400; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<form onsubmit="return false">
+  <label><input type="radio" name="plan"><span>Free</span></label>
+  <label><input type="radio" name="plan" checked><span>Pro</span></label>
+  <label><input type="radio" name="plan"><span>Team</span></label>
+</form>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>:default</code> marks the initially-checked control even after you pick
+  another — useful for showing what "reset" would restore.</p>

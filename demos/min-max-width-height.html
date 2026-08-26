@@ -1,0 +1,11 @@
+<style>
+  .box { padding: 0.4rem 0.6rem; background: color-mix(in oklab, var(--swatch) 16%, transparent); border-radius: 5px; font-size: 0.74rem; margin-block-end: 4px; }
+  .a { inline-size: 100%; max-inline-size: 16rem; }
+  .b { inline-size: 2rem; min-inline-size: 10rem; }
+  .c { block-size: 1rem; min-block-size: 3rem; }
+  code { display: block; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="box a">max-inline-size: 16rem caps a 100% width</div>
+<div class="box b">min-inline-size: 10rem floors a 2rem width</div>
+<div class="box c">min-block-size wins over a smaller height</div>
+<code>Minimums beat maximums, which beat the declared size.</code>

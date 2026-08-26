@@ -1,0 +1,16 @@
+<style>
+  form { display: grid; gap: 0.4rem; }
+  input { inline-size: 100%; }
+  input:valid { border-color: var(--swatch-3); }
+  input:invalid { border-color: var(--swatch-2); }
+  input:required + span::after { content: " (required)"; color: var(--swatch-2); }
+  input:optional + span::after { content: " (optional)"; color: var(--ink-faint); }
+  span { font-size: 0.7rem; color: var(--ink-faint); }
+  input:in-range { outline: 2px solid color-mix(in oklab, var(--swatch-3) 50%, transparent); outline-offset: 1px; }
+  input:out-of-range { outline: 2px solid var(--swatch-2); outline-offset: 1px; }
+</style>
+<form onsubmit="return false">
+  <input type="email" required placeholder="Email"><span></span>
+  <input type="text" placeholder="Nickname"><span></span>
+  <input type="number" min="1" max="10" value="5"><span>:in-range / :out-of-range — try 42</span>
+</form>

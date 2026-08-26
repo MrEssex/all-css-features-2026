@@ -1,0 +1,12 @@
+<style>
+  .row { display: flex; gap: 0.5rem; }
+  .b { flex: 1; overflow: auto; border: 1px solid var(--line); border-radius: 5px; padding: 0.4rem; font-size: 0.72rem; block-size: 4rem; }
+  .h { resize: horizontal; } .v { resize: vertical; } .both { resize: both; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="b h">resize: horizontal</div>
+  <div class="b v">resize: vertical</div>
+  <div class="b both">resize: both</div>
+</div>
+<code>Drag the corner of each. Needs overflow other than visible.</code>

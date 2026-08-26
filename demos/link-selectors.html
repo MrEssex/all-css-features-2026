@@ -1,0 +1,15 @@
+<style>
+  .row { display: flex; gap: 0.8rem; font-size: 0.85rem; flex-wrap: wrap; }
+  .row a:link { color: var(--swatch); }
+  .row a:visited { color: var(--swatch-2); }
+  .row a:any-link { text-underline-offset: 3px; }
+  .row a:hover { text-decoration-thickness: 2px; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <a href="#link-selectors">:link (unvisited)</a>
+  <a href="https://example.com">external</a>
+  <a>no href — matches neither</a>
+</div>
+<p class="note"><code>:visited</code> is deliberately limited to colour
+properties, so a page cannot sniff your history by measuring layout.</p>

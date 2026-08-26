@@ -1,0 +1,10 @@
+<style>
+  ol { list-style: none; padding: 0; counter-reset: reversed(cr); display: grid; gap: 0.25rem; font-size: 0.78rem; }
+  li { counter-increment: cr -1; }
+  li::before { content: counter(cr) ". "; font-family: var(--mono); color: var(--swatch-2); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<ol><li>Countdown item</li><li>Countdown item</li><li>Countdown item</li><li>Countdown item</li></ol>
+<p class="note"><code>counter-reset: reversed(name)</code> counts down from the
+number of items, so a top-ten list numbers correctly without knowing its length
+in advance.</p>

@@ -1,0 +1,12 @@
+<style>
+  .ref { border-block-end: 1px dotted var(--swatch); cursor: help; }
+  .ref::after {
+    content: " (" attr(data-note) ")";
+    font-size: 0.85em;
+    color: var(--swatch);
+  }
+  p { font-size: 0.8rem; }
+</style>
+<p>The <span class="ref" data-note="CSS Working Group">CSSWG</span> publishes the
+drafts that become <span class="ref" data-note="Candidate Recommendation">CR</span>
+specifications.</p>

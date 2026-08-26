@@ -1,0 +1,11 @@
+<style>
+  .b { block-size: 3.2rem; border-radius: 6px;
+    background-image: light-dark(
+      linear-gradient(120deg, oklch(88% .1 90), oklch(78% .13 40)),
+      linear-gradient(120deg, oklch(35% .12 275), oklch(25% .1 300))); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="b"></div>
+<p class="note"><code>light-dark()</code> works for images too, so an illustration
+can swap with the colour scheme without a media query or a second element. Switch
+this page's theme to see it change.</p>

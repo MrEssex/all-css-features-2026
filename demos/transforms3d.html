@@ -1,0 +1,29 @@
+<style>
+  .scene { perspective: 600px; padding: 0.75rem 0; }
+  .card3d {
+    inline-size: 6rem;
+    aspect-ratio: 3 / 2;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 600ms cubic-bezier(.3,.8,.3,1);
+  }
+  .scene:hover .card3d, .scene:focus-within .card3d { transform: rotateY(180deg); }
+  .face {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    font-size: 0.75rem;
+    color: oklch(100% 0 0);
+  }
+  .front { background: var(--swatch); }
+  .back { background: var(--swatch-2); transform: rotateY(180deg); }
+</style>
+<div class="scene" tabindex="0">
+  <div class="card3d">
+    <div class="face front">front</div>
+    <div class="face back">back</div>
+  </div>
+</div>

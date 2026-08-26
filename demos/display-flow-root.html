@@ -1,0 +1,10 @@
+<style>
+  .box { border: 1px dashed var(--line); border-radius: 6px; margin-block-end: 0.5rem; font-size: 0.75rem; }
+  .fr { display: flow-root; }
+  .float { float: inline-start; inline-size: 3rem; aspect-ratio: 1; background: var(--swatch); border-radius: 4px; margin-inline-end: 0.5rem; }
+  code { font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<code>without flow-root — the float escapes the box</code>
+<div class="box"><div class="float"></div>Text beside the float.</div>
+<code>display: flow-root — the box contains it</code>
+<div class="box fr"><div class="float"></div>Text beside the float.</div>

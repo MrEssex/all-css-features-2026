@@ -1,0 +1,19 @@
+<style>
+  x-part-demo::part(label) { color: var(--swatch); font-weight: 700; }
+  x-part-demo::part(pill) { background: var(--swatch-3); color: oklch(15% 0 0); padding: 0.1rem 0.5rem; border-radius: 2rem; font-size: 0.7rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<x-part-demo></x-part-demo>
+<p class="note">The page styles internals the component chose to expose with
+<code>part=</code>. Everything else in the shadow root stays private.</p>
+<script>
+  if (!customElements.get('x-part-demo')) {
+    customElements.define('x-part-demo', class extends HTMLElement {
+      connectedCallback() {
+        const shadow = this.attachShadow({ mode: 'open' });
+        shadow.innerHTML = `<style>:host{display:flex;gap:.5rem;align-items:center;font-size:.8rem}</style>
+          <span part="label">Status</span><span part="pill">shipped</span>`;
+      }
+    });
+  }
+</script>

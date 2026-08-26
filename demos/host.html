@@ -1,0 +1,19 @@
+<style>
+  .mount { display: grid; gap: 0.4rem; }
+  .note { font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="mount"><div id="a"></div><div id="b" class="loud"></div></div>
+<p class="note"><code>:host</code> styles the custom element from inside its own
+shadow root; <code>:host(.loud)</code> reacts to a class set outside it.</p>
+<script>
+  for (const host of root.querySelectorAll('#a, #b')) {
+    const shadow = host.attachShadow({ mode: 'open' });
+    shadow.innerHTML = `<style>
+      :host { display: block; padding: .4rem .6rem; border-radius: 6px;
+        background: color-mix(in oklab, currentColor 12%, transparent);
+        border: 1px solid currentColor; font-size: .78rem; }
+      :host(.loud) { font-weight: 700; letter-spacing: .04em; }
+    </style><slot></slot>`;
+    host.textContent = host.classList.contains('loud') ? ':host(.loud)' : ':host';
+  }
+</script>

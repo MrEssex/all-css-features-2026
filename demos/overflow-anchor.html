@@ -1,0 +1,24 @@
+<style>
+  .box { block-size: 6rem; overflow: auto; border: 1px solid var(--line); border-radius: 6px; padding: 0.5rem; font-size: 0.75rem; }
+  .none { overflow-anchor: none; }
+  .grow { block-size: 2rem; background: color-mix(in oklab, var(--swatch) 18%, transparent); border-radius: 4px; margin-block-end: 0.3rem; }
+  button { margin-block-start: 0.4rem; padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.75rem; }
+</style>
+<div class="box" id="box">
+  <div id="top"></div>
+  <div class="grow">existing content</div><div class="grow">existing content</div>
+  <div class="grow">existing content</div><div class="grow">existing content</div>
+</div>
+<button type="button" id="add">Prepend content above</button>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Scroll down, then prepend. Scroll anchoring keeps your reading position instead
+  of jumping — <code>overflow-anchor: none</code> opts out.</p>
+<script>
+  const top = root.querySelector('#top');
+  root.querySelector('#add').addEventListener('click', () => {
+    const el = document.createElement('div');
+    el.className = 'grow';
+    el.textContent = 'newly inserted';
+    top.after(el);
+  });
+</script>

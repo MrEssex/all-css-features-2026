@@ -1,0 +1,9 @@
+<style>
+  @font-palette-values --fp-demo { font-family: "Demo"; base-palette: 0; override-colors: 0 var(--swatch), 1 var(--swatch-3); }
+  .sample { font-size: 1.6rem; font-palette: --fp-demo; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="sample">🎨 Colour font palette</div>
+<p class="note"><code>@font-palette-values</code> recolours a COLR font — a single
+icon or emoji font can be retinted per theme without shipping a second file.
+Visible only with a palette-carrying font installed.</p>

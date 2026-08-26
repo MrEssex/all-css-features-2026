@@ -1,0 +1,11 @@
+<style>
+  .row { display: grid; gap: 0.35rem; font-size: 0.78rem; }
+  .row div { padding: 0.35rem 0.55rem; border-radius: 5px; background: var(--sunken); }
+  .none { user-select: none; }
+  .all { user-select: all; }
+</style>
+<div class="row">
+  <div>Normal — drag to select part of this line.</div>
+  <div class="none">user-select: none — try to select this; you cannot.</div>
+  <div class="all">user-select: all — one click selects the whole block.</div>
+</div>

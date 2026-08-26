@@ -1,0 +1,13 @@
+<style>
+  .row { display: grid; gap: 0.4rem; }
+  .b { padding: 0.4rem 0.6rem; border-radius: 5px; background: var(--sunken); font-size: 0.75rem; }
+  .inert { interactivity: inert; opacity: 0.5; }
+  button, input { font-size: 0.75rem; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="b"><button type="button">Focusable</button> <input placeholder="editable"></div>
+  <div class="b inert"><button type="button">Inert</button> <input placeholder="not reachable"></div>
+</div>
+<code>interactivity: inert removes a subtree from focus, clicks and the a11y tree —
+the inert attribute as a CSS property.</code>

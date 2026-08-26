@@ -1,0 +1,11 @@
+<style>
+  .scroller { block-size: 8rem; overflow: auto; border: 1px solid var(--line); border-radius: 6px; padding: 0.5rem; position: relative; }
+  .tall { block-size: 20rem; font-size: 0.75rem; }
+  .pinned { position: fixed; padding: 0.25rem 0.5rem; background: var(--swatch); color: oklch(100% 0 0); border-radius: 4px; font-size: 0.7rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="scroller"><div class="tall">Scroll this box. A fixed element positions
+against the viewport, not this scroller — which is why fixed headers inside
+scrolling panels rarely behave as people expect.</div></div>
+<p class="note">A transform, filter or <code>container-type</code> on an ancestor
+makes that ancestor the containing block instead of the viewport.</p>

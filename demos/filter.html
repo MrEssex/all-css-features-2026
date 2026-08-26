@@ -1,0 +1,17 @@
+<style>
+  .set { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.4rem; text-align: center; }
+  .s { aspect-ratio: 1; border-radius: 6px; background: conic-gradient(from 45deg, var(--swatch), var(--swatch-2), var(--swatch-3), var(--swatch)); }
+  .blur { filter: blur(3px); }
+  .sat { filter: saturate(0.15); }
+  .hue { filter: hue-rotate(140deg); }
+  .contrast { filter: contrast(2.2); }
+  .drop { filter: drop-shadow(0 3px 4px oklch(0% 0 0 / .5)); }
+  figcaption { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="set">
+  <figure><div class="s blur"></div><figcaption>blur</figcaption></figure>
+  <figure><div class="s sat"></div><figcaption>saturate</figcaption></figure>
+  <figure><div class="s hue"></div><figcaption>hue-rotate</figcaption></figure>
+  <figure><div class="s contrast"></div><figcaption>contrast</figcaption></figure>
+  <figure><div class="s drop"></div><figcaption>drop-shadow</figcaption></figure>
+</div>

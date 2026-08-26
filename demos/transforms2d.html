@@ -1,0 +1,11 @@
+<style>
+  .row { display: flex; gap: 1rem; padding: 0.6rem 0; }
+  .b { inline-size: 2.6rem; aspect-ratio: 1; border-radius: 6px; background: var(--swatch); display: grid; place-items: center; color: oklch(100% 0 0); font-size: 0.6rem; }
+  .t { transform: translate(0.6rem, 0); } .r { transform: rotate(25deg); }
+  .s { transform: scale(1.25); } .k { transform: skewX(-18deg); }
+  .m { transform: matrix(1, 0.2, -0.2, 1, 0, 0); }
+</style>
+<div class="row">
+  <div class="b t">translate</div><div class="b r">rotate</div>
+  <div class="b s">scale</div><div class="b k">skew</div><div class="b m">matrix</div>
+</div>

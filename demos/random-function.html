@@ -1,0 +1,11 @@
+<style>
+  .row { display: flex; gap: 3px; align-items: end; block-size: 5rem; }
+  .bar { flex: 1; border-radius: 3px 3px 0 0; background: var(--swatch); block-size: random(20%, 100%); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+  <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+</div>
+<p class="note"><code>random()</code> picks a value per element, fixed for the
+document's lifetime — reload for a new set.</p>

@@ -1,0 +1,15 @@
+<style>
+  .set { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; text-align: center; }
+  .s { aspect-ratio: 1; background: linear-gradient(135deg, var(--swatch), var(--swatch-2)); transition: clip-path 400ms ease; }
+  .circle { clip-path: circle(50%); }
+  .poly { clip-path: polygon(50% 0, 100% 38%, 82% 100%, 18% 100%, 0 38%); }
+  .inset { clip-path: inset(12% round 20%); }
+  .arrow { clip-path: polygon(0 20%, 60% 20%, 60% 0, 100% 50%, 60% 100%, 60% 80%, 0 80%); }
+  figcaption { font-family: var(--mono); font-size: 0.62rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="set">
+  <figure><div class="s circle"></div><figcaption>circle()</figcaption></figure>
+  <figure><div class="s poly"></div><figcaption>polygon()</figcaption></figure>
+  <figure><div class="s inset"></div><figcaption>inset()</figcaption></figure>
+  <figure><div class="s arrow"></div><figcaption>polygon()</figcaption></figure>
+</div>

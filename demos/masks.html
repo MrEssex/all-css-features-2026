@@ -1,0 +1,12 @@
+<style>
+  .set { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+  .m { aspect-ratio: 3 / 2; background: linear-gradient(135deg, var(--swatch), var(--swatch-2)); border-radius: 6px; }
+  .fade { mask-image: linear-gradient(to bottom, black 40%, transparent); }
+  .dots { mask-image: radial-gradient(circle at center, black 45%, transparent 46%); mask-size: 14px 14px; mask-repeat: repeat; }
+  .edges { mask-image: linear-gradient(90deg, transparent, black 25%, black 75%, transparent); }
+</style>
+<div class="set">
+  <div class="m fade"></div>
+  <div class="m dots"></div>
+  <div class="m edges"></div>
+</div>

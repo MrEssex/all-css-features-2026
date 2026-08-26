@@ -1,0 +1,10 @@
+<style>
+  .box { border: 1px solid var(--line); border-radius: 6px; padding: 0.5rem; font-size: 0.74rem; margin-block-end: 0.4rem; }
+  .c { contain: content; }
+  .float { float: inline-start; inline-size: 2.5rem; aspect-ratio: 1; background: var(--swatch); border-radius: 4px; margin-inline-end: 0.4rem; }
+  code { display: block; font-size: 0.66rem; color: var(--ink-faint); margin-block-end: 0.2rem; }
+</style>
+<code>contain: content — layout + paint + style containment in one keyword</code>
+<div class="box c"><div class="float"></div>The browser can lay this subtree out
+without consulting the rest of the page, and nothing inside escapes the box.</div>
+<code>Containment is a promise you make so the engine can skip work.</code>

@@ -1,0 +1,13 @@
+<style>
+  svg { inline-size: 100%; max-inline-size: 15rem; }
+  .a { fill: var(--swatch); fill-opacity: 0.45; stroke: var(--swatch); stroke-width: 2; stroke-opacity: 1; }
+  .b { fill: var(--swatch-2); fill-opacity: 1; stroke: var(--swatch-2); stroke-width: 6; stroke-opacity: 0.35; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<svg viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg">
+  <rect class="a" x="8" y="8" width="46" height="34" rx="5"/>
+  <rect class="b" x="66" y="8" width="46" height="34" rx="5"/>
+</svg>
+<p class="note"><code>fill-opacity</code> and <code>stroke-opacity</code> are
+independent, so a shape can have a solid outline over a translucent fill —
+something one <code>opacity</code> value cannot express.</p>

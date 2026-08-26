@@ -1,0 +1,11 @@
+<style>
+  .outer { font-size: 2rem; }
+  .bar { block-size: 1rem; border-radius: 4px; margin-block-end: 4px; background: var(--swatch); }
+  .local { inline-size: 20ch; }
+  .rooted { inline-size: 20rch; background: var(--swatch-2); }
+  code { font-size: 0.68rem; color: var(--ink-faint); }
+</style>
+<div class="outer">
+  <div class="bar local"></div><code>20ch — scales with this element's 2rem font</code>
+  <div class="bar rooted"></div><code>20rch — always the root font's "0" width</code>
+</div>

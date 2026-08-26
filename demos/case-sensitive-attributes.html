@@ -1,0 +1,13 @@
+<style>
+  .list { display: grid; gap: 3px; font-size: 0.76rem; }
+  .list div { padding: 0.25rem 0.5rem; border-radius: 4px; background: var(--sunken); font-family: var(--mono); }
+  .list div[data-id="AB" s] { background: color-mix(in oklab, var(--swatch-3) 22%, transparent); }
+</style>
+<div class="list">
+  <div data-id="AB">data-id="AB" — matched with the s flag</div>
+  <div data-id="ab">data-id="ab" — not matched</div>
+  <div data-id="Ab">data-id="Ab" — not matched</div>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  In HTML many attributes match case-insensitively by default; the <code>s</code>
+  flag forces an exact match.</p>

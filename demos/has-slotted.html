@@ -1,0 +1,24 @@
+<style>
+  .mount { display: grid; gap: 0.4rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="mount">
+  <div id="filled">Some slotted content</div>
+  <div id="bare"></div>
+</div>
+<p class="note"><code>:has-slotted</code> lets a component style a slot
+differently when nothing was passed into it — a placeholder without JavaScript.</p>
+<script>
+  for (const host of root.querySelectorAll('#filled, #bare')) {
+    const text = host.textContent;
+    host.textContent = '';
+    const shadow = host.attachShadow({ mode: 'open' });
+    shadow.innerHTML = `<style>
+      :host { display: block; padding: .4rem .6rem; border-radius: 5px;
+        border: 1px dashed currentColor; font-size: .78rem; opacity: .75; }
+      slot:has-slotted { font-style: normal; }
+      slot:not(:has-slotted)::before { content: 'Nothing slotted'; font-style: italic; opacity: .7; }
+    </style><slot></slot>`;
+    if (text.trim()) host.append(text);
+  }
+</script>

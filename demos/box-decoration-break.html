@@ -1,0 +1,10 @@
+<style>
+  .t { font-size: 0.95rem; line-height: 2.1; }
+  .t span { background: linear-gradient(90deg, var(--swatch), var(--swatch-2)); color: oklch(100% 0 0); padding: 0.15rem 0.5rem; border-radius: 6px; }
+  .clone span { box-decoration-break: clone; }
+  code { display: block; margin-block: 0.5rem 0.2rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<code>slice (default) — decoration continues through the break</code>
+<p class="t"><span>A highlighted phrase that wraps across more than one line here</span></p>
+<code>clone — each line gets its own padding, radius and gradient</code>
+<p class="t clone"><span>A highlighted phrase that wraps across more than one line here</span></p>

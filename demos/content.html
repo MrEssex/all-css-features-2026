@@ -1,0 +1,16 @@
+<style>
+  .row { display: grid; gap: 0.3rem; font-size: 0.8rem; }
+  .icon::before { content: "★ "; color: var(--swatch); }
+  .ext[href^="http"]::after { content: " ↗"; color: var(--ink-faint); }
+  .counted { counter-increment: c-demo; }
+  .counted::before { content: counter(c-demo) ". "; font-family: var(--mono); color: var(--swatch-2); }
+  .alt::before { content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Ccircle cx='6' cy='6' r='6' fill='%2322aa77'/%3E%3C/svg%3E") / "status: ok"; }
+  .wrap { counter-reset: c-demo; display: grid; gap: 0.3rem; }
+</style>
+<div class="row wrap">
+  <div class="icon">Generated prefix</div>
+  <div><a class="ext" href="https://example.com">External link</a></div>
+  <div class="counted">Counter content</div>
+  <div class="counted">Counter content</div>
+  <div class="alt">Image content with alt text</div>
+</div>

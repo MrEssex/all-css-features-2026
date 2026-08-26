@@ -1,0 +1,12 @@
+<style>
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+  .grid > *, .wrapper > * { padding: 0.35rem; border-radius: 4px; background: color-mix(in oklab, var(--swatch) 18%, transparent); font-size: 0.72rem; text-align: center; }
+  .wrapper { display: contents; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="grid">
+  <span>a</span>
+  <div class="wrapper"><span>b</span><span>c</span></div>
+  <span>d</span>
+</div>
+<code>The wrapper box vanishes, so b and c become grid items themselves.</code>

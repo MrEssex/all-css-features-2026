@@ -1,0 +1,12 @@
+<style>
+  .row { display: flex; gap: 3px; }
+  .row div { flex: 1; block-size: 2.6rem; border-radius: 4px; background: var(--swatch); display: grid; place-items: center; color: oklch(100% 0 0); font-family: var(--mono); font-size: 0.64rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div style="opacity: 1">1</div><div style="opacity: .8">.8</div>
+  <div style="opacity: .6">.6</div><div style="opacity: .4">.4</div>
+  <div style="opacity: .2">.2</div>
+</div>
+<p class="note">Opacity applies to the element as a group — text included — and
+creates a stacking context, unlike an alpha channel on one colour.</p>

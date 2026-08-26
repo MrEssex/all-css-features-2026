@@ -1,0 +1,16 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; }
+  .row i { block-size: 2.4rem; border-radius: 4px; display: grid; place-items: end center; font-size: 0.6rem; padding-block-end: 2px; color: oklch(100% 0 0 / .8); }
+  .base { background: var(--swatch); }
+  .lighter { background: oklch(from var(--swatch) calc(l + 0.18) c h); }
+  .darker { background: oklch(from var(--swatch) calc(l - 0.18) c h); }
+  .muted { background: oklch(from var(--swatch) l calc(c * 0.3) h); }
+  .rotated { background: oklch(from var(--swatch) l c calc(h + 120)); }
+</style>
+<div class="row">
+  <i class="base">base</i>
+  <i class="lighter">l + .18</i>
+  <i class="darker">l − .18</i>
+  <i class="muted">c × .3</i>
+  <i class="rotated">h + 120</i>
+</div>

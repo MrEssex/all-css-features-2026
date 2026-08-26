@@ -1,0 +1,17 @@
+<style>
+  .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; }
+  .grid i { block-size: 1.8rem; border-radius: 3px; }
+  code { display: block; margin-block: 0.5rem 0.2rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<code>hue 0 → 300 at 70% saturation, 55% lightness</code>
+<div class="grid">
+  <i style="background: hsl(0 70% 55%)"></i><i style="background: hsl(60 70% 55%)"></i>
+  <i style="background: hsl(120 70% 55%)"></i><i style="background: hsl(180 70% 55%)"></i>
+  <i style="background: hsl(240 70% 55%)"></i><i style="background: hsl(300 70% 55%)"></i>
+</div>
+<code>lightness 20% → 90% at hue 265</code>
+<div class="grid">
+  <i style="background: hsl(265 70% 20%)"></i><i style="background: hsl(265 70% 34%)"></i>
+  <i style="background: hsl(265 70% 48%)"></i><i style="background: hsl(265 70% 62%)"></i>
+  <i style="background: hsl(265 70% 76%)"></i><i style="background: hsl(265 70% 90%)"></i>
+</div>

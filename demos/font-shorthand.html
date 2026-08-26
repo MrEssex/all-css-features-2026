@@ -1,0 +1,15 @@
+<style>
+  .a { font: italic 600 1.1rem/1.4 system-ui, sans-serif; }
+  .b { font: small-caps 1rem/1.5 Georgia, serif; }
+  .c { font: caption; }
+  code { display: block; font-size: 0.62rem; color: var(--ink-faint); }
+</style>
+<div class="a">style weight size/line-height family</div>
+<code>font: italic 600 1.1rem/1.4 system-ui</code>
+<div class="b">Small caps in one declaration</div>
+<code>font: small-caps 1rem/1.5 Georgia</code>
+<div class="c">System keyword</div>
+<code>font: caption — inherits the OS control font wholesale</code>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  The shorthand resets every font longhand it omits — including
+  <code>font-variant</code> and <code>line-height</code>.</p>

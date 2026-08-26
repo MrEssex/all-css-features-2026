@@ -1,0 +1,12 @@
+<style>
+  .cols { columns: 3; column-gap: 1rem; font-size: 0.72rem; }
+  .cols::column { background: color-mix(in oklab, var(--swatch) 10%, transparent); }
+  .cols::column::scroll-marker { content: ""; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="cols">
+  <p>The <code>::column</code> pseudo-element gives each generated column box a
+  styleable identity of its own, which multi-column layout never had before.
+  It is also the hook that turns columns into scroll-snap pages with markers.</p>
+</div>
+<p class="note">Columns here carry a faint tint applied via <code>::column</code>.</p>

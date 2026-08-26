@@ -1,0 +1,22 @@
+<style>
+  .mount { display: grid; gap: 0.4rem; }
+  .dark-area { padding: 0.4rem; border-radius: 6px; background: oklch(25% 0.02 265); }
+  .note { font-size: 0.72rem; color: var(--ink-faint); margin-block-start: 0.5rem; }
+</style>
+<div class="mount">
+  <div id="plain"></div>
+  <div class="dark-area"><div id="nested"></div></div>
+</div>
+<p class="note"><code>:host-context()</code> lets a component adapt to an
+<em>ancestor</em> outside its shadow root — here, a dark surrounding panel.</p>
+<script>
+  for (const host of root.querySelectorAll('#plain, #nested')) {
+    const shadow = host.attachShadow({ mode: 'open' });
+    shadow.innerHTML = `<style>
+      :host { display: block; padding: .4rem .6rem; border-radius: 5px;
+        background: oklch(95% .01 265); color: oklch(25% .02 265); font-size: .78rem; }
+      :host-context(.dark-area) { background: oklch(35% .05 275); color: oklch(97% .01 265); }
+    </style><slot></slot>`;
+    host.textContent = host.id === 'nested' ? 'inside .dark-area' : 'on a plain background';
+  }
+</script>

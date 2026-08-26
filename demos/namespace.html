@@ -1,0 +1,12 @@
+<style>
+  @namespace svg url(http://www.w3.org/2000/svg);
+  svg|rect { fill: var(--swatch); }
+  .row { display: flex; gap: 0.6rem; align-items: center; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <svg width="70" height="40" xmlns="http://www.w3.org/2000/svg"><rect width="70" height="40" rx="6"/></svg>
+  <span style="font-size:.78rem">svg|rect matches only the SVG rect</span>
+</div>
+<p class="note"><code>@namespace</code> lets a selector target one XML namespace,
+which is how you distinguish an SVG <code>&lt;a&gt;</code> from an HTML one.</p>

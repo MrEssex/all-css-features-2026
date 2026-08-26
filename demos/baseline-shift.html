@@ -1,0 +1,12 @@
+<style>
+  svg { border: 1px dashed var(--line); border-radius: 6px; }
+  text { font-size: 13px; fill: var(--ink); }
+  .up { baseline-shift: super; fill: var(--swatch); font-size: 9px; }
+  .down { baseline-shift: sub; fill: var(--swatch-2); font-size: 9px; }
+  .px { baseline-shift: 6px; fill: var(--swatch-3); font-size: 9px; }
+</style>
+<svg width="100%" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+  <text x="8" y="36">E=mc<tspan class="up">2</tspan> H<tspan class="down">2</tspan>O <tspan class="px">6px</tspan></text>
+</svg>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Shifts a run off the baseline by a keyword or an explicit length.</p>

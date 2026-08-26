@@ -1,0 +1,10 @@
+<style>
+  p { font-size: 0.82rem; max-inline-size: 24rem; }
+  p::first-letter { initial-letter: 3 2; color: var(--swatch); font-weight: 700; margin-inline-end: 0.15em; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<p>Initial letters sink into the text properly: the first value sets how many
+lines tall the letter is, the second which line its baseline sits on. A float and
+a guessed line-height cannot get this right across fonts.</p>
+<p class="note"><code>initial-letter: 3 2</code> — three lines tall, sunk to the
+second.</p>

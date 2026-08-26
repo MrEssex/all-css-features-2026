@@ -1,0 +1,14 @@
+<style>
+  dialog { padding: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--raised); color: var(--ink); max-inline-size: 18rem; margin: auto; }
+  dialog > div { padding: 0.8rem 1rem; font-size: 0.8rem; }
+  dialog::backdrop { background: linear-gradient(135deg, oklch(55% .2 275 / .55), oklch(60% .2 20 / .55)); backdrop-filter: blur(3px); }
+  button { padding: 0.35rem 0.8rem; border-radius: 6px; font-size: 0.78rem; }
+</style>
+<button type="button" id="open">Open dialog</button>
+<dialog id="dlg"><div>The gradient behind this dialog is <code>::backdrop</code>.
+<br><br><button type="button" id="close">Close</button></div></dialog>
+<script>
+  const dlg = root.querySelector('#dlg');
+  root.querySelector('#open').addEventListener('click', () => dlg.showModal());
+  root.querySelector('#close').addEventListener('click', () => dlg.close());
+</script>

@@ -1,0 +1,17 @@
+<style>
+  .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; }
+  .grid i { block-size: 2rem; border-radius: 3px; }
+  code { display: block; margin-block: 0.5rem 0.2rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<code>lab() — lightness 30 → 90 at a fixed a/b</code>
+<div class="grid">
+  <i style="background: lab(30 40 -60)"></i><i style="background: lab(42 40 -60)"></i>
+  <i style="background: lab(54 40 -60)"></i><i style="background: lab(66 40 -60)"></i>
+  <i style="background: lab(78 40 -60)"></i><i style="background: lab(90 40 -60)"></i>
+</div>
+<code>lch() — chroma 10 → 110 at lightness 60</code>
+<div class="grid">
+  <i style="background: lch(60 10 300)"></i><i style="background: lch(60 30 300)"></i>
+  <i style="background: lch(60 50 300)"></i><i style="background: lch(60 70 300)"></i>
+  <i style="background: lch(60 90 300)"></i><i style="background: lch(60 110 300)"></i>
+</div>

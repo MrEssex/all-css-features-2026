@@ -1,0 +1,9 @@
+<style>
+  .row { display: flex; gap: 0.6rem; }
+  .f { flex: 1; block-size: 3.4rem; border-radius: 6px; background-image: radial-gradient(circle, var(--swatch), var(--swatch-2)); background-size: 10px 10px; }
+  .s { image-rendering: smooth; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row"><div class="f"></div><div class="f s"></div></div>
+<code>image-rendering: smooth asks for the highest-quality scaling, the opposite
+end of the scale from pixelated.</code>

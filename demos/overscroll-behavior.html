@@ -1,0 +1,13 @@
+<style>
+  .outer { block-size: 7rem; overflow: auto; border: 1px solid var(--line); border-radius: 6px; padding: 0.5rem; }
+  .tall { block-size: 18rem; font-size: 0.75rem; }
+  .inner { block-size: 5rem; overflow: auto; overscroll-behavior: contain; border: 1px solid var(--swatch); border-radius: 6px; padding: 0.4rem; margin-block: 0.5rem; background: color-mix(in oklab, var(--swatch) 8%, transparent); }
+  .inner-tall { block-size: 12rem; }
+</style>
+<div class="outer"><div class="tall">
+  Scroll down to the inner panel.
+  <div class="inner"><div class="inner-tall">This panel sets
+  <code>overscroll-behavior: contain</code>. Scroll to its end and the outer box
+  does <em>not</em> take over — no scroll chaining.</div></div>
+  Outer content continues here.
+</div></div>

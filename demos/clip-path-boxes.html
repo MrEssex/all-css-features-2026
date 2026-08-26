@@ -1,0 +1,14 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; text-align: center; }
+  .f { block-size: 3.6rem; border: 8px solid color-mix(in oklab, var(--swatch) 35%, transparent); padding: 0.4rem; background: linear-gradient(135deg, var(--swatch), var(--swatch-2)); background-clip: border-box; }
+  .a { clip-path: border-box; } .b { clip-path: padding-box; } .c { clip-path: content-box; }
+  figcaption { font-family: var(--mono); font-size: 0.58rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="row">
+  <figure><div class="f a"></div><figcaption>border-box</figcaption></figure>
+  <figure><div class="f b"></div><figcaption>padding-box</figcaption></figure>
+  <figure><div class="f c"></div><figcaption>content-box</figcaption></figure>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  A box keyword alone is a valid clip path, and can also set the reference box for
+  a shape.</p>

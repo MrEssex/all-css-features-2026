@@ -1,0 +1,9 @@
+<style>
+  .fake { display: ruby; font-size: 1.1rem; }
+  .fake .rt { display: ruby-text; color: var(--swatch); font-size: 0.5em; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<span class="fake">漢字<span class="rt">かんじ</span></span>
+<p class="note"><code>display: ruby</code> and <code>ruby-text</code> let any
+element take part in ruby layout, so annotations are not limited to the
+<code>&lt;ruby&gt;</code> element itself.</p>

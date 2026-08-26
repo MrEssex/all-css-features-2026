@@ -1,0 +1,13 @@
+<style>
+  .scroller { block-size: 5.5rem; overflow: auto; border: 1px solid var(--line); border-radius: 6px; padding: 0.5rem; position: relative; }
+  .tall { block-size: 12rem; }
+  .anchor { anchor-name: --vis-anchor; display: inline-block; margin-block-start: 4rem; padding: 0.3rem 0.6rem; border-radius: 5px; background: var(--swatch); color: oklch(100% 0 0); font-size: 0.75rem; }
+  .tip { position: absolute; position-anchor: --vis-anchor; position-area: block-end center; position-visibility: anchors-visible; margin-block-start: 0.3rem; padding: 0.2rem 0.5rem; border-radius: 4px; background: var(--swatch-3); color: oklch(15% 0 0); font-size: 0.7rem; }
+</style>
+<div class="scroller"><div class="tall">
+  <span class="anchor">scroll me out of view</span>
+  <span class="tip">hides when its anchor does</span>
+</div></div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>position-visibility: anchors-visible</code> hides the tethered element
+  once the anchor scrolls away, instead of leaving it floating.</p>

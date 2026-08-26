@@ -1,0 +1,24 @@
+<style>
+  x-state-demo { display: inline-block; }
+  x-state-demo:state(pressed) { outline: 2px solid var(--swatch-3); outline-offset: 3px; border-radius: 8px; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<x-state-demo></x-state-demo>
+<p class="note">A custom element exposes its own internal state, and the page
+styles it with <code>:state()</code> — no class attribute to keep in sync.</p>
+<script>
+  if (!customElements.get('x-state-demo')) {
+    customElements.define('x-state-demo', class extends HTMLElement {
+      connectedCallback() {
+        this.internals ??= this.attachInternals();
+        const shadow = this.attachShadow({ mode: 'open' });
+        shadow.innerHTML = `<style>button{font:inherit;padding:.35rem .8rem;border-radius:6px;border:1px solid #8884;background:#8881;cursor:pointer}</style>
+          <button type="button">Toggle state</button>`;
+        shadow.querySelector('button').addEventListener('click', () => {
+          const on = this.internals.states.has('pressed');
+          on ? this.internals.states.delete('pressed') : this.internals.states.add('pressed');
+        });
+      }
+    });
+  }
+</script>

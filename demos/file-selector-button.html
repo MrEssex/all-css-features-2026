@@ -1,0 +1,18 @@
+<style>
+  input[type="file"] { font-size: 0.78rem; }
+  input[type="file"]::file-selector-button {
+    margin-inline-end: 0.6rem;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--swatch);
+    border-radius: 2rem;
+    background: color-mix(in oklab, var(--swatch) 18%, transparent);
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+  input[type="file"]::file-selector-button:hover { background: color-mix(in oklab, var(--swatch) 32%, transparent); }
+</style>
+<input type="file">
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  The button inside the native file input, styled without wrapping it in a
+  fake label.</p>

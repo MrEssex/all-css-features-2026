@@ -1,0 +1,11 @@
+<style>
+  @keyframes sda-fill { from { inline-size: 0; } to { inline-size: 100%; } }
+  .progress { block-size: 0.4rem; border-radius: 2rem; background: var(--sunken); overflow: clip; margin-block-end: 0.4rem; }
+  .progress i { display: block; block-size: 100%; background: var(--swatch); animation: sda-fill linear; animation-timeline: --sda-scroller; }
+  .scroller { scroll-timeline: --sda-scroller block; block-size: 6rem; overflow: auto; border: 1px solid var(--line); border-radius: 6px; padding: 0.5rem; font-size: 0.75rem; }
+  .tall { block-size: 16rem; }
+</style>
+<div class="progress"><i></i></div>
+<div class="scroller"><div class="tall">Scroll this box and the bar above fills.
+The animation is driven by scroll position rather than time — no scroll listener,
+and it runs off the main thread.</div></div>

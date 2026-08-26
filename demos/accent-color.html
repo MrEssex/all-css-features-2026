@@ -1,0 +1,13 @@
+<style>
+  .row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; font-size: 0.78rem; }
+  .a { accent-color: var(--swatch); }
+  .b { accent-color: var(--swatch-2); }
+  .c { accent-color: var(--swatch-3); }
+  label { display: flex; align-items: center; gap: 0.35rem; }
+  input[type="range"] { inline-size: 5rem; }
+</style>
+<div class="row a"><label><input type="checkbox" checked> checkbox</label><label><input type="radio" checked> radio</label><input type="range" value="60"></div>
+<div class="row b"><label><input type="checkbox" checked> checkbox</label><label><input type="radio" checked> radio</label><input type="range" value="40"></div>
+<div class="row c"><label><input type="checkbox" checked> checkbox</label><label><input type="radio" checked> radio</label><input type="range" value="80"></div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  One property tints native controls while leaving their platform behaviour intact.</p>

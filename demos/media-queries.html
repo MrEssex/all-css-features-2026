@@ -1,0 +1,17 @@
+<style>
+  .opts { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .opts span { padding: 0.25rem 0.6rem; border-radius: 2rem; font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); border: 1px solid var(--line); color: var(--ink-faint); }
+  @media screen { .o1 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o1::after { content: ' ✓'; } }
+  @media print { .o2 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o2::after { content: ' ✓'; } }
+  @media (width >= 30rem) { .o3 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o3::after { content: ' ✓'; } }
+  @media (orientation: landscape) { .o4 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o4::after { content: ' ✓'; } }
+  @media (orientation: portrait) { .o5 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o5::after { content: ' ✓'; } }
+</style>
+<div class="opts">
+  <span class="o1">screen</span>
+  <span class="o2">print</span>
+  <span class="o3">width ≥ 30rem</span>
+  <span class="o4">orientation: landscape</span>
+  <span class="o5">orientation: portrait</span>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">Your browser right now, live via <code>media type + features</code>.</p>

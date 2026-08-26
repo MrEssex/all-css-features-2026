@@ -1,0 +1,11 @@
+<style>
+  .panel { --level: 3; container-type: normal; padding: 0.5rem 0.7rem; border-radius: 6px; border: 1px solid var(--line); font-size: 0.76rem; margin-block-end: 4px; }
+  .high { --level: 8; }
+  .bar { block-size: 0.4rem; border-radius: 2rem; background: var(--swatch); margin-block-start: 0.3rem; }
+  @container style(--level > 5) { .bar { background: var(--swatch-2); } .label::after { content: " — over threshold"; color: var(--swatch-2); } }
+</style>
+<div class="panel"><span class="label">--level: 3</span><div class="bar"></div></div>
+<div class="panel high"><span class="label">--level: 8</span><div class="bar"></div></div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Comparison operators inside <code>style()</code> queries, so a numeric custom
+  property can drive styling by range rather than exact match.</p>

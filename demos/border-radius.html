@@ -1,0 +1,15 @@
+<style>
+  .set { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; text-align: center; }
+  .s { aspect-ratio: 1; background: var(--swatch); }
+  .even { border-radius: 12px; }
+  .squircle { border-radius: 40%; }
+  .leaf { border-radius: 60% 8px 60% 8px; }
+  .ellipse { border-radius: 50% / 25%; }
+  figcaption { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="set">
+  <figure><div class="s even"></div><figcaption>12px</figcaption></figure>
+  <figure><div class="s squircle"></div><figcaption>40%</figcaption></figure>
+  <figure><div class="s leaf"></div><figcaption>60% 8px…</figcaption></figure>
+  <figure><div class="s ellipse"></div><figcaption>50% / 25%</figcaption></figure>
+</div>

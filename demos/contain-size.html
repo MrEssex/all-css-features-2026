@@ -1,0 +1,11 @@
+<style>
+  .row { display: flex; gap: 0.5rem; align-items: start; }
+  .b { flex: 1; border: 1px solid var(--line); border-radius: 5px; padding: 0.4rem; font-size: 0.72rem; }
+  .s { contain: size; block-size: 3rem; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="b">Normal — the box grows to fit this content, however much there is.</div>
+  <div class="b s">contain: size — the box ignores its contents and takes only the size given to it.</div>
+</div>
+<code>Size containment needs an explicit size, or the box collapses.</code>

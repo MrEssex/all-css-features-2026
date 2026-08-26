@@ -1,0 +1,12 @@
+<style>
+  .stage { color: var(--swatch); font-style: italic; }
+  .stage p { font-size: 0.8rem; }
+  .stage p.i { color: initial; font-style: initial; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="stage">
+  <p>Inheriting the parent's colour and italics</p>
+  <p class="i">initial — back to the property's own default, ignoring the parent</p>
+</div>
+<p class="note"><code>initial</code> for <code>color</code> is black, not the
+inherited value — that is the whole difference from <code>inherit</code>.</p>

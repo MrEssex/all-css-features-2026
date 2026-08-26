@@ -1,0 +1,18 @@
+<style>
+  .set { display: grid; gap: 0.5rem; }
+  .box {
+    padding-inline: 1.25rem;
+    padding-block: 0.4rem;
+    border-inline-start: 4px solid var(--swatch);
+    border-radius: 4px;
+    background: color-mix(in oklab, var(--swatch) 12%, transparent);
+    font-size: 0.75rem;
+  }
+  .rtl { direction: rtl; }
+  .note { font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="set">
+  <div class="box">border-inline-start sits on the left in LTR</div>
+  <div class="box rtl">‏وفي الاتجاه من اليمين إلى اليسار ينتقل الحد تلقائيًا</div>
+  <p class="note">One rule, both directions — no <code>[dir="rtl"]</code> override needed.</p>
+</div>

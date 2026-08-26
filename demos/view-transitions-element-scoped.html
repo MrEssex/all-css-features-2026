@@ -1,0 +1,18 @@
+<style>
+  .panel { border: 1px solid var(--line); border-radius: 8px; padding: 0.6rem; view-transition-name: vts-panel; }
+  .panel.alt { background: color-mix(in oklab, var(--swatch-2) 14%, transparent); }
+  .inner { font-size: 0.78rem; }
+  button { margin-block-end: 0.5rem; padding: 0.35rem 0.8rem; border-radius: 6px; font-size: 0.78rem; }
+</style>
+<button type="button" id="go">Swap panel</button>
+<div class="panel" id="panel"><div class="inner">A scoped view transition animates
+only this subtree, so an update in one widget does not freeze the whole page.</div></div>
+<script>
+  const panel = root.querySelector('#panel');
+  root.querySelector('#go').addEventListener('click', () => {
+    const swap = () => panel.classList.toggle('alt');
+    if (panel.startViewTransition) panel.startViewTransition(swap);
+    else if (document.startViewTransition) document.startViewTransition(swap);
+    else swap();
+  });
+</script>

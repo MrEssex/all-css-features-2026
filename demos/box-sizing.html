@@ -1,0 +1,12 @@
+<style>
+  .row { display: flex; gap: 0.5rem; align-items: start; }
+  .b { inline-size: 8rem; padding: 0.6rem; border: 3px solid var(--swatch); border-radius: 5px; font-size: 0.7rem; background: color-mix(in oklab, var(--swatch) 12%, transparent); }
+  .content { box-sizing: content-box; }
+  .border { box-sizing: border-box; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="b content">content-box</div>
+  <div class="b border">border-box</div>
+</div>
+<code>Both say width: 8rem. content-box adds padding and border on top.</code>

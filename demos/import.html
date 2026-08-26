@@ -1,0 +1,10 @@
+<style>
+  .code { font-family: var(--mono); font-size: 0.72rem; background: var(--sunken); padding: 0.6rem 0.8rem; border-radius: 6px; white-space: pre-wrap; border: 1px solid var(--line); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="code">@import url("theme.css") layer(theme);
+@import url("print.css") print;
+@import url("wide.css") (width >= 60rem);</div>
+<p class="note"><code>@import</code> takes a cascade layer and a media condition,
+so a stylesheet can be pulled into a named layer and only loaded when it applies.
+It must come before any style rule.</p>

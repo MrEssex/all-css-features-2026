@@ -1,0 +1,11 @@
+<style>
+  .row { display: flex; gap: 0.5rem; }
+  .b { flex: 1; border: 1px solid var(--line); border-radius: 5px; padding: 0.4rem; font-size: 0.72rem; content-visibility: hidden; }
+  .sized { contain-intrinsic-size: auto 4rem; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="b">no intrinsic size — collapses to nothing</div>
+  <div class="b sized">contain-intrinsic-size: 4rem — holds its space</div>
+</div>
+<code>Both boxes have hidden content; only the second reserves room for it.</code>

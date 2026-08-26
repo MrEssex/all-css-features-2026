@@ -1,0 +1,13 @@
+<style>
+  .grid { display: flex; flex-wrap: wrap; gap: 4px; reading-flow: flex-visual; }
+  .grid button { order: var(--o); flex: 1 1 5rem; font-size: 0.72rem; padding: 0.3rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="grid">
+  <button type="button" style="--o:3">DOM 1 / visual 3</button>
+  <button type="button" style="--o:1">DOM 2 / visual 1</button>
+  <button type="button" style="--o:2">DOM 3 / visual 2</button>
+</div>
+<p class="note">Tab through these. <code>reading-flow</code> makes focus follow the
+<em>visual</em> order that <code>order</code> produced, fixing the long-standing
+accessibility trap of reordered flex and grid items.</p>

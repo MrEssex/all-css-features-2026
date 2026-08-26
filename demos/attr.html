@@ -1,0 +1,13 @@
+<style>
+  .meter { --pct: attr(data-pct type(<percentage>), 0%); display: grid; gap: 0.3rem; }
+  .track { block-size: 0.6rem; border-radius: 2rem; background: var(--sunken); overflow: clip; }
+  .fill { block-size: 100%; inline-size: var(--pct); background: var(--swatch); }
+  .label::after { content: attr(data-pct); font-family: var(--mono); font-size: 0.7rem; color: var(--ink-faint); }
+</style>
+<div class="meter" data-pct="72%">
+  <div class="track"><div class="fill"></div></div>
+  <span class="label" data-pct="72%"></span>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>attr()</code> with a type pulls a real length out of the attribute, not
+  just a string for <code>content</code>.</p>

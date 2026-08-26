@@ -1,0 +1,12 @@
+<style>
+  ul { padding-inline-start: 1.6rem; font-size: 0.8rem; display: grid; gap: 0.2rem; }
+  li::marker { color: var(--swatch); font-weight: 700; }
+  li.big::marker { font-size: 1.3em; content: "▸ "; }
+  ol { padding-inline-start: 2rem; font-size: 0.8rem; margin-block-start: 0.4rem; }
+  ol li::marker { font-family: var(--mono); color: var(--swatch-2); }
+</style>
+<ul><li>Recoloured marker</li><li class="big">Custom marker content</li></ul>
+<ol><li>Monospace numbers</li><li>Second item</li></ol>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>::marker</code> accepts a limited set of properties — colour, font and
+  content — so the marker cannot be repositioned out of the layout.</p>

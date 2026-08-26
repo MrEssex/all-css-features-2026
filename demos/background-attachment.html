@@ -1,0 +1,9 @@
+<style>
+  .scroller { block-size: 6rem; overflow: auto; border-radius: 6px; background-image: radial-gradient(circle at 30% 30%, var(--swatch), var(--swatch-2)); background-attachment: local; }
+  .tall { block-size: 14rem; padding: 0.5rem; color: oklch(100% 0 0); font-size: 0.75rem; }
+  .fixed { background-attachment: scroll; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="scroller"><div class="tall">background-attachment: local — the gradient
+scrolls with the content. Scroll this box and watch the background move.</div></div>
+<code>local scrolls with content; scroll stays put; fixed pins to the viewport.</code>

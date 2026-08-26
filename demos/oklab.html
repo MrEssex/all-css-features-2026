@@ -1,0 +1,21 @@
+<style>
+  .ramp { display: grid; grid-template-columns: repeat(9, 1fr); gap: 2px; }
+  .ramp i { display: block; block-size: 2.2rem; border-radius: 3px; }
+  .l { display: block; margin-block: 0.6rem 0.25rem; font-family: var(--mono); font-size: 0.68rem; color: var(--ink-faint); }
+</style>
+<span class="l">oklch() — even lightness steps look even</span>
+<div class="ramp">
+  <i style="background: oklch(95% .05 275)"></i><i style="background: oklch(87% .09 275)"></i>
+  <i style="background: oklch(79% .13 275)"></i><i style="background: oklch(71% .17 275)"></i>
+  <i style="background: oklch(63% .19 275)"></i><i style="background: oklch(55% .18 275)"></i>
+  <i style="background: oklch(47% .15 275)"></i><i style="background: oklch(39% .12 275)"></i>
+  <i style="background: oklch(31% .09 275)"></i>
+</div>
+<span class="l">hsl() — the same steps bunch up and shift hue</span>
+<div class="ramp">
+  <i style="background: hsl(265 90% 95%)"></i><i style="background: hsl(265 90% 87%)"></i>
+  <i style="background: hsl(265 90% 79%)"></i><i style="background: hsl(265 90% 71%)"></i>
+  <i style="background: hsl(265 90% 63%)"></i><i style="background: hsl(265 90% 55%)"></i>
+  <i style="background: hsl(265 90% 47%)"></i><i style="background: hsl(265 90% 39%)"></i>
+  <i style="background: hsl(265 90% 31%)"></i>
+</div>

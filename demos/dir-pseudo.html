@@ -1,0 +1,10 @@
+<style>
+  p { padding: 0.35rem 0.6rem; border-radius: 5px; font-size: 0.8rem; margin-block-end: 3px; }
+  :dir(ltr) { border-inline-start: 4px solid var(--swatch); background: color-mix(in oklab, var(--swatch) 12%, transparent); }
+  :dir(rtl) { border-inline-start: 4px solid var(--swatch-2); background: color-mix(in oklab, var(--swatch-2) 12%, transparent); }
+</style>
+<p dir="ltr">:dir(ltr) — left-to-right text</p>
+<p dir="rtl">‏‏:dir(rtl) — نص من اليمين إلى اليسار</p>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  Matches the resolved direction, including <code>dir="auto"</code>, which an
+  attribute selector cannot do.</p>

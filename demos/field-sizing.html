@@ -1,0 +1,11 @@
+<style>
+  .set { display: grid; gap: 0.5rem; }
+  input, textarea { inline-size: auto; min-inline-size: 6rem; max-inline-size: 100%; }
+  .grow { field-sizing: content; }
+  textarea.grow { min-block-size: 2rem; }
+  .l { font-family: var(--mono); font-size: 0.64rem; color: var(--ink-faint); }
+</style>
+<div class="set">
+  <div><span class="l">field-sizing: content</span><br><input class="grow" value="Type and watch me grow"></div>
+  <div><span class="l">textarea, field-sizing: content</span><br><textarea class="grow" rows="1">Add lines and the box follows.</textarea></div>
+</div>

@@ -1,0 +1,12 @@
+<style>
+  svg { border: 1px dashed var(--line); border-radius: 6px; }
+  text { font-size: 11px; fill: var(--ink); }
+  line { stroke: var(--swatch); stroke-width: 1; }
+</style>
+<svg width="100%" height="110" viewBox="0 0 260 110" xmlns="http://www.w3.org/2000/svg">
+  <line x1="0" y1="25" x2="260" y2="25"/><text x="4" y="25" dominant-baseline="auto">auto</text><text x="70" y="25" dominant-baseline="hanging">hanging</text><text x="150" y="25" dominant-baseline="middle">middle</text>
+  <line x1="0" y1="65" x2="260" y2="65"/><text x="4" y="65" dominant-baseline="central">central</text><text x="70" y="65" dominant-baseline="text-top">text-top</text><text x="150" y="65" dominant-baseline="ideographic">ideographic</text>
+</svg>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Which baseline of the text aligns to the given y coordinate — the reliable way
+  to centre SVG labels.</p>

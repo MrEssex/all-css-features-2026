@@ -1,0 +1,18 @@
+<style>
+  .opts { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .opts span { padding: 0.25rem 0.6rem; border-radius: 2rem; font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); border: 1px solid var(--line); color: var(--ink-faint); }
+  @supports (display: grid) { .a { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); } .a::after { content: " ✓"; } }
+  @supports not (display: grid) { .a::after { content: " ✗"; } }
+  @supports (display: grid) and (gap: 1px) { .b { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); } .b::after { content: " ✓"; } }
+  @supports (--x: 1) or (nonsense: 1) { .c { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); } .c::after { content: " ✓"; } }
+  @supports selector(:has(a)) { .d { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); } .d::after { content: " ✓"; } }
+</style>
+<div class="opts">
+  <span class="a">(display: grid)</span>
+  <span class="b">grid and gap</span>
+  <span class="c">or, with a bogus branch</span>
+  <span class="d">selector(:has())</span>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>@supports</code> tests a declaration the browser must actually parse, so
+  it cannot be fooled the way UA sniffing can.</p>

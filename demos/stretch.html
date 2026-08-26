@@ -1,0 +1,11 @@
+<style>
+  .frame { border: 1px dashed var(--line); border-radius: 6px; padding: 0.5rem; }
+  .b { inline-size: stretch; padding: 0.35rem 0.5rem; border-radius: 4px; background: color-mix(in oklab, var(--swatch) 18%, transparent); font-size: 0.74rem; margin-block-end: 4px; }
+  .m { margin-inline: 1.5rem; }
+  code { display: block; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="frame">
+  <div class="b">inline-size: stretch</div>
+  <div class="b m">stretch with 1.5rem margins — still fills the rest</div>
+</div>
+<code>Unlike 100%, stretch fills what remains after margins, so it never overflows.</code>

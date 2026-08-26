@@ -1,0 +1,14 @@
+<style>
+  .scroller { block-size: 6rem; overflow: auto; border: 1px solid var(--line); border-radius: 6px; font-size: 0.75rem; }
+  .scroller section { block-size: 5rem; display: grid; place-items: center; border-block-end: 1px solid var(--line); }
+  .here { scroll-initial-target: nearest; background: color-mix(in oklab, var(--swatch) 16%, transparent); }
+</style>
+<div class="scroller">
+  <section>Above</section>
+  <section class="here">scroll-initial-target: nearest</section>
+  <section>Below</section>
+  <section>Further below</section>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  The scroller opens already scrolled to this element, rather than at the top —
+  useful for chat logs and "jump to today" views, with no script on load.</p>

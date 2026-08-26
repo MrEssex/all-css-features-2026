@@ -1,0 +1,29 @@
+<style>
+  .box {
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    background: color-mix(in oklab, var(--swatch-3) 20%, transparent);
+    font-size: 0.78rem;
+    opacity: 1;
+    transition: opacity 350ms ease;
+  }
+  .with { transition-behavior: allow-discrete; transition-property: opacity, overlay, display; }
+  .hidden { display: none; opacity: 0; }
+  .set { display: grid; gap: 0.5rem; margin-block-start: 0.5rem; }
+  .l { font-family: var(--mono); font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<button type="button" id="t">Hide both</button>
+<div class="set">
+  <span class="l">without allow-discrete — snaps away</span>
+  <div class="box" id="a">display flips instantly</div>
+  <span class="l">with allow-discrete — fades, then hides</span>
+  <div class="box with" id="b">display waits for the fade</div>
+</div>
+<script>
+  const a = root.querySelector('#a');
+  const b = root.querySelector('#b');
+  root.querySelector('#t').addEventListener('click', () => {
+    a.classList.toggle('hidden');
+    b.classList.toggle('hidden');
+  });
+</script>

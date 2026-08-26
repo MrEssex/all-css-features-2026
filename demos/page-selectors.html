@@ -1,0 +1,15 @@
+<style>
+  .sheet { border: 1px solid var(--line); border-radius: 6px; background: var(--raised); padding: 0.7rem 0.9rem; font-size: 0.76rem; }
+  .sheet + .sheet { margin-block-start: 0.4rem; }
+  .sheet::before { content: attr(data-label); display: block; font-family: var(--mono); font-size: 0.64rem; color: var(--ink-faint); margin-block-end: 0.3rem; }
+  .first { border-inline-start: 3px solid var(--swatch); }
+  .left { border-inline-start: 3px solid var(--swatch-2); }
+  .code { margin-block-start: 0.5rem; font-family: var(--mono); font-size: 0.68rem; color: var(--ink-faint); white-space: pre-wrap; }
+</style>
+<div class="sheet first" data-label=":first">Title page — no running header</div>
+<div class="sheet left" data-label=":left">Verso page — wider inner margin</div>
+<div class="sheet" data-label=":right">Recto page</div>
+<div class="code">@page :first { margin-block-start: 6cm }
+@page :left { margin-inline: 3cm 2cm }</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  These apply when printing; the boxes above stand in for the pages.</p>

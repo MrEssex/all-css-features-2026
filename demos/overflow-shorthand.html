@@ -1,0 +1,12 @@
+<style>
+  .row { display: flex; gap: 0.5rem; }
+  .b { flex: 1; block-size: 4.5rem; border: 1px solid var(--line); border-radius: 5px; padding: 0.3rem 0.5rem; font-size: 0.72rem; }
+  .a { overflow: hidden auto; }
+  .c { overflow: auto hidden; white-space: nowrap; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="b a">overflow: hidden auto — scrolls vertically only. More text so it overflows the box and needs scrolling.</div>
+  <div class="b c">overflow: auto hidden — one long unwrapped line that scrolls sideways.</div>
+</div>
+<code>Two values: inline axis first, then block.</code>

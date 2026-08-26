@@ -1,0 +1,8 @@
+<style>
+  .code { font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid var(--line); white-space: pre-wrap; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="code">background-image: url("pic.avif" referrerpolicy(no-referrer));</div>
+<p class="note">Controls what <code>Referer</code> header the image request
+carries. Without it, loading a third-party asset leaks the URL of the page the
+visitor is reading.</p>

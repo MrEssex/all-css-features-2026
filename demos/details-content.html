@@ -1,0 +1,18 @@
+<style>
+  details { border: 1px solid var(--line); border-radius: 6px; overflow: clip; font-size: 0.78rem; }
+  summary { cursor: pointer; padding: 0.4rem 0.6rem; font-weight: 600; }
+  details::details-content {
+    background: color-mix(in oklab, var(--swatch) 12%, transparent);
+    block-size: 0;
+    overflow: clip;
+    transition: block-size 280ms ease, content-visibility 280ms allow-discrete;
+  }
+  details[open]::details-content { block-size: auto; }
+  @starting-style { details[open]::details-content { block-size: 0; } }
+  .inner { padding: 0.6rem; }
+</style>
+<details><summary>Animated disclosure</summary>
+  <div class="inner">Before <code>::details-content</code> there was no element to
+  animate here — the content had no box of its own. Now it does, and with
+  <code>allow-discrete</code> it can slide open.</div>
+</details>

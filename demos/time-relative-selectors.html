@@ -1,0 +1,15 @@
+<style>
+  .cues { display: grid; gap: 3px; font-size: 0.78rem; }
+  .cues > * { padding: 0.3rem 0.5rem; border-radius: 4px; background: var(--sunken); }
+  .cues :past { opacity: 0.4; }
+  .cues :current { background: color-mix(in oklab, var(--swatch) 25%, transparent); font-weight: 600; }
+  .cues :future { opacity: 0.7; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="cues">
+  <p>Earlier caption line</p>
+  <p>Current caption line</p>
+  <p>Upcoming caption line</p>
+</div>
+<p class="note"><code>:past</code>, <code>:current</code> and <code>:future</code>
+style timed media cues — WebVTT captions — as playback moves through them.</p>

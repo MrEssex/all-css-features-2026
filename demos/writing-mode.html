@@ -1,0 +1,16 @@
+<style>
+  .set { display: flex; gap: 0.75rem; align-items: stretch; }
+  .mode {
+    padding: 0.5rem;
+    border-radius: 6px;
+    background: color-mix(in oklab, var(--swatch) 16%, transparent);
+    font-size: 0.75rem;
+  }
+  .vrl { writing-mode: vertical-rl; }
+  .vlr { writing-mode: vertical-lr; text-orientation: upright; letter-spacing: 0.1em; }
+</style>
+<div class="set">
+  <div class="mode">horizontal-tb — the default flow</div>
+  <div class="mode vrl">vertical-rl</div>
+  <div class="mode vlr">UPRIGHT</div>
+</div>

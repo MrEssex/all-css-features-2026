@@ -1,0 +1,10 @@
+<style>
+  .line { font-size: 1.1rem; border-block-end: 1px solid var(--line); padding-block-end: 0.3rem; margin-block-end: 0.4rem; }
+  .line span { padding: 0.05rem 0.3rem; border-radius: 3px; background: color-mix(in oklab, var(--swatch) 20%, transparent); font-size: 0.7rem; }
+  .top { vertical-align: top; } .mid { vertical-align: middle; }
+  .sub { vertical-align: sub; } .sup { vertical-align: super; }
+</style>
+<div class="line">Text <span class="top">top</span> <span class="mid">middle</span>
+<span class="sub">sub</span> <span class="sup">super</span> baseline</div>
+<p style="font-size:.72rem;color:var(--ink-faint)">Aligns inline boxes and table
+cells — it has no effect on flex or grid items.</p>

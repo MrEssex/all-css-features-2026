@@ -1,0 +1,14 @@
+<style>
+  .code { font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid var(--line); white-space: pre-wrap; }
+  .sheets { display: flex; gap: 0.4rem; margin-block-start: 0.5rem; }
+  .sheet { flex: 1; border: 1px solid var(--line); border-radius: 4px; background: var(--raised); block-size: 4rem; padding: 0.35rem; font-size: 0.66rem; color: var(--ink-faint); }
+  .keep { background: color-mix(in oklab, var(--swatch) 16%, transparent); border-radius: 3px; padding: 0.15rem 0.3rem; color: var(--ink); }
+</style>
+<div class="code">h2 { break-before: page }
+figure { break-inside: avoid }</div>
+<div class="sheets">
+  <div class="sheet">page 1<div class="keep">figure kept whole</div></div>
+  <div class="sheet">page 2 — starts at the heading</div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Two rules turn a scrolling document into a readable printout.</p>

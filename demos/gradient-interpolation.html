@@ -1,0 +1,13 @@
+<style>
+  .bar { block-size: 2.2rem; border-radius: 5px; }
+  .l { display: block; margin-block: 0.5rem 0.2rem; font-family: var(--mono); font-size: 0.66rem; color: var(--ink-faint); }
+  .srgb { background: linear-gradient(90deg, oklch(65% .2 25), oklch(65% .2 250)); }
+  .oklch-short { background: linear-gradient(in oklch, oklch(65% .2 25), oklch(65% .2 250)); }
+  .oklch-long { background: linear-gradient(in oklch longer hue, oklch(65% .2 25), oklch(65% .2 250)); }
+</style>
+<span class="l">default (sRGB) — greys out in the middle</span>
+<div class="bar srgb"></div>
+<span class="l">in oklch — stays saturated</span>
+<div class="bar oklch-short"></div>
+<span class="l">in oklch longer hue — takes the long way round</span>
+<div class="bar oklch-long"></div>

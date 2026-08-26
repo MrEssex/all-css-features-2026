@@ -1,0 +1,16 @@
+<style>
+  .row { display: grid; gap: 0.3rem; font-size: 1rem; }
+  .a { font-family: Georgia, serif; }
+  .b { font-family: Verdana, sans-serif; }
+  .adj { font-size-adjust: ex-height 0.5; }
+  span { font-size: 0.6rem; color: var(--ink-faint); font-family: var(--mono); }
+</style>
+<div class="row">
+  <div class="a">Handgloves at one size <span>Georgia</span></div>
+  <div class="b">Handgloves at one size <span>Verdana — looks larger</span></div>
+  <div class="a adj">Handgloves adjusted <span>Georgia, ex-height 0.5</span></div>
+  <div class="b adj">Handgloves adjusted <span>Verdana, ex-height 0.5</span></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Normalises apparent size across families by x-height, so a fallback font does
+  not look bigger than the one it replaces.</p>

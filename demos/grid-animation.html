@@ -1,0 +1,13 @@
+<style>
+  @keyframes grid-animation-shift {
+    from { grid-template-columns: 3fr 1fr; }
+    to { grid-template-columns: 1fr 3fr; }
+  }
+  .grid { display: grid; grid-template-columns: 3fr 1fr; gap: 4px; animation: grid-animation-shift 2.5s ease-in-out infinite alternate; }
+  .grid > div { padding: 0.5rem; border-radius: 5px; font-size: 0.72rem; text-align: center; }
+  .a { background: color-mix(in oklab, var(--swatch) 22%, transparent); }
+  .b { background: color-mix(in oklab, var(--swatch-3) 22%, transparent); }
+</style>
+<div class="grid"><div class="a">3fr → 1fr</div><div class="b">1fr → 3fr</div></div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  Grid track sizes are animatable, so a sidebar can collapse without JavaScript.</p>

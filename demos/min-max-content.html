@@ -1,0 +1,12 @@
+<style>
+  .row { display: flex; gap: 0.5rem; align-items: start; }
+  .b { padding: 0.4rem 0.5rem; background: color-mix(in oklab, var(--swatch) 16%, transparent); border-radius: 5px; font-size: 0.75rem; }
+  .min { inline-size: min-content; }
+  .max { inline-size: max-content; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="b min">min-content wraps at every opportunity</div>
+  <div class="b max">max-content never wraps</div>
+</div>
+<code>min-content is as narrow as the longest word; max-content is one long line.</code>

@@ -1,0 +1,13 @@
+<style>
+  .row { display: flex; gap: 0.6rem; align-items: start; }
+  svg { border: 1px dashed var(--line); border-radius: 6px; }
+  text { font-size: 11px; fill: var(--swatch); }
+  .tb { writing-mode: tb; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <svg width="90" height="80" xmlns="http://www.w3.org/2000/svg"><text x="8" y="20">horizontal</text></svg>
+  <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg"><text class="tb" x="30" y="10">writing-mode: tb</text></svg>
+</div>
+<p class="note">SVG's legacy <code>tb</code>, <code>lr</code> and <code>rl</code>
+values map onto the modern <code>writing-mode</code> keywords.</p>

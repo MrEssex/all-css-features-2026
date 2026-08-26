@@ -1,0 +1,16 @@
+<style>
+  .nav { scroll-target-group: auto; display: flex; gap: 0.35rem; margin-block-end: 0.5rem; }
+  .nav a { font-size: 0.72rem; padding: 0.2rem 0.6rem; border: 1px solid var(--line); border-radius: 2rem; text-decoration: none; color: inherit; }
+  .nav a:target-current { background: var(--swatch); color: oklch(100% 0 0); border-color: var(--swatch); }
+  .scroller { block-size: 6rem; overflow: auto; border: 1px solid var(--line); border-radius: 6px; scroll-behavior: smooth; }
+  .scroller section { block-size: 6rem; display: grid; place-items: center; font-size: 0.8rem; border-block-end: 1px solid var(--line); }
+</style>
+<div class="nav"><a href="#stg-1">One</a><a href="#stg-2">Two</a><a href="#stg-3">Three</a></div>
+<div class="scroller">
+  <section id="stg-1">Section one</section>
+  <section id="stg-2">Section two</section>
+  <section id="stg-3">Section three</section>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  Scrollspy in CSS: <code>:target-current</code> highlights the link for whichever
+  section you are looking at.</p>

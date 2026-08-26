@@ -1,0 +1,12 @@
+<style>
+  .panel { display: none; opacity: 0; padding: 0.5rem 0.7rem; border-radius: 6px; background: color-mix(in oklab, var(--swatch) 16%, transparent); font-size: 0.76rem; margin-block-start: 0.5rem;
+    transition: opacity 300ms ease, display 300ms allow-discrete; }
+  .stage:has(input:checked) .panel { display: block; opacity: 1; }
+  @starting-style { .stage:has(input:checked) .panel { opacity: 0; } }
+  label { font-size: 0.78rem; display: inline-flex; gap: 0.4rem; align-items: center; }
+</style>
+<div class="stage">
+  <label><input type="checkbox"> Toggle</label>
+  <div class="panel">Because <code>display</code> is animatable as a discrete
+  property, the element stays visible for the whole fade-out before it is removed.</div>
+</div>

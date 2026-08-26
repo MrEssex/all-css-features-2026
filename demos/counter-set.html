@@ -1,0 +1,16 @@
+<style>
+  ol { list-style: none; padding: 0; counter-reset: cs 0; display: grid; gap: 0.25rem; font-size: 0.78rem; }
+  li { counter-increment: cs; }
+  li::before { content: counter(cs) ". "; font-family: var(--mono); color: var(--swatch); }
+  .jump { counter-set: cs 9; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<ol>
+  <li>First</li>
+  <li>Second</li>
+  <li class="jump">counter-set: cs 9 — then incremented to 10</li>
+  <li>Eleven</li>
+</ol>
+<p class="note"><code>counter-set</code> assigns a value outright, where
+<code>counter-reset</code> creates a counter and <code>counter-increment</code>
+steps it.</p>

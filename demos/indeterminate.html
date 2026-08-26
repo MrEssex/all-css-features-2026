@@ -1,0 +1,26 @@
+<style>
+  label { display: flex; align-items: center; gap: 0.45rem; font-size: 0.78rem; padding-block: 0.15rem; }
+  .kids { padding-inline-start: 1.4rem; }
+  input:indeterminate + span { color: var(--swatch-2); font-style: italic; }
+</style>
+<label><input type="checkbox" id="all"><span>Select all</span></label>
+<div class="kids">
+  <label><input type="checkbox" class="kid" checked><span>One</span></label>
+  <label><input type="checkbox" class="kid"><span>Two</span></label>
+  <label><input type="checkbox" class="kid"><span>Three</span></label>
+</div>
+<script>
+  const all = root.querySelector('#all');
+  const kids = [...root.querySelectorAll('.kid')];
+  const sync = () => {
+    const on = kids.filter((k) => k.checked).length;
+    all.checked = on === kids.length;
+    all.indeterminate = on > 0 && on < kids.length;
+  };
+  all.addEventListener('change', () => {
+    for (const kid of kids) kid.checked = all.checked;
+    sync();
+  });
+  for (const kid of kids) kid.addEventListener('change', sync);
+  sync();
+</script>

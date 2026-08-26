@@ -1,0 +1,13 @@
+<style>
+  @keyframes animation-composition-nudge { to { translate: 3rem 0; } }
+  .row { display: grid; gap: 0.4rem; }
+  .b { inline-size: 3rem; aspect-ratio: 1.6; border-radius: 5px; background: var(--swatch); translate: 1rem 0; animation: animation-composition-nudge 1.8s infinite alternate; display: grid; place-items: center; color: oklch(100% 0 0); font-size: 0.6rem; }
+  .add { animation-composition: add; background: var(--swatch-2); }
+  code { font-size: 0.64rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <code>replace (default) — the keyframe overrides the underlying translate</code>
+  <div class="b">replace</div>
+  <code>add — the keyframe is added to the existing 1rem offset</code>
+  <div class="b add">add</div>
+</div>

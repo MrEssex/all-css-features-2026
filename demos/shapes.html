@@ -1,0 +1,13 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; text-align: center; }
+  .f { block-size: 3.4rem; background: linear-gradient(135deg, var(--swatch), var(--swatch-2)); }
+  .a { clip-path: circle(45%); } .b { clip-path: ellipse(45% 30%); }
+  .c { clip-path: inset(10% 20% round 30%); } .d { clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+  figcaption { font-family: var(--mono); font-size: 0.56rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="row">
+  <figure><div class="f a"></div><figcaption>circle()</figcaption></figure>
+  <figure><div class="f b"></div><figcaption>ellipse()</figcaption></figure>
+  <figure><div class="f c"></div><figcaption>inset()</figcaption></figure>
+  <figure><div class="f d"></div><figcaption>polygon()</figcaption></figure>
+</div>

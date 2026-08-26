@@ -1,0 +1,13 @@
+<style>
+  .row { display: grid; gap: 0.35rem; font-size: 0.95rem; }
+  .sp { text-decoration-line: spelling-error; }
+  .gr { text-decoration-line: grammar-error; }
+  span { font-size: 0.62rem; color: var(--ink-faint); font-family: var(--mono); }
+</style>
+<div class="row">
+  <div>A <span class="sp">mispelled</span> word <span>spelling-error</span></div>
+  <div>They <span class="gr">was</span> here <span>grammar-error</span></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Draws the platform's own spelling and grammar squiggle on arbitrary text, so an
+  editor built with contenteditable can match the native look exactly.</p>

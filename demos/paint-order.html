@@ -1,0 +1,13 @@
+<style>
+  .row { display: flex; gap: 0.8rem; align-items: center; }
+  .word { font-size: 1.6rem; font-weight: 800; -webkit-text-stroke: 5px var(--swatch); }
+  .after { paint-order: stroke fill; }
+  figcaption { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <figure><div class="word">Aa</div><figcaption>default</figcaption></figure>
+  <figure><div class="word after">Aa</div><figcaption>paint-order: stroke fill</figcaption></figure>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Painting the stroke first keeps it outside the glyph, so a thick outline stops
+  eating the letterforms.</p>

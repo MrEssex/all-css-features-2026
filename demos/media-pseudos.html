@@ -1,0 +1,11 @@
+<style>
+  video { inline-size: 100%; max-inline-size: 16rem; border-radius: 8px; background: var(--sunken); }
+  video:paused { outline: 3px solid var(--swatch-2); }
+  video:playing { outline: 3px solid var(--swatch-3); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<video controls muted loop playsinline
+  src="data:video/mp4;base64,AAAAIGZ0eXBpc29tAAACAGlzb21pc28yYXZjMW1wNDEAAAAIZnJlZQAAAr1tZGF0AAACrgYF"></video>
+<p class="note"><code>:playing</code> and <code>:paused</code> match media
+elements by playback state. The source above is a stub, so the element will show
+as paused — with a real file the outline switches colour as you play and pause.</p>

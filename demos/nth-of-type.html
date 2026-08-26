@@ -1,0 +1,14 @@
+<style>
+  .stack { display: grid; gap: 3px; font-size: 0.75rem; }
+  .stack > * { padding: 0.25rem 0.5rem; border-radius: 4px; background: var(--sunken); }
+  .stack p:nth-of-type(2) { background: color-mix(in oklab, var(--swatch) 22%, transparent); }
+  .stack span:first-of-type { outline: 2px solid var(--swatch-3); outline-offset: -2px; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="stack">
+  <p>p — first</p>
+  <span>span — first-of-type</span>
+  <p>p — second-of-type, highlighted</p>
+  <span>span</span>
+</div>
+<code>Counts only elements of the same tag, ignoring the others between them.</code>

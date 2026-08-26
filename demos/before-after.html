@@ -1,0 +1,10 @@
+<style>
+  .quote { position: relative; padding: 0.4rem 1.4rem; font-size: 0.82rem; font-style: italic; }
+  .quote::before, .quote::after { position: absolute; font-size: 1.8rem; line-height: 1; color: var(--swatch); font-style: normal; }
+  .quote::before { content: "“"; inset-block-start: 0; inset-inline-start: 0; }
+  .quote::after { content: "”"; inset-block-end: -0.4rem; inset-inline-end: 0; }
+  .rule { display: flex; align-items: center; gap: 0.5rem; font-size: 0.7rem; color: var(--ink-faint); margin-block-start: 0.5rem; }
+  .rule::before, .rule::after { content: ""; flex: 1; block-size: 1px; background: var(--line); }
+</style>
+<p class="quote">Two pseudo-elements per element, and no extra markup for the decoration.</p>
+<div class="rule">section break</div>

@@ -1,0 +1,11 @@
+<style>
+  math { font-size: 1.2rem; font-family: math; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow><msubsup><mo>∫</mo><mn>0</mn><mi>∞</mi></msubsup>
+  <msup><mi>e</mi><mrow><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup>
+  <mi>d</mi><mi>x</mi><mo>=</mo><mfrac><msqrt><mi>π</mi></msqrt><mn>2</mn></mfrac></mrow>
+</math>
+<p class="note">The <code>math</code> generic picks a font with the OpenType MATH
+table, which is what makes stretchy integrals and correctly sized radicals possible.</p>

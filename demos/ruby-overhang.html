@@ -1,0 +1,10 @@
+<style>
+  .row { display: grid; gap: 0.4rem; font-size: 1.05rem; }
+  rt { color: var(--swatch); font-size: 0.5em; }
+  .none { ruby-overhang: none; } .auto { ruby-overhang: auto; }
+  span { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="auto">これは<ruby>難<rt>むずか</rt></ruby>しい <span>auto — the long annotation may overhang its neighbours</span></div>
+  <div class="none">これは<ruby>難<rt>むずか</rt></ruby>しい <span>none — it never overhangs</span></div>
+</div>

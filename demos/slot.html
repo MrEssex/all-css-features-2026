@@ -1,0 +1,22 @@
+<style>
+  .mount { display: grid; gap: 0.4rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="mount"><div id="host">Light-DOM content passed into a slot</div></div>
+<p class="note">Slotted nodes stay in the light DOM, so the <em>page's</em> styles
+win over the component's. <code>::slotted()</code> lets the component style them
+too, at lower priority.</p>
+<script>
+  const host = root.querySelector('#host');
+  const text = host.textContent;
+  host.textContent = '';
+  const shadow = host.attachShadow({ mode: 'open' });
+  shadow.innerHTML = `<style>
+    :host { display: block; padding: .45rem .6rem; border: 1px dashed currentColor; border-radius: 6px; font-size: .78rem; }
+    ::slotted(*) { font-style: italic; }
+    .label { font-size: .66rem; opacity: .6; }
+  </style><span class="label">shadow root</span> <slot></slot>`;
+  const span = document.createElement('span');
+  span.textContent = text;
+  host.append(span);
+</script>

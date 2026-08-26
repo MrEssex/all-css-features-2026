@@ -1,0 +1,10 @@
+<style>
+  p::first-line { font-variant-caps: small-caps; letter-spacing: 0.06em; color: var(--swatch); }
+  p { font-size: 0.85rem; max-inline-size: 26rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<p>This opening line is set in small caps, and the effect follows the line box
+rather than any particular words — resize the panel and a different set of words
+takes the styling, because the browser recomputes which text is on line one.</p>
+<p class="note">No wrapper element could do this; the first line is not a thing
+that exists in the markup.</p>

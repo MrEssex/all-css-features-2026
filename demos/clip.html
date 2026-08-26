@@ -1,0 +1,11 @@
+<style>
+  .code { font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); padding: 0.5rem 0.7rem; border-radius: 6px; border: 1px solid var(--line); }
+  .demo-box { position: relative; block-size: 3.5rem; border-radius: 6px; overflow: clip; margin-block-start: 0.5rem; }
+  .demo-box div { position: absolute; inset: 0; background: linear-gradient(135deg, var(--swatch), var(--swatch-2)); clip-path: inset(20% 25%); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="code">clip: rect(10px, 90px, 60px, 20px);  /* deprecated */</div>
+<div class="demo-box"><div></div></div>
+<p class="note">The old <code>clip</code> property only ever worked on absolutely
+positioned elements and only took rectangles. <code>clip-path</code> — shown in
+the box above — replaces it and takes any shape.</p>

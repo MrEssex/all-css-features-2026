@@ -1,0 +1,12 @@
+<style>
+  @keyframes clip-path-animatable-morph {
+    0%   { clip-path: circle(50% at 50% 50%); }
+    50%  { clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+    100% { clip-path: circle(50% at 50% 50%); }
+  }
+  .f { inline-size: 4.5rem; aspect-ratio: 1; background: linear-gradient(135deg, var(--swatch), var(--swatch-2)); animation: clip-path-animatable-morph 3s ease-in-out infinite; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="f"></div>
+<p class="note">Shapes interpolate when they have the same type and point count —
+which is why both keyframes here stay well-formed polygons.</p>

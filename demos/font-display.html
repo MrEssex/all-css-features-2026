@@ -1,0 +1,16 @@
+<style>
+  .rows { display: grid; gap: 3px; font-size: 0.74rem; }
+  .rows div { display: grid; grid-template-columns: 5rem 1fr; gap: 0.5rem; align-items: center; }
+  .rows code { font-size: 0.68rem; color: var(--swatch); }
+  .bar { display: flex; block-size: 0.9rem; border-radius: 3px; overflow: clip; font-size: 0.55rem; color: oklch(100% 0 0); }
+  .block { background: var(--ink-faint); } .swap { background: var(--swatch); } .fail { background: var(--swatch-2); }
+</style>
+<div class="rows">
+  <div><code>block</code><span class="bar"><i class="block" style="inline-size:35%"></i><i class="swap" style="inline-size:65%"></i></span></div>
+  <div><code>swap</code><span class="bar"><i class="block" style="inline-size:8%"></i><i class="swap" style="inline-size:92%"></i></span></div>
+  <div><code>fallback</code><span class="bar"><i class="block" style="inline-size:8%"></i><i class="swap" style="inline-size:25%"></i><i class="fail" style="inline-size:67%"></i></span></div>
+  <div><code>optional</code><span class="bar"><i class="block" style="inline-size:8%"></i><i class="fail" style="inline-size:92%"></i></span></div>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  Grey = invisible text, blue = webfont shown, pink = fallback kept. The trade is
+  between a flash of invisible text and a flash of unstyled text.</p>

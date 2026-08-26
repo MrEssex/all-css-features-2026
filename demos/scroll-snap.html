@@ -1,0 +1,23 @@
+<style>
+  .rail {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0.25rem;
+    padding-block-end: 0.4rem;
+  }
+  .rail > div {
+    flex: 0 0 60%;
+    scroll-snap-align: start;
+    display: grid;
+    place-items: center;
+    block-size: 4.5rem;
+    border-radius: 8px;
+    background: color-mix(in oklab, var(--swatch) 18%, transparent);
+    font-size: 0.78rem;
+  }
+  .note { font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="rail"><div>one</div><div>two</div><div>three</div><div>four</div></div>
+<p class="note">Scroll sideways — each panel snaps to the start edge.</p>

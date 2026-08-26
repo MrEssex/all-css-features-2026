@@ -1,0 +1,9 @@
+<style>
+  .box { inline-size: 4rem; aspect-ratio: 1; border-radius: 8px; background: var(--swatch); will-change: transform; transition: rotate 300ms ease, scale 300ms ease; }
+  .stage:hover .box { rotate: 12deg; scale: 1.1; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="stage"><div class="box"></div></div>
+<p class="note">A hint that this element is about to animate, so the browser can
+promote it in advance. Use it sparingly and remove it when the animation ends —
+a permanent <code>will-change</code> wastes memory on every such element.</p>

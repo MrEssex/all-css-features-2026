@@ -1,0 +1,8 @@
+<style>
+  .frame { border: 1px dashed var(--line); border-radius: 8px; padding: 0.5rem; }
+  .inner { padding-inline: max(0.75rem, env(safe-area-inset-left)); padding-block-end: max(0.5rem, env(safe-area-inset-bottom)); background: color-mix(in oklab, var(--swatch) 14%, transparent); border-radius: 6px; font-size: 0.76rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="frame"><div class="inner">Padded clear of notches and home indicators.</div></div>
+<p class="note"><code>max(0.75rem, env(safe-area-inset-left))</code> — a normal
+gutter on a plain screen, a safe one on a notched phone.</p>

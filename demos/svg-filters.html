@@ -1,0 +1,16 @@
+<style>
+  .row { display: flex; gap: 0.6rem; }
+  .f { flex: 1; block-size: 3.6rem; border-radius: 6px; background: linear-gradient(135deg, var(--swatch), var(--swatch-2)); }
+  .rough { filter: url(#svgf-rough); }
+  .goo { filter: url(#svgf-goo); }
+  svg.defs { position: absolute; inline-size: 0; block-size: 0; }
+  figcaption { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<svg class="defs" xmlns="http://www.w3.org/2000/svg"><defs>
+  <filter id="svgf-rough"><feTurbulence baseFrequency="0.06" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="8"/></filter>
+  <filter id="svgf-goo"><feGaussianBlur stdDeviation="4" result="b"/><feColorMatrix in="b" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"/></filter>
+</defs></svg>
+<div class="row">
+  <figure style="flex:1"><div class="f rough"></div><figcaption>feTurbulence</figcaption></figure>
+  <figure style="flex:1"><div class="f goo"></div><figcaption>gooey blur</figcaption></figure>
+</div>

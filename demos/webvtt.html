@@ -1,0 +1,12 @@
+<style>
+  .code { font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid var(--line); white-space: pre-wrap; }
+  .fake { margin-block-start: 0.5rem; position: relative; block-size: 3.6rem; border-radius: 6px; background: linear-gradient(135deg, oklch(30% .04 265), oklch(20% .03 265)); display: grid; align-items: end; justify-items: center; padding-block-end: 0.4rem; }
+  .cue { background: oklch(0% 0 0 / .75); color: oklch(100% 0 0); padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.72rem; }
+  .cue b { color: var(--swatch-3); font-weight: 600; }
+</style>
+<div class="code">::cue { background: rgb(0 0 0 / .75); color: #fff }
+::cue(b) { color: gold }</div>
+<div class="fake"><span class="cue">A caption with <b>emphasis</b></span></div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>::cue</code> styles WebVTT captions on a real <code>&lt;track&gt;</code>.
+  The bar above imitates one, since there is no video here.</p>

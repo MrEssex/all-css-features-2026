@@ -1,0 +1,20 @@
+<style>
+  .box {
+    inline-size: 3.5rem;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    background: var(--swatch);
+    transition: translate 400ms cubic-bezier(.2,.9,.3,1.2), border-radius 400ms ease, background-color 400ms ease;
+  }
+  .stage { padding: 0.5rem 0; }
+  .stage:hover .box, .stage:focus-within .box {
+    translate: calc(100% + 1rem) 0;
+    border-radius: 50%;
+    background: var(--swatch-2);
+  }
+  .note { font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="stage" tabindex="0">
+  <div class="box"></div>
+</div>
+<p class="note">Hover or focus the area.</p>

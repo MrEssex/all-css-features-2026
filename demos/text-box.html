@@ -1,0 +1,13 @@
+<style>
+  .row { display: grid; gap: 0.5rem; }
+  .b { background: color-mix(in oklab, var(--swatch) 18%, transparent); border-radius: 5px; font-size: 1.4rem; font-weight: 600; padding: 0.5rem; }
+  .trim { text-box: trim-both cap alphabetic; }
+  code { font-size: 0.62rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div><code>default — leading above and below</code><div class="b">Heading</div></div>
+  <div><code>text-box: trim-both cap alphabetic</code><div class="b trim">Heading</div></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Trims the font's built-in half-leading so padding measures from the cap height
+  and baseline — optical alignment without magic numbers.</p>

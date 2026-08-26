@@ -1,0 +1,9 @@
+<style>
+  .box { contain: layout; position: relative; border: 1px solid var(--line); border-radius: 6px; padding: 0.5rem; font-size: 0.74rem; }
+  .abs { position: absolute; inset-block-start: 0.3rem; inset-inline-end: 0.3rem; padding: 0.15rem 0.4rem; border-radius: 4px; background: var(--swatch); color: oklch(100% 0 0); font-size: 0.66rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="box">Layout containment<span class="abs">contained</span></div>
+<p class="note">Nothing inside can affect layout outside, and the box becomes the
+containing block for absolutely positioned descendants — so this badge anchors
+here even without <code>position: relative</code> further up.</p>

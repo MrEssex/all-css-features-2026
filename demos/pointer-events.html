@@ -1,0 +1,17 @@
+<style>
+  .stage { position: relative; block-size: 4rem; }
+  .btn { position: absolute; inset-block-start: 0.5rem; inset-inline-start: 0.5rem; padding: 0.35rem 0.8rem; border-radius: 6px; font-size: 0.78rem; }
+  .veil { position: absolute; inset: 0; border-radius: 6px; background: color-mix(in oklab, var(--swatch-2) 15%, transparent); pointer-events: none; display: grid; place-items: end; padding: 0.3rem; font-size: 0.68rem; color: var(--ink-faint); }
+  .out { margin-block-start: 0.4rem; font-size: 0.75rem; color: var(--swatch); }
+</style>
+<div class="stage">
+  <button type="button" class="btn" id="b">Still clickable</button>
+  <div class="veil">overlay with pointer-events: none</div>
+</div>
+<p class="out" id="out">Clicks pass straight through the overlay.</p>
+<script>
+  let n = 0;
+  root.querySelector('#b').addEventListener('click', () => {
+    root.querySelector('#out').textContent = `Clicked ${++n} time${n === 1 ? '' : 's'} — through the overlay.`;
+  });
+</script>

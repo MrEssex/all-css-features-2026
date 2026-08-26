@@ -1,0 +1,10 @@
+<style>
+  .code { font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid var(--line); white-space: pre-wrap; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="code">@font-face {
+  src: url("font.woff2" crossorigin(anonymous));
+}</div>
+<p class="note">A request modifier inside <code>url()</code>, setting the CORS mode
+for that fetch. It matters for fonts and for images you intend to read back from a
+canvas without tainting it.</p>

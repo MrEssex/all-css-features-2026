@@ -1,0 +1,15 @@
+<style>
+  .b { padding: 0.35rem 0.5rem; border-radius: 5px; background: var(--sunken); font-size: 0.76rem; margin-block-end: 4px; }
+  .c { white-space-collapse: collapse; } .p { white-space-collapse: preserve; }
+  .bs { white-space-collapse: preserve-breaks; }
+  code { font-size: 0.62rem; color: var(--ink-faint); }
+</style>
+<code>collapse + text-wrap: wrap</code><div class="b c">Spaces    collapse
+and breaks are ignored.</div>
+<code>preserve-breaks — keep newlines, collapse spaces</code><div class="b bs">Spaces    collapse
+but this newline is kept.</div>
+<code>preserve</code><div class="b p">Spaces    and
+newlines both kept.</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Splits the old <code>white-space</code> shorthand into collapsing and wrapping,
+  so the two can be set independently.</p>

@@ -1,0 +1,20 @@
+<style>
+  .box {
+    block-size: 6rem;
+    overflow: auto;
+    padding: 0.5rem 0.7rem;
+    border-radius: 6px;
+    background: var(--sunken);
+    font-size: 0.78rem;
+    scrollbar-color: var(--swatch) color-mix(in oklab, var(--swatch) 15%, transparent);
+  }
+  p { margin-block-end: 0.6rem; }
+</style>
+<div class="box">
+  <p>The thumb and track take author colours directly — two keywords, no
+  vendor-prefixed pseudo-elements and no custom scrollbar script.</p>
+  <p>The browser keeps its own sizing, hit targets and platform behaviour, which
+  is exactly what a replacement widget usually gets wrong.</p>
+  <p>Keep enough contrast between thumb and track that the control stays
+  visible for everyone.</p>
+</div>

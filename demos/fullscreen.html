@@ -1,0 +1,19 @@
+<style>
+  .stage { border: 1px solid var(--line); border-radius: 8px; padding: 0.8rem; text-align: center; background: var(--sunken); }
+  .stage:fullscreen { display: grid; place-content: center; background: linear-gradient(135deg, var(--swatch), var(--swatch-2)); color: oklch(100% 0 0); }
+  .stage:fullscreen .hint::after { content: " — now fullscreen. Press Esc."; }
+  .stage::backdrop { background: oklch(10% 0 0); }
+  button { padding: 0.35rem 0.8rem; border-radius: 6px; font-size: 0.78rem; }
+  .hint { display: block; font-size: 0.75rem; margin-block-start: 0.4rem; }
+</style>
+<div class="stage" id="stage">
+  <button type="button" id="go">Go fullscreen</button>
+  <span class="hint">:fullscreen restyles the element itself</span>
+</div>
+<script>
+  const stage = root.querySelector('#stage');
+  root.querySelector('#go').addEventListener('click', () => {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else stage.requestFullscreen?.();
+  });
+</script>

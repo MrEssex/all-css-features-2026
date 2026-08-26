@@ -1,0 +1,14 @@
+<style>
+  .row { display: flex; gap: 0.6rem; }
+  .f { flex: 1; block-size: 3.6rem; border-radius: 6px; background: linear-gradient(135deg, var(--swatch), var(--swatch-2)); }
+  .a { mask-image: linear-gradient(90deg, black, transparent); mask-mode: alpha; }
+  .b { mask-image: linear-gradient(90deg, white, black); mask-mode: luminance; }
+  figcaption { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="row">
+  <figure style="flex:1"><div class="f a"></div><figcaption>alpha</figcaption></figure>
+  <figure style="flex:1"><div class="f b"></div><figcaption>luminance</figcaption></figure>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>mask-type</code> on an SVG mask, and <code>mask-mode</code> in CSS, choose
+  whether transparency or brightness drives the mask.</p>

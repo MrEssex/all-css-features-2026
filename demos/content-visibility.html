@@ -1,0 +1,14 @@
+<style>
+  .list { block-size: 7rem; overflow: auto; border: 1px solid var(--line); border-radius: 6px; }
+  .item { content-visibility: auto; contain-intrinsic-size: auto 2.4rem; padding: 0.4rem 0.6rem; border-block-end: 1px solid var(--line); font-size: 0.75rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="list">
+  <div class="item">Row 1 — rendered</div><div class="item">Row 2</div>
+  <div class="item">Row 3</div><div class="item">Row 4 — skipped until scrolled near</div>
+  <div class="item">Row 5</div><div class="item">Row 6</div>
+  <div class="item">Row 7</div><div class="item">Row 8</div>
+</div>
+<p class="note">Off-screen rows skip layout and paint entirely.
+<code>contain-intrinsic-size</code> supplies a placeholder height so the scrollbar
+stays honest. This page uses it on all 436 cards.</p>

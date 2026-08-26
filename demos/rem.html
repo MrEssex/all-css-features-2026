@@ -1,0 +1,11 @@
+<style>
+  .parent { font-size: 2rem; }
+  .em { padding: 0.5em; background: color-mix(in oklab, var(--swatch) 18%, transparent); border-radius: 5px; }
+  .rem { padding: 0.5rem; background: color-mix(in oklab, var(--swatch-2) 18%, transparent); border-radius: 5px; margin-block-start: 4px; }
+  code { font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="parent">
+  <div class="em">padding: 0.5em</div>
+  <div class="rem">padding: 0.5rem</div>
+</div>
+<code>Inside a 2rem parent, em compounds and rem does not.</code>

@@ -1,0 +1,18 @@
+<style>
+  .rows { display: grid; gap: 2px; }
+  .rows p { padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.75rem; background: var(--sunken); }
+  .rows p.hit:nth-child(odd of .hit) {
+    background: color-mix(in oklab, var(--swatch) 22%, transparent);
+  }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="rows">
+  <p class="hit">match 1 — striped</p>
+  <p>skipped, not a match</p>
+  <p class="hit">match 2</p>
+  <p class="hit">match 3 — striped</p>
+  <p>skipped</p>
+  <p class="hit">match 4</p>
+</div>
+<p class="note">Striping counts only the matching rows, so hidden or filtered
+rows never break the zebra pattern.</p>

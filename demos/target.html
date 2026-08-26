@@ -1,0 +1,10 @@
+<style>
+  .panel { padding: 0.5rem 0.7rem; border-radius: 6px; background: var(--sunken); font-size: 0.78rem; margin-block-end: 3px; border: 2px solid transparent; }
+  .panel:target { border-color: var(--swatch); background: color-mix(in oklab, var(--swatch) 14%, transparent); }
+  .nav { display: flex; gap: 0.4rem; margin-block-end: 0.5rem; }
+  .nav a { font-size: 0.75rem; padding: 0.2rem 0.6rem; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; }
+</style>
+<div class="nav"><a href="#one">One</a><a href="#two">Two</a><a href="#three">Three</a></div>
+<div class="panel" id="one">Panel one</div>
+<div class="panel" id="two">Panel two</div>
+<div class="panel" id="three">Panel three</div>

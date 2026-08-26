@@ -1,0 +1,14 @@
+<style>
+  .code { font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid var(--line); white-space: pre-wrap; }
+  ol { margin-block-start: 0.5rem; padding-inline-start: 2rem; font-size: 0.78rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="code">@counter-style spelled {
+  system: numeric;
+  symbols: "0" "1";
+  speak-as: spell-out;
+}</div>
+<ol><li>First</li><li>Second</li><li>Third</li></ol>
+<p class="note">Inside <code>@counter-style</code>, <code>speak-as</code> tells a
+screen reader how to pronounce the marker — spelled out, read as numbers, or
+announced as the equivalent list style.</p>

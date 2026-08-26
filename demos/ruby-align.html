@@ -1,0 +1,13 @@
+<style>
+  .row { display: grid; gap: 0.4rem; font-size: 1.1rem; }
+  rt { color: var(--swatch); font-size: 0.5em; }
+  .start { ruby-align: start; } .center { ruby-align: center; } .between { ruby-align: space-between; }
+  span { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div><ruby class="start">日本国<rt>にほん</rt></ruby> <span>start</span></div>
+  <div><ruby class="center">日本国<rt>にほん</rt></ruby> <span>center</span></div>
+  <div><ruby class="between">日本国<rt>にほん</rt></ruby> <span>space-between</span></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  How the annotation is distributed when it is narrower than its base.</p>

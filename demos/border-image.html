@@ -1,0 +1,10 @@
+<style>
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .b { padding: 0.6rem; font-size: 0.75rem; border: 10px solid transparent; }
+  .grad { border-image: linear-gradient(45deg, var(--swatch), var(--swatch-2), var(--swatch-3)) 1; }
+  .rep { border-image: repeating-linear-gradient(45deg, var(--swatch) 0 6px, var(--swatch-3) 6px 12px) 10 round; }
+</style>
+<div class="row">
+  <div class="b grad">gradient border-image, slice 1</div>
+  <div class="b rep">repeating stripes, slice 10 round</div>
+</div>

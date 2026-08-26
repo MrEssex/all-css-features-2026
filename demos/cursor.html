@@ -1,0 +1,13 @@
+<style>
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+  .grid div { padding: 0.45rem 0.3rem; border-radius: 5px; background: var(--sunken); text-align: center; font-family: var(--mono); font-size: 0.62rem; border: 1px solid var(--line); }
+</style>
+<div class="grid">
+  <div style="cursor: pointer">pointer</div><div style="cursor: grab">grab</div>
+  <div style="cursor: help">help</div><div style="cursor: crosshair">crosshair</div>
+  <div style="cursor: text">text</div><div style="cursor: not-allowed">not-allowed</div>
+  <div style="cursor: zoom-in">zoom-in</div><div style="cursor: col-resize">col-resize</div>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  Hover each. The cursor is a genuine affordance — <code>pointer</code> on a
+  non-clickable element is a small lie.</p>

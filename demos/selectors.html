@@ -1,0 +1,17 @@
+<style>
+  .tree { display: grid; gap: 3px; font-size: 0.75rem; }
+  .tree > * { padding: 0.25rem 0.5rem; border-radius: 4px; background: var(--sunken); }
+  .tree h4 { font-weight: 600; }
+  .tree > p + p { background: color-mix(in oklab, var(--swatch) 20%, transparent); }
+  .tree > [data-tag~="new"] { outline: 2px solid var(--swatch-3); outline-offset: -2px; }
+  .tree > :last-child { font-style: italic; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="tree">
+  <h4>Combinators and attributes</h4>
+  <p>First paragraph</p>
+  <p>Adjacent sibling — p + p</p>
+  <p data-tag="draft new">Attribute contains "new"</p>
+  <p>:last-child</p>
+</div>
+<code>descendant, child &gt;, adjacent +, sibling ~, [attr~=value]</code>

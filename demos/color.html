@@ -1,0 +1,13 @@
+<style>
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+  .grid div { padding: 0.5rem 0.4rem; border-radius: 5px; font-family: var(--mono); font-size: 0.64rem; text-align: center; color: oklch(100% 0 0); }
+</style>
+<div class="grid">
+  <div style="background:#4f46e5">#4f46e5</div>
+  <div style="background:rgb(79 70 229)">rgb()</div>
+  <div style="background:hsl(244 76% 59%)">hsl()</div>
+  <div style="background:oklch(52% .22 274)">oklch()</div>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  Four notations for one colour. <code>color</code> also sets the default for
+  borders, text decorations and <code>currentcolor</code>.</p>

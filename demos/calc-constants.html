@@ -1,0 +1,12 @@
+<style>
+  .row { display: flex; gap: 0.4rem; align-items: end; }
+  .bar { inline-size: 2rem; border-radius: 4px 4px 0 0; background: var(--swatch); }
+  .e { block-size: calc(e * 1rem); }
+  .pi { block-size: calc(pi * 1rem); }
+  .tau { block-size: calc(2 * pi * 1rem); }
+  code { font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="bar e"></div><div class="bar pi"></div><div class="bar tau"></div>
+</div>
+<code>heights: e, pi and 2·pi rem — constants usable directly in calc()</code>

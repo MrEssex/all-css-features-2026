@@ -1,0 +1,20 @@
+<style>
+  .set { display: flex; gap: 0.5rem; align-items: start; }
+  .box {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    background: color-mix(in oklab, var(--swatch) 20%, transparent);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+  }
+  .a { aspect-ratio: 1; }
+  .b { aspect-ratio: 16 / 9; }
+  .c { aspect-ratio: 3 / 4; }
+</style>
+<div class="set">
+  <div class="box a">1 / 1</div>
+  <div class="box b">16 / 9</div>
+  <div class="box c">3 / 4</div>
+</div>

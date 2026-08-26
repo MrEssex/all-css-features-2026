@@ -1,0 +1,8 @@
+<style>
+  .f { inline-size: 5rem; aspect-ratio: 1; background: linear-gradient(135deg, var(--swatch-3), var(--swatch));
+    clip-path: path("M40 8 C 22 -8, -8 18, 40 72 C 88 18, 58 -8, 40 8 Z"); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="f"></div>
+<p class="note"><code>path()</code> takes a literal SVG path string in pixels. It
+does not scale with the element — <code>shape()</code> is the flexible successor.</p>

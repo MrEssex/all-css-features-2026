@@ -1,0 +1,13 @@
+<style>
+  :where(.stage) { interpolate-size: allow-keywords; }
+  .panel { block-size: 0; overflow: clip; transition: block-size 300ms ease; background: color-mix(in oklab, var(--swatch-3) 16%, transparent); border-radius: 6px; }
+  .panel > div { padding: 0.6rem 0.8rem; font-size: 0.78rem; }
+  .stage:has(input:checked) .panel { block-size: auto; }
+  label { font-size: 0.78rem; display: inline-flex; gap: 0.4rem; align-items: center; margin-block-end: 0.5rem; }
+</style>
+<div class="stage">
+  <label><input type="checkbox"> Expand</label>
+  <div class="panel"><div>One opt-in makes every <code>auto</code>,
+  <code>min-content</code> and <code>fit-content</code> animatable, so the
+  height-transition hack finally retires.</div></div>
+</div>

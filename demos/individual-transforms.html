@@ -1,0 +1,24 @@
+<style>
+  .box {
+    inline-size: 3.5rem;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: var(--swatch);
+    color: oklch(100% 0 0);
+    font-size: 0.68rem;
+    translate: 0 0;
+    rotate: 0deg;
+    scale: 1;
+    transition: translate 300ms ease, rotate 300ms ease, scale 300ms ease;
+  }
+  .stage { padding: 0.75rem 0; }
+  .stage:hover .box { translate: 2.5rem 0; }
+  .stage:hover .box { rotate: 45deg; scale: 1.15; }
+  .note { font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="stage"><div class="box">hover</div></div>
+<p class="note"><code>translate</code>, <code>rotate</code> and <code>scale</code>
+are separate properties, so they animate independently instead of fighting over
+one <code>transform</code> shorthand.</p>

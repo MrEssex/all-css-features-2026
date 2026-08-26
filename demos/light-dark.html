@@ -1,0 +1,20 @@
+<style>
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .panel {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid light-dark(oklch(88% 0.01 265), oklch(35% 0.02 265));
+    background: light-dark(oklch(97% 0.01 265), oklch(20% 0.02 265));
+    color: light-dark(oklch(25% 0.02 265), oklch(92% 0.01 265));
+    font-size: 0.75rem;
+  }
+  .forced-light { color-scheme: light; }
+  .forced-dark { color-scheme: dark; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="pair">
+  <div class="panel forced-light">color-scheme: light</div>
+  <div class="panel forced-dark">color-scheme: dark</div>
+</div>
+<p class="note">Both panels share one set of declarations. <code>light-dark()</code>
+picks the branch from the nearest <code>color-scheme</code> — no media query.</p>

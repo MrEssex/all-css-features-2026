@@ -1,0 +1,19 @@
+<style>
+  @property --demo-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+  }
+  @keyframes registered-custom-properties-spin { to { --demo-angle: 360deg; } }
+  .ring {
+    inline-size: 5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: conic-gradient(from var(--demo-angle), var(--swatch), var(--swatch-2), var(--swatch-3), var(--swatch));
+    animation: registered-custom-properties-spin 4s linear infinite;
+  }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="ring"></div>
+<p class="note">A registered <code>&lt;angle&gt;</code> can be interpolated, so
+the gradient itself animates. An unregistered custom property would jump.</p>

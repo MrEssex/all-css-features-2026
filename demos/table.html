@@ -1,0 +1,18 @@
+<style>
+  table { border-collapse: collapse; inline-size: 100%; font-size: 0.76rem; table-layout: fixed; }
+  caption { caption-side: bottom; font-size: 0.68rem; color: var(--ink-faint); padding-block-start: 0.35rem; }
+  th, td { padding: 0.3rem 0.5rem; border: 1px solid var(--line); text-align: start; }
+  thead th { background: color-mix(in oklab, var(--swatch) 16%, transparent); }
+  tbody tr:nth-child(even) { background: var(--sunken); }
+  col.wide { width: 55%; }
+</style>
+<table>
+  <caption>border-collapse, table-layout, colgroup and zebra striping</caption>
+  <colgroup><col class="wide"><col><col></colgroup>
+  <thead><tr><th>Feature</th><th>Tier</th><th>Usage</th></tr></thead>
+  <tbody>
+    <tr><td>Grid</td><td>Widely</td><td>99%</td></tr>
+    <tr><td>Subgrid</td><td>Widely</td><td>97%</td></tr>
+    <tr><td>Anchor positioning</td><td>Limited</td><td>—</td></tr>
+  </tbody>
+</table>

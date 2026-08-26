@@ -1,0 +1,13 @@
+<style>
+  .row { display: flex; gap: 0.6rem; }
+  .b { flex: 1; block-size: 5rem; overflow: auto; border: 1px solid var(--line); border-radius: 6px; padding: 0.4rem; font-size: 0.73rem; }
+  .stable { scrollbar-gutter: stable; }
+  .both { scrollbar-gutter: stable both-edges; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.64rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="b">auto — space appears only when needed, so content shifts when a scrollbar arrives.</div>
+  <div class="b stable">stable — the gutter is always reserved. Extra text so this one scrolls.</div>
+  <div class="b both">stable both-edges — matching gutters keep the content centred.</div>
+</div>
+<code>Prevents the classic layout jump when content grows past one screen.</code>

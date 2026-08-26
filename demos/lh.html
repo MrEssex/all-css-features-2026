@@ -1,0 +1,14 @@
+<style>
+  .prose { line-height: 1.8; font-size: 0.85rem; position: relative; }
+  .rule { position: absolute; inset-inline: 0; block-size: 1lh; background: color-mix(in oklab, var(--swatch) 14%, transparent); }
+  .r1 { inset-block-start: 0; }
+  .r2 { inset-block-start: 2lh; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="prose">
+  <span class="rule r1"></span><span class="rule r2"></span>
+  One <code>lh</code> equals this element's computed line height, so a highlight
+  sized in <code>lh</code> lands exactly on a line of text no matter what the
+  line-height happens to be. Offsets in <code>lh</code> snap to the same rhythm.
+</div>
+<p class="note">Bands are <code>1lh</code> tall at <code>0</code> and <code>2lh</code>.</p>

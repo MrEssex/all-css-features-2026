@@ -1,0 +1,15 @@
+<style>
+  .rows { display: grid; gap: 3px; font-family: var(--mono); font-size: 0.68rem; }
+  .rows div { display: grid; grid-template-columns: 5rem 1fr; align-items: center; gap: 0.5rem; }
+  .bar { block-size: 1rem; border-radius: 3px; background: var(--swatch); }
+  .a { inline-size: 40Q; }
+  .b { inline-size: 80Q; }
+  .c { inline-size: 1cm; background: var(--swatch-2); }
+</style>
+<div class="rows">
+  <div><span>40Q</span><span class="bar a"></span></div>
+  <div><span>80Q</span><span class="bar b"></span></div>
+  <div><span>1cm</span><span class="bar c"></span></div>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>Q</code> is a quarter-millimetre, so <code>40Q</code> is exactly 1cm.</p>

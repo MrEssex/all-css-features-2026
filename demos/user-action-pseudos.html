@@ -1,0 +1,10 @@
+<style>
+  .btn { padding: 0.4rem 0.9rem; border-radius: 6px; border: 1px solid var(--line); background: var(--sunken); font-size: 0.8rem; cursor: pointer; transition: all 120ms ease; }
+  .btn:hover { background: color-mix(in oklab, var(--swatch) 18%, transparent); border-color: var(--swatch); }
+  .btn:active { scale: 0.95; background: var(--swatch); color: oklch(100% 0 0); }
+  .btn:focus-visible { outline: 2px solid var(--swatch-3); outline-offset: 2px; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<button type="button" class="btn">Hover, press and tab to me</button>
+<p class="note"><code>:hover</code>, <code>:active</code> and
+<code>:focus-visible</code> — three different states, three different treatments.</p>

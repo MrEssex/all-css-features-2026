@@ -1,0 +1,11 @@
+<style>
+  .scaled { font-size: 2.5rem; }
+  .bar { block-size: 0.6rem; border-radius: 3px; margin-block-end: 4px; }
+  .local { inline-size: calc(20 * 1ex); background: var(--swatch); }
+  .rooted { inline-size: calc(20 * 1rex); background: var(--swatch-2); }
+  code { font-size: 0.68rem; color: var(--ink-faint); }
+</style>
+<div class="scaled">
+  <div class="bar local"></div><code>20ex — local x-height</code>
+  <div class="bar rooted"></div><code>20rex — root x-height</code>
+</div>

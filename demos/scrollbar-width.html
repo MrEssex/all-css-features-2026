@@ -1,0 +1,11 @@
+<style>
+  .set { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .box { block-size: 5.5rem; overflow: auto; padding: 0.4rem 0.6rem; border-radius: 6px; background: var(--sunken); font-size: 0.74rem; }
+  .thin { scrollbar-width: thin; }
+  .none { scrollbar-width: none; }
+  .l { font-family: var(--mono); font-size: 0.64rem; color: var(--ink-faint); }
+</style>
+<div class="set">
+  <div><span class="l">thin</span><div class="box thin"><p>A narrower scrollbar that still works as a scrollbar. Scroll me. More text so there is something to scroll past.</p></div></div>
+  <div><span class="l">none</span><div class="box none"><p>Hidden entirely — still scrollable by wheel, touch and keyboard. Use sparingly. More text to overflow the box.</p></div></div>
+</div>

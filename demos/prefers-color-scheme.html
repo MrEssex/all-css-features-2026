@@ -1,0 +1,6 @@
+<style>
+  .pane { padding: 0.7rem 0.9rem; border-radius: 6px; font-size: 0.78rem; border: 1px solid var(--line); }
+  @media (prefers-color-scheme: light) { .pane::after { content: "You are in light mode."; } .pane { background: oklch(97% .02 90); color: oklch(30% .04 90); } }
+  @media (prefers-color-scheme: dark) { .pane::after { content: "You are in dark mode."; } .pane { background: oklch(22% .03 265); color: oklch(90% .03 265); } }
+</style>
+<div class="pane"></div>

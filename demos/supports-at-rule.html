@@ -1,0 +1,15 @@
+<style>
+  .opts { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .opts span { padding: 0.25rem 0.6rem; border-radius: 2rem; font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); border: 1px solid var(--line); color: var(--ink-faint); }
+  @supports at-rule(@container) { .a { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); } .a::after { content: " ✓"; } }
+  @supports at-rule(@scope) { .b { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); } .b::after { content: " ✓"; } }
+  @supports at-rule(@starting-style) { .c { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); } .c::after { content: " ✓"; } }
+  @supports at-rule(@nonsense) { .d { background: var(--swatch-2); } }
+</style>
+<div class="opts">
+  <span class="a">@container</span><span class="b">@scope</span>
+  <span class="c">@starting-style</span><span class="d">@nonsense</span>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>@supports at-rule(...)</code> tests for an at-rule rather than a property,
+  which nothing else could do.</p>

@@ -1,0 +1,15 @@
+<style>
+  @layer demo-theme, demo-overrides;
+  @layer demo-overrides {
+    .btn { background: var(--swatch); color: oklch(100% 0 0); }
+  }
+  @layer demo-theme {
+    /* Higher specificity, but an earlier layer — so it still loses. */
+    div.stage .btn.btn { background: var(--sunken); color: var(--ink); }
+  }
+  .btn { padding: 0.35rem 0.8rem; border-radius: 6px; border: 1px solid var(--line); font-size: 0.78rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="stage"><button type="button" class="btn">Accent wins</button></div>
+<p class="note">The losing rule has far higher specificity. Layer order is
+decided before specificity is ever consulted.</p>

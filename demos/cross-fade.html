@@ -1,0 +1,15 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; text-align: center; }
+  .f { block-size: 3.4rem; border-radius: 6px; }
+  .a { background-image: cross-fade(linear-gradient(var(--swatch), var(--swatch-2)) 100%, radial-gradient(var(--swatch-3), var(--swatch)) 0%); }
+  .b { background-image: cross-fade(linear-gradient(var(--swatch), var(--swatch-2)) 50%, radial-gradient(var(--swatch-3), var(--swatch)) 50%); }
+  .c { background-image: cross-fade(linear-gradient(var(--swatch), var(--swatch-2)) 0%, radial-gradient(var(--swatch-3), var(--swatch)) 100%); }
+  figcaption { font-family: var(--mono); font-size: 0.58rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="row">
+  <figure><div class="f a"></div><figcaption>100 / 0</figcaption></figure>
+  <figure><div class="f b"></div><figcaption>50 / 50</figcaption></figure>
+  <figure><div class="f c"></div><figcaption>0 / 100</figcaption></figure>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Blends two images at a chosen ratio, in CSS.</p>

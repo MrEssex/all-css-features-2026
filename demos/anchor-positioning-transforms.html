@@ -1,0 +1,12 @@
+<style>
+  .stage { position: relative; padding: 2.4rem 0.5rem 0.5rem; display: flex; justify-content: center; }
+  .anchor { anchor-name: --xf-anchor; rotate: -8deg; padding: 0.35rem 0.8rem; border-radius: 6px; background: var(--swatch); color: oklch(100% 0 0); font-size: 0.78rem; }
+  .tip { position: absolute; position-anchor: --xf-anchor; position-area: block-start center; margin-block-end: 0.4rem; padding: 0.25rem 0.6rem; border-radius: 5px; background: var(--swatch-2); color: oklch(100% 0 0); font-size: 0.72rem; }
+</style>
+<div class="stage">
+  <span class="anchor">rotated anchor</span>
+  <span class="tip">follows the transform</span>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  The anchor is rotated, and the tethered element accounts for that transform
+  rather than positioning against the untransformed box.</p>

@@ -1,0 +1,15 @@
+<style>
+  .panel { --tone: calm; container-type: normal; padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid var(--line); font-size: 0.78rem; }
+  .panel.alert { --tone: alert; }
+  .inner { display: flex; align-items: center; gap: 0.5rem; }
+  .dot { inline-size: 0.6rem; aspect-ratio: 1; border-radius: 50%; background: var(--swatch-3); }
+  @container style(--tone: alert) {
+    .dot { background: var(--swatch-2); }
+    .inner { color: var(--swatch-2); font-weight: 600; }
+  }
+  .set { display: grid; gap: 0.4rem; }
+</style>
+<div class="set">
+  <div class="panel"><div class="inner"><span class="dot"></span>--tone: calm</div></div>
+  <div class="panel alert"><div class="inner"><span class="dot"></span>--tone: alert</div></div>
+</div>

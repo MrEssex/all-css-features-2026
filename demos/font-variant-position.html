@@ -1,0 +1,13 @@
+<style>
+  .row { display: grid; gap: 0.2rem; font-size: 1.1rem; }
+  .sup { font-variant-position: super; }
+  .sub { font-variant-position: sub; }
+  span { font-size: 0.62rem; color: var(--ink-faint); font-family: var(--mono); }
+</style>
+<div class="row">
+  <div>E = mc<span class="sup">2</span> <span>font-variant-position: super</span></div>
+  <div>H<span class="sub">2</span>O <span>font-variant-position: sub</span></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Uses the font's real superior and inferior glyphs rather than shrinking and
+  shifting the normal ones, so stroke weight stays correct.</p>

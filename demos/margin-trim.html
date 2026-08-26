@@ -1,0 +1,10 @@
+<style>
+  .box { border: 1px solid var(--line); border-radius: 6px; padding: 0.6rem; }
+  .box p { margin-block: 0.6rem; padding: 0.3rem 0.5rem; background: color-mix(in oklab, var(--swatch) 16%, transparent); border-radius: 4px; font-size: 0.75rem; }
+  .trimmed { margin-trim: block; }
+  code { display: block; margin-block: 0.5rem 0.2rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<code>default — the first and last child margins push against the padding</code>
+<div class="box"><p>one</p><p>two</p></div>
+<code>margin-trim: block — leading and trailing margins removed</code>
+<div class="box trimmed"><p>one</p><p>two</p></div>

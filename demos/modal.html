@@ -1,0 +1,25 @@
+<style>
+  dialog { padding: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--raised); color: var(--ink); max-inline-size: 18rem; margin: auto; }
+  dialog:modal { border-color: var(--swatch); box-shadow: 0 0 0 3px color-mix(in oklab, var(--swatch) 30%, transparent); }
+  dialog > div { padding: 0.8rem 1rem; font-size: 0.8rem; }
+  button { padding: 0.35rem 0.8rem; border-radius: 6px; font-size: 0.78rem; }
+  .row { display: flex; gap: 0.4rem; }
+</style>
+<div class="row">
+  <button type="button" id="modal">Show modal</button>
+  <button type="button" id="plain">Show non-modal</button>
+</div>
+<dialog id="dlg"><div><span id="what"></span><br><br><button type="button" id="close">Close</button></div></dialog>
+<script>
+  const dlg = root.querySelector('#dlg');
+  const what = root.querySelector('#what');
+  root.querySelector('#modal').addEventListener('click', () => {
+    what.textContent = 'Opened with showModal() — :modal matches, so it gets the accent ring.';
+    dlg.showModal();
+  });
+  root.querySelector('#plain').addEventListener('click', () => {
+    what.textContent = 'Opened with show() — not modal, so no ring and no backdrop.';
+    dlg.show();
+  });
+  root.querySelector('#close').addEventListener('click', () => dlg.close());
+</script>

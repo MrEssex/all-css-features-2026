@@ -1,0 +1,10 @@
+<style>
+  .cols { columns: 3; column-gap: 1rem; font-size: 0.73rem; }
+  .cols h4 { column-span: all; background: color-mix(in oklab, var(--swatch) 18%, transparent); padding: 0.2rem 0.4rem; border-radius: 4px; margin-block-end: 0.3rem; font-size: 0.78rem; }
+</style>
+<div class="cols">
+  <p>Text before the spanning heading flows in columns as usual.</p>
+  <h4>column-span: all</h4>
+  <p>The heading breaks out across every column, and the text after it starts a
+  fresh set of balanced columns beneath.</p>
+</div>

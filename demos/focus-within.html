@@ -1,0 +1,21 @@
+<style>
+  form {
+    display: grid;
+    gap: 0.4rem;
+    padding: 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: border-color 150ms ease, background-color 150ms ease;
+  }
+  form:focus-within {
+    border-color: var(--swatch);
+    background: color-mix(in oklab, var(--swatch) 8%, transparent);
+  }
+  form:focus-within .label { color: var(--swatch); }
+  .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); }
+</style>
+<form onsubmit="return false">
+  <span class="label">Focus either field</span>
+  <input type="text" placeholder="Name">
+  <input type="email" placeholder="Email">
+</form>

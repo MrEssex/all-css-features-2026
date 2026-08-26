@@ -1,0 +1,12 @@
+<style>
+  .row { display: grid; gap: 0.2rem; font-size: 1.05rem; font-variant-caps: small-caps; }
+  .off { font-synthesis-small-caps: none; }
+  span { font-size: 0.62rem; color: var(--ink-faint); font-family: var(--mono); font-variant-caps: normal; }
+</style>
+<div class="row">
+  <div>Synthesised Small Caps <span>auto</span></div>
+  <div class="off">Real Small Caps Only <span>font-synthesis-small-caps: none</span></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Faked small caps are just shrunk capitals, so their strokes look too light
+  beside the full-size letters.</p>

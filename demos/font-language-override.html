@@ -1,0 +1,13 @@
+<style>
+  .row { display: grid; gap: 0.3rem; font-size: 1.1rem; }
+  .sr { font-language-override: "SRB"; }
+  span { font-size: 0.6rem; color: var(--ink-faint); font-family: var(--mono); }
+</style>
+<div class="row">
+  <div lang="ru">бгдпт <span>as Russian</span></div>
+  <div lang="ru" class="sr">бгдпт <span>font-language-override: "SRB"</span></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Serbian Cyrillic uses different letterforms from Russian for the same code
+  points. This forces the font's language-specific glyphs regardless of
+  <code>lang</code>.</p>

@@ -1,0 +1,31 @@
+<style>
+  .menu {
+    display: grid;
+    gap: 3px;
+
+    & a {
+      display: block;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.78rem;
+      text-decoration: none;
+      color: var(--ink);
+
+      &:hover { background: color-mix(in oklab, var(--swatch) 18%, transparent); }
+
+      &[aria-current] {
+        background: var(--swatch);
+        color: oklch(100% 0 0);
+      }
+    }
+
+    @media (width < 30rem) {
+      & a { font-size: 0.72rem; }
+    }
+  }
+</style>
+<nav class="menu" aria-label="Nesting demo">
+  <a href="#nesting" aria-current="page">Current page</a>
+  <a href="#nesting">Hover me</a>
+  <a href="#nesting">Another link</a>
+</nav>

@@ -1,0 +1,29 @@
+<style>
+  @keyframes animations-css-pulse {
+    from { scale: 1; opacity: 1; }
+    to { scale: 1.9; opacity: 0; }
+  }
+  @keyframes animations-css-spin { to { rotate: 360deg; } }
+  .stage { display: flex; gap: 1.75rem; align-items: center; padding: 0.5rem 0; }
+  .pulse { position: relative; inline-size: 1.6rem; aspect-ratio: 1; border-radius: 50%; background: var(--swatch); }
+  .pulse::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--swatch);
+    animation: animations-css-pulse 1.8s ease-out infinite;
+  }
+  .spin {
+    inline-size: 1.6rem;
+    aspect-ratio: 1;
+    border: 3px solid color-mix(in oklab, var(--swatch) 25%, transparent);
+    border-block-start-color: var(--swatch);
+    border-radius: 50%;
+    animation: animations-css-spin 900ms linear infinite;
+  }
+</style>
+<div class="stage">
+  <div class="pulse"></div>
+  <div class="spin"></div>
+</div>

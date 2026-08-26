@@ -1,0 +1,11 @@
+<style>
+  .stage { border: 1px dashed var(--line); border-radius: 6px; padding: 0.5rem; }
+  .box { padding: 0.3rem 0.5rem; border-radius: 4px; background: color-mix(in oklab, var(--swatch) 18%, transparent); font-size: 0.74rem; margin-block-end: 4px; }
+  .r { position: relative; inset-inline-start: 1.5rem; background: var(--swatch); color: oklch(100% 0 0); }
+  .ghost { border: 1px dashed var(--swatch); background: none; color: var(--ink-faint); }
+</style>
+<div class="stage">
+  <div class="box">Normal flow</div>
+  <div class="box r">Shifted 1.5rem — but its original space is kept</div>
+  <div class="box">Still positioned as if the box above had not moved</div>
+</div>

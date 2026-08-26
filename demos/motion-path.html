@@ -1,0 +1,18 @@
+<style>
+  @keyframes motion-path-travel { to { offset-distance: 100%; } }
+  .track {
+    block-size: 5rem;
+    background:
+      radial-gradient(circle at center, transparent 1.55rem, color-mix(in oklab, var(--swatch) 22%, transparent) 1.6rem 1.75rem, transparent 1.8rem);
+  }
+  .dot {
+    inline-size: 0.7rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--swatch);
+    offset-path: circle(1.675rem at 50% 50%);
+    offset-rotate: auto;
+    animation: motion-path-travel 3s linear infinite;
+  }
+</style>
+<div class="track"><div class="dot"></div></div>

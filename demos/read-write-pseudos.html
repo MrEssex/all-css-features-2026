@@ -1,0 +1,11 @@
+<style>
+  .row { display: grid; gap: 0.35rem; font-size: 0.78rem; }
+  input:read-only, [contenteditable="false"] { background: var(--sunken); color: var(--ink-faint); }
+  input:read-write, [contenteditable="true"] { border-color: var(--swatch-3); }
+  [contenteditable] { padding: 0.3rem 0.55rem; border: 1px solid var(--line); border-radius: 5px; }
+</style>
+<div class="row">
+  <input value="Editable — :read-write">
+  <input value="Read-only — :read-only" readonly>
+  <div contenteditable="true">A contenteditable div also matches :read-write</div>
+</div>

@@ -1,0 +1,16 @@
+<style>
+  .code { font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid var(--line); white-space: pre-wrap; }
+  .row { display: flex; gap: 0.5rem; margin-block-start: 0.5rem; }
+  .sheet { border: 1px solid var(--line); border-radius: 4px; background: var(--raised); display: grid; place-items: center; font-size: 0.62rem; color: var(--ink-faint); }
+  .p { inline-size: 3rem; block-size: 4rem; }
+  .l { inline-size: 4rem; block-size: 3rem; }
+</style>
+<div class="code">@page { size: A4 landscape }
+@page { page-orientation: rotate-left }</div>
+<div class="row">
+  <div class="sheet p">portrait</div>
+  <div class="sheet l">landscape</div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>page-orientation</code> rotates the printed sheet without changing how the
+  page box is laid out.</p>

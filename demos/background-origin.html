@@ -1,0 +1,11 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; text-align: center; }
+  .f { block-size: 3.6rem; border-radius: 6px; border: 6px dashed color-mix(in oklab, var(--swatch) 40%, transparent); padding: 0.5rem; background-image: linear-gradient(135deg, var(--swatch), var(--swatch-2)); background-repeat: no-repeat; }
+  .a { background-origin: border-box; } .b { background-origin: padding-box; } .c { background-origin: content-box; }
+  figcaption { font-family: var(--mono); font-size: 0.58rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="row">
+  <figure><div class="f a"></div><figcaption>border-box</figcaption></figure>
+  <figure><div class="f b"></div><figcaption>padding-box</figcaption></figure>
+  <figure><div class="f c"></div><figcaption>content-box</figcaption></figure>
+</div>

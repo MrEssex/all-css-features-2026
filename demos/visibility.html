@@ -1,0 +1,11 @@
+<style>
+  .row { display: flex; gap: 0.4rem; }
+  .row div { flex: 1; padding: 0.5rem; border-radius: 5px; background: color-mix(in oklab, var(--swatch) 18%, transparent); font-size: 0.72rem; text-align: center; }
+  .hidden { visibility: hidden; }
+  .gone { display: none; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div>visible</div><div class="hidden">hidden</div><div>visible</div><div class="gone">none</div>
+</div>
+<code>visibility: hidden keeps the box and its space; display: none removes both.</code>

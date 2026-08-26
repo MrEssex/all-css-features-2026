@@ -1,0 +1,20 @@
+<style>
+  ::highlight(demo-hl) { background: color-mix(in oklab, var(--swatch-3) 40%, transparent); color: var(--ink); }
+  ::highlight(demo-hl2) { background: color-mix(in oklab, var(--swatch-2) 35%, transparent); text-decoration: underline wavy var(--swatch-2); }
+  p { font-size: 0.85rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<p id="hl-text">The Custom Highlight API paints ranges without inserting any
+elements, so highlighting search results never touches the DOM structure.</p>
+<p class="note">Two ranges above are highlighted from script via
+<code>CSS.highlights</code> — no wrapper spans were added.</p>
+<script>
+  const el = root.querySelector('#hl-text');
+  const node = el.firstChild;
+  if (node && CSS.highlights) {
+    const a = new Range(); a.setStart(node, 4); a.setEnd(node, 29);
+    const b = new Range(); b.setStart(node, 44); b.setEnd(node, 68);
+    CSS.highlights.set('demo-hl', new Highlight(a));
+    CSS.highlights.set('demo-hl2', new Highlight(b));
+  }
+</script>

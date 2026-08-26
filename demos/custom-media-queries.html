@@ -1,0 +1,10 @@
+<style>
+  .code { font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); padding: 0.6rem 0.8rem; border-radius: 6px; border: 1px solid var(--line); white-space: pre-wrap; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="code">@custom-media --wide (width >= 60rem);
+@custom-media --motion-ok (prefers-reduced-motion: no-preference);
+
+@media (--wide) and (--motion-ok) { … }</div>
+<p class="note">Names a query once and reuses it, so a breakpoint stops being
+copied into forty places. Not yet shipped in any browser.</p>

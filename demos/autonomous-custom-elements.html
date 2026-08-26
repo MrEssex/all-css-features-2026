@@ -1,0 +1,14 @@
+<style>
+  x-badge-demo { display: inline-flex; gap: 0.4rem; align-items: center; padding: 0.25rem 0.7rem; border-radius: 2rem; background: color-mix(in oklab, var(--swatch) 18%, transparent); font-size: 0.76rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<x-badge-demo>An unknown tag, styled and upgraded</x-badge-demo>
+<p class="note">Custom elements are ordinary elements to CSS: they inherit, they
+take any selector, and they style fine even before their definition loads.</p>
+<script>
+  if (!customElements.get('x-badge-demo')) {
+    customElements.define('x-badge-demo', class extends HTMLElement {
+      connectedCallback() { this.prepend('★ '); }
+    });
+  }
+</script>

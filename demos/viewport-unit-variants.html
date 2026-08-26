@@ -1,0 +1,16 @@
+<style>
+  .rows { display: grid; gap: 3px; font-family: var(--mono); font-size: 0.68rem; }
+  .rows div { display: grid; grid-template-columns: 4rem 1fr; align-items: center; gap: 0.5rem; }
+  .bar { block-size: 1.3rem; border-radius: 3px; background: var(--swatch); }
+  .svw { inline-size: min(100%, 18svw); }
+  .lvw { inline-size: min(100%, 18lvw); }
+  .dvw { inline-size: min(100%, 18dvw); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="rows">
+  <div><span>18svw</span><span class="bar svw"></span></div>
+  <div><span>18lvw</span><span class="bar lvw"></span></div>
+  <div><span>18dvw</span><span class="bar dvw"></span></div>
+</div>
+<p class="note"><em>small</em>, <em>large</em> and <em>dynamic</em> viewport units
+differ on mobile, where the browser chrome expands and collapses as you scroll.</p>

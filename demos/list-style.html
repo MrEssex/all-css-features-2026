@@ -1,0 +1,12 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; font-size: 0.76rem; }
+  ul, ol { padding-inline-start: 1.5rem; }
+  .a { list-style: square; } .b { list-style: upper-roman; }
+  .c { list-style: "→ "; } .d { list-style-position: inside; background: var(--sunken); border-radius: 5px; padding: 0.3rem 0.4rem; }
+</style>
+<div class="row">
+  <ul class="a"><li>square</li><li>square</li></ul>
+  <ol class="b"><li>roman</li><li>roman</li></ol>
+  <ul class="c"><li>string</li><li>marker</li></ul>
+</div>
+<ul class="a d" style="margin-block-start:.5rem"><li>list-style-position: inside — the marker sits inside the content box, so wrapped lines align under it</li></ul>

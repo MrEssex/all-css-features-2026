@@ -1,0 +1,12 @@
+<style>
+  .row { display: flex; gap: 0.6rem; }
+  .frame { flex: 1; block-size: 4.5rem; border-radius: 6px; overflow: clip; }
+  svg { inline-size: 100%; block-size: 100%; object-fit: cover; }
+  .zoom svg { object-view-box: inset(25% 30% 25% 30%); }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="frame"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="40" fill="oklch(62% .17 275)"/><circle cx="30" cy="20" r="8" fill="oklch(85% .13 90)"/></svg></div>
+  <div class="frame zoom"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="40" fill="oklch(62% .17 275)"/><circle cx="30" cy="20" r="8" fill="oklch(85% .13 90)"/></svg></div>
+</div>
+<code>object-view-box crops and zooms in CSS — no second cropped asset needed.</code>

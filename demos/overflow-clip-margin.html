@@ -1,0 +1,10 @@
+<style>
+  .box { inline-size: 7rem; block-size: 3rem; overflow: clip; overflow-clip-margin: 1rem; border: 1px dashed var(--line); border-radius: 5px; margin-block-end: 0.6rem; }
+  .plain { overflow-clip-margin: 0; }
+  .blob { inline-size: 11rem; block-size: 2rem; margin: 0.5rem; background: var(--swatch); border-radius: 4px; }
+  code { display: block; font-size: 0.66rem; color: var(--ink-faint); margin-block-end: 0.2rem; }
+</style>
+<code>overflow-clip-margin: 1rem — content may bleed 1rem past the box</code>
+<div class="box"><div class="blob"></div></div>
+<code>0 — clipped exactly at the edge</code>
+<div class="box plain"><div class="blob"></div></div>

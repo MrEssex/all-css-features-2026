@@ -1,0 +1,12 @@
+<style>
+  .stage { position: relative; block-size: 6rem; border: 1px dashed var(--line); border-radius: 6px; }
+  .tag { position: absolute; padding: 0.2rem 0.45rem; border-radius: 4px; font-family: var(--mono); font-size: 0.64rem; background: var(--swatch); color: oklch(100% 0 0); }
+  .tl { inset-block-start: 0.4rem; inset-inline-start: 0.4rem; }
+  .br { inset-block-end: 0.4rem; inset-inline-end: 0.4rem; background: var(--swatch-2); }
+  .mid { inset: 50%; translate: -50% -50%; background: var(--swatch-3); color: oklch(15% 0 0); }
+</style>
+<div class="stage">
+  <span class="tag tl">inset-block-start / inline-start</span>
+  <span class="tag mid">centred with inset + translate</span>
+  <span class="tag br">bottom / end</span>
+</div>

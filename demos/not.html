@@ -1,0 +1,21 @@
+<style>
+  .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; list-style: none; padding: 0; }
+  .tags li {
+    padding: 0.2rem 0.55rem;
+    border-radius: 2rem;
+    font-size: 0.72rem;
+    background: var(--sunken);
+    border: 1px solid var(--line);
+  }
+  .tags li:not(.muted, :last-child) {
+    background: color-mix(in oklab, var(--swatch) 20%, transparent);
+    border-color: var(--swatch);
+  }
+</style>
+<ul class="tags">
+  <li>grid</li>
+  <li class="muted">deprecated</li>
+  <li>oklch</li>
+  <li>:has()</li>
+  <li>last one, excluded</li>
+</ul>

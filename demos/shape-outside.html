@@ -1,0 +1,18 @@
+<style>
+  .blob {
+    float: inline-start;
+    inline-size: 5rem;
+    aspect-ratio: 1;
+    margin-inline-end: 0.6rem;
+    background: var(--swatch);
+    clip-path: circle(50%);
+    shape-outside: circle(50%);
+    shape-margin: 0.4rem;
+  }
+  p { font-size: 0.76rem; text-align: justify; hyphens: auto; }
+</style>
+<div class="blob"></div>
+<p lang="en">Text wraps to the geometry of the shape rather than to the rectangle
+of the float's margin box, which is what magazine layout has always done and
+what the web could not do for its first two decades. The shape can be a circle,
+an ellipse, a polygon, or the alpha channel of an image.</p>

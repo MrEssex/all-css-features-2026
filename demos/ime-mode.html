@@ -1,0 +1,11 @@
+<style>
+  .code { font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); padding: 0.5rem 0.7rem; border-radius: 6px; border: 1px solid var(--line); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+  input { inline-size: 100%; margin-block-start: 0.5rem; }
+</style>
+<div class="code">ime-mode: disabled;  /* deprecated */</div>
+<input placeholder="An ordinary text field">
+<p class="note">An old attempt to control the input method editor from CSS. It is
+deprecated and ignored outside legacy Firefox; controlling someone's IME from a
+stylesheet was a bad idea for CJK users in the first place. Use the
+<code>inputmode</code> attribute where you need a hint.</p>

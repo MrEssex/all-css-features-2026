@@ -1,0 +1,13 @@
+<style>
+  .row { display: flex; gap: 0.6rem; }
+  p { flex: 1; font-size: 0.75rem; text-align: justify; padding: 0.35rem 0.5rem; background: var(--sunken); border-radius: 5px; }
+  .auto { hyphens: auto; } .none { hyphens: none; }
+  code { display: block; font-size: 0.62rem; color: var(--ink-faint); margin-block-end: 0.2rem; }
+</style>
+<div class="row">
+  <div style="flex:1"><code>hyphens: none</code><p class="none" lang="en">Extraordinarily complicated internationalisation vocabulary.</p></div>
+  <div style="flex:1"><code>hyphens: auto</code><p class="auto" lang="en">Extraordinarily complicated internationalisation vocabulary.</p></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>auto</code> needs a <code>lang</code> attribute — the browser hyphenates
+  by language dictionary.</p>

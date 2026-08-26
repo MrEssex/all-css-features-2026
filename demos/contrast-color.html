@@ -1,0 +1,24 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; }
+  .row i {
+    display: grid;
+    place-items: center;
+    block-size: 2.6rem;
+    border-radius: 4px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: contrast-color(var(--bg));
+    background: var(--bg);
+  }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <i style="--bg: oklch(95% .05 275)">Aa</i>
+  <i style="--bg: oklch(80% .13 90)">Aa</i>
+  <i style="--bg: oklch(65% .2 25)">Aa</i>
+  <i style="--bg: oklch(55% .18 275)">Aa</i>
+  <i style="--bg: oklch(40% .12 150)">Aa</i>
+  <i style="--bg: oklch(22% .04 265)">Aa</i>
+</div>
+<p class="note">One declaration, six backgrounds — the browser picks black or
+white for legibility.</p>

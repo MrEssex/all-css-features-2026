@@ -1,0 +1,14 @@
+<style>
+  .row { display: flex; gap: 0.6rem; text-align: center; }
+  .f { flex: 1; block-size: 3.6rem; background: linear-gradient(135deg, var(--swatch), var(--swatch-2)); }
+  .a { clip-path: xywh(20% 15% 60% 70% round 20%); }
+  .b { clip-path: rect(15% 80% 85% 20% round 12px); }
+  figcaption { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="row">
+  <figure><div class="f a"></div><figcaption>xywh()</figcaption></figure>
+  <figure><div class="f b"></div><figcaption>rect()</figcaption></figure>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>xywh()</code> takes position and size; <code>rect()</code> takes four
+  edges — both far easier to read than nested <code>inset()</code> maths.</p>

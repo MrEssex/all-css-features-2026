@@ -1,0 +1,13 @@
+<style>
+  .opts { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .opts span { padding: 0.25rem 0.6rem; border-radius: 2rem; font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); border: 1px solid var(--line); color: var(--ink-faint); }
+  @media (resolution >= 1dppx) { .o1 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o1::after { content: ' ✓'; } }
+  @media (resolution >= 2dppx) { .o2 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o2::after { content: ' ✓'; } }
+  @media (resolution >= 3dppx) { .o3 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o3::after { content: ' ✓'; } }
+</style>
+<div class="opts">
+  <span class="o1">≥ 1dppx</span>
+  <span class="o2">≥ 2dppx</span>
+  <span class="o3">≥ 3dppx</span>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">Your browser right now, live via <code>resolution</code>.</p>

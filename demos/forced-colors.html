@@ -1,0 +1,14 @@
+<style>
+  .box { padding: 0.6rem 0.8rem; border: 2px solid var(--swatch); border-radius: 6px; background: color-mix(in oklab, var(--swatch) 14%, transparent); font-size: 0.78rem; }
+  .swatch { display: inline-block; inline-size: 1rem; aspect-ratio: 1; background: var(--swatch); border-radius: 3px; vertical-align: -2px; forced-color-adjust: none; }
+  .state::after { content: "forced colours are off"; }
+  @media (forced-colors: active) {
+    .box { border-color: CanvasText; background: Canvas; color: CanvasText; }
+    .state::after { content: "forced colours are ACTIVE"; }
+  }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="box"><span class="swatch"></span> <span class="state"></span></div>
+<p class="note">In Windows High Contrast the browser replaces your palette.
+<code>forced-color-adjust: none</code> opts a swatch out where the colour
+<em>is</em> the information.</p>

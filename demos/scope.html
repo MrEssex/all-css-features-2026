@@ -1,0 +1,13 @@
+<style>
+  @scope (.card-a) to (.nested) {
+    p { color: var(--swatch); font-weight: 600; }
+  }
+  .card-a, .nested { padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.78rem; }
+  .nested { margin-block-start: 0.4rem; }
+</style>
+<div class="card-a">
+  <p>In scope — styled.</p>
+  <div class="nested">
+    <p>Past the lower boundary — untouched.</p>
+  </div>
+</div>

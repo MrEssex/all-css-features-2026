@@ -1,0 +1,10 @@
+<style>
+  @font-palette-values --fpa-a { font-family: "Demo"; override-colors: 0 oklch(65% .2 275); }
+  @font-palette-values --fpa-b { font-family: "Demo"; override-colors: 0 oklch(70% .2 20); }
+  @keyframes font-palette-animation-cycle { from { font-palette: --fpa-a; } to { font-palette: --fpa-b; } }
+  .sample { font-size: 1.6rem; animation: font-palette-animation-cycle 2s infinite alternate; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="sample">🎨 Animated palette</div>
+<p class="note">Palettes interpolate, so a colour font can transition between
+themes rather than snapping. Needs a COLR font to show.</p>

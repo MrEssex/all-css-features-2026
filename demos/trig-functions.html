@@ -1,0 +1,22 @@
+<style>
+  .ring { position: relative; block-size: 7rem; }
+  .ring i {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    inline-size: 0.85rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--swatch);
+    --a: calc(var(--i) * 30deg);
+    --r: 3rem;
+    translate: calc(cos(var(--a)) * var(--r) - 50%) calc(sin(var(--a)) * var(--r) - 50%);
+  }
+  .note { font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="ring">
+  <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i>
+  <i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i>
+  <i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i>
+</div>
+<p class="note">Positioned with <code>cos()</code> and <code>sin()</code> in pure CSS.</p>

@@ -1,0 +1,11 @@
+<style>
+  .b { block-size: 3.5rem; border-radius: 6px;
+    background-image: image-set(
+      linear-gradient(var(--swatch), var(--swatch-2)) 1x,
+      linear-gradient(var(--swatch-3), var(--swatch)) 2x); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="b"></div>
+<p class="note"><code>image-set()</code> lets the browser choose by pixel density
+and by format support — the CSS counterpart of <code>srcset</code>. On a 2× screen
+this box picks the second gradient.</p>

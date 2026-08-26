@@ -1,0 +1,10 @@
+<style>
+  .tight { line-height: 1.1; font-size: 0.8rem; }
+  .bar { block-size: 1lh; background: color-mix(in oklab, var(--swatch) 25%, transparent); border-radius: 3px; margin-block-end: 4px; }
+  .root { block-size: 1rlh; background: color-mix(in oklab, var(--swatch-2) 25%, transparent); }
+  code { font-size: 0.68rem; color: var(--ink-faint); }
+</style>
+<div class="tight">
+  <div class="bar"></div><code>1lh — this element's tight line height</code>
+  <div class="bar root"></div><code>1rlh — the root element's line height</code>
+</div>

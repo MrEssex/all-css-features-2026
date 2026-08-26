@@ -1,0 +1,12 @@
+<style>
+  @scope (.widget) {
+    :scope { border: 2px solid var(--swatch); border-radius: 6px; padding: 0.5rem; }
+    :scope > p { font-weight: 600; color: var(--swatch); }
+    p { font-size: 0.78rem; }
+  }
+  .widget p { margin-block-end: 2px; }
+</style>
+<div class="widget">
+  <p>:scope — the scoping root itself</p>
+  <div><p>A nested paragraph, still in scope but not a direct child</p></div>
+</div>

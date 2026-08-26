@@ -1,0 +1,14 @@
+<style>
+  form { display: grid; gap: 0.4rem; }
+  input { inline-size: 100%; }
+  input:autofill { outline: 2px solid var(--swatch-3); outline-offset: 1px; }
+  input:autofill + span::after { content: "autofilled ✓"; color: var(--swatch-3); font-size: 0.7rem; }
+  span { font-size: 0.7rem; color: var(--ink-faint); min-block-size: 1rem; }
+</style>
+<form onsubmit="return false">
+  <input type="email" name="email" autocomplete="email" placeholder="Email"><span></span>
+  <input type="text" name="name" autocomplete="name" placeholder="Full name"><span></span>
+</form>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Use your browser's saved-details autofill to see the ring. Only a limited set of
+  properties is allowed, so a page cannot detect autofill by measuring layout.</p>

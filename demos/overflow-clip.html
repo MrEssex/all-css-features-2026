@@ -1,0 +1,12 @@
+<style>
+  .row { display: flex; gap: 0.5rem; }
+  .b { flex: 1; block-size: 4rem; border: 1px solid var(--line); border-radius: 5px; padding: 0.3rem 0.5rem; font-size: 0.72rem; }
+  .h { overflow: hidden; }
+  .c { overflow: clip; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="b h">overflow: hidden — still a scroll container, so scripts can scroll it and it creates a scrollport.</div>
+  <div class="b c">overflow: clip — simply clips. No scroll container, no programmatic scrolling.</div>
+</div>
+<code>clip is the cheaper choice when you only want to cut content off.</code>

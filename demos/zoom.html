@@ -1,0 +1,11 @@
+<style>
+  .row { display: flex; gap: 0.5rem; align-items: start; }
+  .b { padding: 0.4rem 0.6rem; border-radius: 5px; background: color-mix(in oklab, var(--swatch) 16%, transparent); font-size: 0.75rem; }
+  .z { zoom: 1.5; }
+  .s { zoom: 0.75; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <div class="b">zoom: 1</div><div class="b z">zoom: 1.5</div><div class="b s">zoom: 0.75</div>
+</div>
+<code>Unlike scale(), zoom changes the element's layout size, so siblings move.</code>

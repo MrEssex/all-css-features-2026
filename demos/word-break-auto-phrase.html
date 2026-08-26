@@ -1,0 +1,12 @@
+<style>
+  .b { font-size: 1rem; padding: 0.35rem 0.5rem; background: var(--sunken); border-radius: 5px; max-inline-size: 11rem; margin-block-end: 4px; }
+  .phrase { word-break: auto-phrase; }
+  code { font-size: 0.62rem; color: var(--ink-faint); }
+</style>
+<code>normal</code>
+<div class="b" lang="ja">今日はいい天気ですね</div>
+<code>word-break: auto-phrase</code>
+<div class="b phrase" lang="ja">今日はいい天気ですね</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Japanese has no spaces, so lines can break mid-phrase.
+  <code>auto-phrase</code> breaks at natural phrase boundaries instead.</p>

@@ -1,0 +1,23 @@
+<style>
+  .outer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 4px;
+  }
+  .pane { display: grid; grid-row: span 3; grid-template-rows: subgrid; gap: 4px; }
+  .pane > * {
+    padding: 0.35rem 0.5rem;
+    border-radius: 4px;
+    background: color-mix(in oklab, var(--swatch) 16%, transparent);
+    font-size: 0.72rem;
+  }
+  .pane h4 { font-weight: 600; }
+  .note { margin-block-start: 0.6rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="outer">
+  <div class="pane"><h4>One</h4><p>Short.</p><small>meta</small></div>
+  <div class="pane"><h4>Two with a longer title</h4><p>A description that runs to two lines.</p><small>meta</small></div>
+  <div class="pane"><h4>Three</h4><p>Medium length body.</p><small>meta</small></div>
+</div>
+<p class="note">Rows are inherited from the parent grid, so all three rows line up despite different content.</p>

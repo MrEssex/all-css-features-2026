@@ -1,0 +1,21 @@
+<style>
+  .list { display: flex; gap: 3px; }
+  .list li {
+    list-style: none;
+    flex: 1;
+    block-size: 2.2rem;
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    color: oklch(100% 0 0);
+    background: oklch(from var(--swatch) calc(0.45 + 0.4 * sibling-index() / sibling-count()) c h);
+  }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<ul class="list">
+  <li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li>
+</ul>
+<p class="note">Each item's lightness is <code>sibling-index() / sibling-count()</code>
+— a whole ramp with one declaration and no per-item classes.</p>

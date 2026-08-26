@@ -1,0 +1,20 @@
+<style>
+  .resizer { container-type: inline-size; resize: horizontal; overflow: auto; min-inline-size: 9rem; max-inline-size: 100%; border: 1px dashed var(--line); border-radius: 8px; padding: 0.5rem; }
+  .media { display: grid; gap: 0.5rem; }
+  .thumb { block-size: 3rem; border-radius: 6px; background: var(--swatch); }
+  .body h4 { font-size: 0.8rem; }
+  .body p { font-size: 0.72rem; color: var(--ink-faint); }
+  @container (inline-size > 18rem) {
+    .media { grid-template-columns: 5rem 1fr; align-items: center; }
+    .thumb { block-size: 100%; min-block-size: 3rem; }
+    .body h4 { font-size: 0.95rem; }
+  }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="resizer">
+  <div class="media">
+    <div class="thumb"></div>
+    <div class="body"><h4>Reflows on its container</h4><p>Not on the viewport.</p></div>
+  </div>
+</div>
+<p class="note">Drag the bottom-right corner.</p>

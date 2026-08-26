@@ -1,0 +1,19 @@
+<style>
+  .opts { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .opts span { padding: 0.25rem 0.6rem; border-radius: 2rem; font-family: var(--mono); font-size: 0.7rem; background: var(--sunken); border: 1px solid var(--line); color: var(--ink-faint); }
+  @media (pointer: fine) { .o1 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o1::after { content: ' ✓'; } }
+  @media (pointer: coarse) { .o2 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o2::after { content: ' ✓'; } }
+  @media (pointer: none) { .o3 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o3::after { content: ' ✓'; } }
+  @media (hover: hover) { .o4 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o4::after { content: ' ✓'; } }
+  @media (hover: none) { .o5 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o5::after { content: ' ✓'; } }
+  @media (any-pointer: coarse) { .o6 { background: color-mix(in oklab, var(--swatch-3) 25%, transparent); border-color: var(--swatch-3); color: var(--ink); font-weight: 600; } .o6::after { content: ' ✓'; } }
+</style>
+<div class="opts">
+  <span class="o1">pointer: fine</span>
+  <span class="o2">pointer: coarse</span>
+  <span class="o3">pointer: none</span>
+  <span class="o4">hover: hover</span>
+  <span class="o5">hover: none</span>
+  <span class="o6">any-pointer: coarse</span>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">Your browser right now, live via <code>pointer / hover</code>.</p>

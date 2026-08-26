@@ -1,0 +1,13 @@
+<style>
+  .doc :heading { color: var(--swatch); letter-spacing: -0.01em; margin-block-end: 0.2rem; }
+  .doc :heading(2) { font-size: 1.05rem; }
+  .doc :heading(3,4) { font-size: 0.9rem; opacity: 0.85; }
+  .doc p { font-size: 0.76rem; color: var(--ink-soft); margin-block-end: 0.4rem; }
+</style>
+<div class="doc">
+  <h2>:heading(2)</h2>
+  <p>Matches every heading level at once, or a chosen set.</p>
+  <h3>:heading(3,4)</h3>
+  <p>Replaces the <code>h1, h2, h3, h4, h5, h6</code> pile-up.</p>
+  <h4>Also level 4</h4>
+</div>

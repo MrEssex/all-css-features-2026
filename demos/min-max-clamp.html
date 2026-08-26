@@ -1,0 +1,8 @@
+<style>
+  .fluid { font-size: clamp(0.9rem, 3.5cqi, 2.2rem); font-weight: 700; letter-spacing: -0.02em; container-type: inline-size; }
+  .wrap { container-type: inline-size; resize: horizontal; overflow: auto; min-inline-size: 8rem; border: 1px dashed var(--line); border-radius: 6px; padding: 0.5rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="wrap"><div class="fluid">Fluid type</div></div>
+<p class="note"><code>clamp(0.9rem, 3.5cqi, 2.2rem)</code> — drag to resize; the
+size tracks the container but never leaves its bounds.</p>

@@ -1,0 +1,14 @@
+<style>
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .panel { padding: 0.6rem; border-radius: 6px; font-size: 0.75rem; }
+  .l { color-scheme: light; }
+  .d { color-scheme: dark; }
+  input, select { inline-size: 100%; margin-block-start: 0.3rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="pair">
+  <div class="panel l">color-scheme: light<input value="native widget"><select><option>Menu</option></select></div>
+  <div class="panel d">color-scheme: dark<input value="native widget"><select><option>Menu</option></select></div>
+</div>
+<p class="note">The form controls, scrollbars and default backgrounds are repainted
+by the browser — no author colours involved.</p>

@@ -1,0 +1,11 @@
+<style>
+  .pane { padding: 0.6rem 0.8rem; border-radius: 6px; font-size: 0.78rem; background: var(--sunken); }
+  @supports (color: oklch(50% 0.1 200)) {
+    .pane { background: color-mix(in oklab, var(--swatch-3) 20%, transparent); }
+    .pane::before { content: "✓ "; color: var(--swatch-3); font-weight: 700; }
+  }
+  .pane2 { margin-block-start: 0.4rem; padding: 0.6rem 0.8rem; border-radius: 6px; font-size: 0.78rem; background: color-mix(in oklab, var(--swatch-3) 20%, transparent); }
+  @supports not (rotate: 1deg) { .pane2 { background: var(--sunken); } }
+</style>
+<div class="pane">Your browser supports <code>oklch()</code></div>
+<div class="pane2">…and individual transform properties</div>

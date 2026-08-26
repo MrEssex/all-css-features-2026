@@ -1,0 +1,14 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; text-align: center; }
+  .f { block-size: 2.6rem; border-radius: 8px; background: color-mix(in oklab, var(--swatch) 16%, transparent); outline: 3px solid var(--swatch); }
+  .b { outline-offset: 4px; }
+  .c { outline-style: dashed; outline-offset: -6px; }
+  figcaption { font-family: var(--mono); font-size: 0.6rem; color: var(--ink-faint); margin-block-start: 0.4rem; }
+</style>
+<div class="row">
+  <figure><div class="f"></div><figcaption>offset 0</figcaption></figure>
+  <figure><div class="f b"></div><figcaption>offset 4px</figcaption></figure>
+  <figure><div class="f c"></div><figcaption>offset −6px</figcaption></figure>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Outlines take no layout space and now follow <code>border-radius</code>.</p>

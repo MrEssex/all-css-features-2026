@@ -1,0 +1,16 @@
+<style>
+  .rows { display: grid; gap: 3px; font-family: var(--mono); font-size: 0.68rem; }
+  .rows div { display: grid; grid-template-columns: 5rem 1fr; align-items: center; gap: 0.5rem; }
+  .bar { block-size: 1.1rem; border-radius: 3px; background: var(--swatch); max-inline-size: 100%; }
+  .a { inline-size: 10vw; }
+  .b { inline-size: 20vw; }
+  .c { inline-size: 10vmin; background: var(--swatch-2); }
+  .d { inline-size: 10vmax; background: var(--swatch-3); }
+</style>
+<div class="rows">
+  <div><span>10vw</span><span class="bar a"></span></div>
+  <div><span>20vw</span><span class="bar b"></span></div>
+  <div><span>10vmin</span><span class="bar c"></span></div>
+  <div><span>10vmax</span><span class="bar d"></span></div>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">Resize the window.</p>

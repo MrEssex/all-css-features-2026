@@ -1,0 +1,12 @@
+<style>
+  .bar { display: flex; align-items: center; gap: 0.5rem; padding: 0.3rem 0.5rem; border-radius: 6px 6px 0 0; background: color-mix(in oklab, var(--swatch) 18%, transparent); font-size: 0.72rem;
+    padding-inline-start: env(titlebar-area-x, 0.5rem); }
+  .body { border: 1px solid var(--line); border-block-start: none; border-radius: 0 0 6px 6px; padding: 0.5rem; font-size: 0.75rem; }
+  .drag { app-region: drag; flex: 1; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="bar"><span class="drag">Custom title bar (drag region)</span><span>▫ ✕</span></div>
+<div class="body">Window content</div>
+<p class="note">In an installed PWA the app can draw its own title bar. The
+<code>titlebar-area-*</code> environment variables say where the system's window
+controls sit so your UI does not end up underneath them.</p>

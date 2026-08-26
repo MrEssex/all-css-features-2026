@@ -1,0 +1,9 @@
+<style>
+  :where(.reset) a { color: var(--ink-faint); text-decoration: none; }
+  .reset a { color: var(--swatch); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<p class="reset"><a href="#where">This link is accent-coloured.</a></p>
+<p class="note">The <code>:where(.reset) a</code> rule has zero specificity, so the
+plain <code>.reset a</code> rule that comes after it wins without any fight.
+<code>:is()</code> would have tied.</p>

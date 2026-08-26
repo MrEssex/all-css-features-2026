@@ -1,0 +1,15 @@
+<style>
+  .pair { display: grid; gap: 0.3rem; }
+  .big { font-size: 1.8rem; font-optical-sizing: auto; }
+  .small { font-size: 0.72rem; font-optical-sizing: auto; }
+  .off { font-optical-sizing: none; }
+  span { font-size: 0.62rem; color: var(--ink-faint); font-family: var(--mono); }
+</style>
+<div class="pair">
+  <div class="big">Optical sizing <span>auto</span></div>
+  <div class="small">The same face at a small size, with thicker strokes and looser spacing <span>auto</span></div>
+  <div class="small off">The same text with optical sizing switched off <span>none</span></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  With an <code>opsz</code> axis the design adapts to the size — visible only in
+  fonts that carry one.</p>

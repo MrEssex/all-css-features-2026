@@ -1,0 +1,686 @@
+@layer reset, tokens, base, layout, components, demos;
+
+@layer reset {
+  *, *::before, *::after { box-sizing: border-box; }
+  * { margin: 0; }
+  html { scrollbar-gutter: stable; }
+  img, svg { display: block; max-inline-size: 100%; }
+  button, input { font: inherit; color: inherit; }
+}
+
+@layer tokens {
+  :root {
+    color-scheme: light dark;
+  }
+  :root[data-theme='light'] { color-scheme: light; }
+  :root[data-theme='dark'] { color-scheme: dark; }
+
+  :root {
+
+    --ink:        light-dark(oklch(24% 0.02 265), oklch(93% 0.012 265));
+    --ink-soft:   light-dark(oklch(46% 0.02 265), oklch(72% 0.018 265));
+    --ink-faint:  light-dark(oklch(50% 0.02 265), oklch(68% 0.018 265));
+    --surface:    light-dark(oklch(98.5% 0.004 265), oklch(17% 0.018 265));
+    --raised:     light-dark(oklch(100% 0 0),       oklch(21% 0.02 265));
+    --sunken:     light-dark(oklch(96% 0.006 265),  oklch(14% 0.018 265));
+    --line:       light-dark(oklch(89% 0.008 265),  oklch(30% 0.02 265));
+
+    --accent:     light-dark(oklch(52% 0.19 275), oklch(76% 0.15 275));
+    --widely:     light-dark(oklch(46% 0.13 155), oklch(78% 0.15 155));
+    --newly:      light-dark(oklch(48% 0.115 70), oklch(82% 0.14 82));
+    --limited:    light-dark(oklch(48% 0.19 27),  oklch(75% 0.16 27));
+
+    --radius: 0.75rem;
+    --gutter: clamp(1rem, 4vw, 3rem);
+
+    --mono: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Inter, Roboto, sans-serif;
+  }
+}
+
+@layer base {
+  body {
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1rem;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-underline-offset: 0.2em; }
+  a:hover { text-decoration-thickness: 2px; }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.875em;
+    font-variant-ligatures: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  .skip-link {
+    position: absolute;
+    inset-block-start: -4rem;
+    inset-inline-start: 1rem;
+    z-index: 10;
+    padding: 0.6rem 1rem;
+    background: var(--raised);
+    border: 1px solid var(--line);
+    border-radius: 0 0 var(--radius) var(--radius);
+    text-decoration: none;
+    transition: inset-block-start 150ms ease;
+  }
+  .skip-link:focus { inset-block-start: 0; }
+}
+
+@layer layout {
+  .masthead,
+  .controls__inner,
+  .section,
+  .colophon {
+    max-inline-size: 78rem;
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  .masthead {
+    padding-block: clamp(3rem, 9vw, 6rem) 2.5rem;
+    display: grid;
+    gap: 1.5rem;
+    justify-items: start;
+  }
+
+  .masthead__title {
+    font-size: clamp(2.4rem, 7vw, 4.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    font-weight: 680;
+    text-wrap: balance;
+    background: linear-gradient(100deg, var(--ink) 20%, var(--accent));
+    background-clip: text;
+    color: transparent;
+  }
+
+  .masthead__lead {
+    max-inline-size: 46rem;
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .stat {
+    display: grid;
+    gap: 0.1rem;
+    padding: 0.7rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--raised);
+  }
+  .stat dt {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-faint);
+  }
+  .stat dd {
+    font-size: 1.6rem;
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+  }
+  .stat--widely dd { color: var(--widely); }
+  .stat--newly dd { color: var(--newly); }
+  .stat--limited dd { color: var(--limited); }
+
+  .section { padding-block: 3.5rem 1rem; }
+  .section__head {
+    display: grid;
+    gap: 0.4rem;
+    padding-block-end: 1.5rem;
+    border-block-end: 1px solid var(--line);
+    margin-block-end: 1.75rem;
+  }
+  .section__title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  .section__intro {
+    max-inline-size: 52rem;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+  .section__count {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+  }
+
+  /* Collapse a whole section once every card in it is filtered out. */
+  .section:not(:has(.card:not([hidden]))) { display: none; }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(27rem, 100%), 1fr));
+    align-items: start;
+    gap: 1.25rem;
+  }
+
+  .ad {
+    max-inline-size: 78rem;
+    margin: 1.5rem auto 0;
+    padding-inline: var(--gutter);
+    min-block-size: 90px;
+  }
+  .ad:empty { display: none; }
+
+  .empty {
+    max-inline-size: 78rem;
+    margin-inline: auto;
+    padding: 4rem var(--gutter);
+    text-align: center;
+    color: var(--ink-faint);
+  }
+
+  .colophon {
+    margin-block-start: 4rem;
+    padding-block: 2.5rem 4rem;
+    border-block-start: 1px solid var(--line);
+    display: grid;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .controls {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 5;
+    background: color-mix(in oklab, var(--surface) 82%, transparent);
+    backdrop-filter: blur(14px) saturate(1.4);
+    border-block-end: 1px solid var(--line);
+  }
+  .controls__inner {
+    display: grid;
+    gap: 0.9rem;
+    padding-block: 1.05rem;
+  }
+
+  .search { display: flex; align-items: center; gap: 0.6rem; }
+  .search__label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-faint);
+  }
+  .search__input {
+    field-sizing: content;
+    min-inline-size: 14rem;
+    max-inline-size: 100%;
+    padding: 0.5rem 1rem;
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    background: var(--raised);
+    border: 1px solid var(--line);
+    border-radius: 2rem;
+  }
+
+  .tiers, .filter-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+  .controls__top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+  }
+  .controls__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.6rem;
+  }
+  /* Separates the filter groups without drawing a rule between wrapped rows. */
+  .controls__row > .tiers + .tiers {
+    padding-inline-start: 1.5rem;
+    border-inline-start: 1px solid var(--line);
+    margin-inline-start: -1.1rem;
+  }
+
+  .tier-btn, .filter-chip {
+    padding: 0.42rem 0.95rem;
+    font-size: 0.82rem;
+    background: var(--raised);
+    border: 1px solid var(--line);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+  }
+  .tier-btn:hover, .filter-chip:hover {
+    border-color: color-mix(in oklab, var(--accent) 55%, var(--line));
+  }
+  .tier-btn.is-active, .filter-chip.is-active {
+    background: color-mix(in oklab, var(--accent) 16%, var(--raised));
+    border-color: var(--accent);
+    color: light-dark(var(--accent), var(--ink));
+  }
+  .filter-chip__count {
+    font-family: var(--mono);
+    font-size: 0.72em;
+    color: var(--ink-faint);
+  }
+
+  /* Wrapped chips would take most of a phone screen in a sticky bar. */
+  @media (width < 48rem) {
+    .filter-chips {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+      margin-inline: calc(var(--gutter) * -1);
+      padding-inline: var(--gutter);
+    }
+    .filter-chip { flex: 0 0 auto; }
+  }
+
+  .result-count {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+  }
+
+  .cards > .card {
+    display: grid;
+    gap: 0.95rem;
+    align-content: start;
+    padding: 1.35rem 1.4rem 1.4rem;
+    background: var(--raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    container-type: inline-size;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 20rem;
+    transition: border-color 140ms ease, box-shadow 140ms ease;
+  }
+  .cards > .card:hover {
+    border-color: color-mix(in oklab, var(--accent) 45%, var(--line));
+    box-shadow: 0 1px 2px oklch(0% 0 0 / 0.05), 0 8px 24px -12px oklch(0% 0 0 / 0.25);
+  }
+  .cards > .card:target {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 25%, transparent);
+  }
+
+  .card__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    gap: 0.6rem;
+  }
+  .card__title {
+    font-size: 1.02rem;
+    font-weight: 620;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .card__title a { color: inherit; text-decoration: none; }
+  .card__title a:hover { color: var(--accent); }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.28rem 0.7rem;
+    font-size: 0.7rem;
+    font-weight: 550;
+    white-space: nowrap;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+  }
+  .badge__dot {
+    inline-size: 0.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: currentcolor;
+  }
+  .badge__date {
+    font-family: var(--mono);
+    font-size: 0.92em;
+  }
+  .badge--widely {
+    color: var(--widely);
+    background: color-mix(in oklab, var(--widely) 12%, transparent);
+    border-color: color-mix(in oklab, var(--widely) 30%, transparent);
+  }
+  .badge--newly {
+    color: var(--newly);
+    background: color-mix(in oklab, var(--newly) 14%, transparent);
+    border-color: color-mix(in oklab, var(--newly) 32%, transparent);
+  }
+  .badge--limited {
+    color: var(--limited);
+    background: color-mix(in oklab, var(--limited) 12%, transparent);
+    border-color: color-mix(in oklab, var(--limited) 30%, transparent);
+  }
+
+  .card__desc {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+  .card__desc code {
+    padding: 0.05em 0.3em;
+    background: var(--sunken);
+    border-radius: 4px;
+  }
+
+  .syntax {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    list-style: none;
+    padding: 0;
+    align-content: start;
+  }
+  .syntax code {
+    display: inline-block;
+    padding: 0.3rem 0.62rem;
+    background: var(--sunken);
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    font-size: 0.76rem;
+    color: light-dark(oklch(38% 0.09 275), oklch(84% 0.07 275));
+  }
+
+  .support {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+    list-style: none;
+    padding: 0;
+    margin-block-start: auto;
+  }
+  .chip {
+    display: grid;
+    gap: 0.15rem;
+    padding: 0.45rem 0.5rem;
+    background: var(--sunken);
+    border-radius: 6px;
+    text-align: center;
+  }
+  .chip__browser {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-faint);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .chip__version {
+    font-family: var(--mono);
+    font-size: 0.76rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .chip--unknown .chip__version { color: var(--ink-faint); }
+  .chip--partial {
+    background: color-mix(in oklab, var(--newly) 12%, var(--sunken));
+    outline: 1px dashed color-mix(in oklab, var(--newly) 45%, transparent);
+    outline-offset: -1px;
+  }
+  .chip--partial sup { color: var(--newly); font-size: 0.85em; }
+
+  .usage {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .usage__bar {
+    display: flex;
+    block-size: 0.4rem;
+    border-radius: 2rem;
+    overflow: clip;
+    background: var(--sunken);
+    box-shadow: inset 0 0 0 1px var(--line);
+  }
+  .usage__full { background: var(--widely); }
+  .usage__partial { background: color-mix(in oklab, var(--newly) 70%, transparent); }
+  .usage__value {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .usage__extra { color: var(--newly); font-size: 0.9em; }
+
+  @container (width < 15rem) {
+    .support { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .card__links {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.78rem;
+    padding-block-start: 0.15rem;
+  }
+
+  .advice {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    font-size: 0.76rem;
+  }
+  .advice__label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--ink-faint);
+  }
+  /* Advice is secondary to the Baseline badge above it, so it stays quiet:
+     no border, a wash of its tier colour, and text pulled back towards the ink. */
+  .advice__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.38rem;
+    padding: 0.18rem 0.6rem 0.18rem 0.4rem;
+    border-radius: 2rem;
+    font-size: 0.74rem;
+    font-weight: 550;
+    background: color-mix(in oklab, currentcolor 9%, transparent);
+  }
+  .advice__chip > :not(.advice__icon), .advice__chip { color: inherit; }
+  .advice__icon {
+    inline-size: 0.9rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 0.58rem;
+    font-weight: 700;
+    /* currentcolor here is the chip's tier colour; the glyph sits on top of it. */
+    background: color-mix(in oklab, currentcolor 75%, transparent);
+  }
+  .advice__icon::before { content: "✓"; color: var(--raised); }
+  .advice__chip--yes { color: color-mix(in oklab, var(--widely) 72%, var(--ink-soft)); }
+  .advice__chip--soon { color: color-mix(in oklab, var(--newly) 72%, var(--ink-soft)); }
+  .advice__chip--soon .advice__icon::before { content: "!"; font-weight: 800; }
+  .advice__chip--no { color: color-mix(in oklab, var(--limited) 72%, var(--ink-soft)); }
+  .advice__chip--no .advice__icon::before { content: "✕"; }
+
+  .demo-open {
+    inline-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: light-dark(oklch(100% 0 0), oklch(16% 0.02 265));
+    background: var(--accent);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px oklch(0% 0 0 / 0.12);
+    transition: background-color 120ms ease, translate 120ms ease, box-shadow 120ms ease;
+  }
+  .demo-open__icon { font-size: 0.7em; }
+  .demo-open:hover {
+    background: color-mix(in oklab, var(--accent) 82%, var(--ink));
+    translate: 0 -1px;
+    box-shadow: 0 4px 12px -4px color-mix(in oklab, var(--accent) 60%, transparent);
+  }
+  .demo-open:active { translate: 0 0; }
+
+  .visually-hidden {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .demo-dialog {
+    margin: auto;
+    inline-size: min(46rem, calc(100vw - 2rem));
+    max-block-size: min(44rem, calc(100dvh - 3rem));
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--raised);
+    color: var(--ink);
+    overflow: auto;
+    opacity: 0;
+    scale: 0.97;
+    transition: opacity 180ms ease, scale 180ms ease, display 180ms allow-discrete, overlay 180ms allow-discrete;
+  }
+  .demo-dialog[open] { opacity: 1; scale: 1; }
+  @starting-style { .demo-dialog[open] { opacity: 0; scale: 0.97; } }
+
+  .demo-dialog::backdrop {
+    background: oklch(0% 0 0 / 0.5);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: opacity 180ms ease, display 180ms allow-discrete, overlay 180ms allow-discrete;
+  }
+  .demo-dialog[open]::backdrop { opacity: 1; }
+  @starting-style { .demo-dialog[open]::backdrop { opacity: 0; } }
+
+  .demo-dialog__head {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 1.1rem;
+    background: color-mix(in oklab, var(--raised) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-block-end: 1px solid var(--line);
+  }
+  .demo-dialog__head h4 { font-size: 0.95rem; font-weight: 620; }
+  /* The demo is cloned into a wrapper; the stage and its listings still need to
+     be the dialog's own children for the sticky head and dividers to work. */
+  .demo-dialog__body { display: contents; }
+  .demo-dialog__close {
+    inline-size: 1.9rem;
+    aspect-ratio: 1;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: var(--ink-faint);
+    background: var(--sunken);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .demo-dialog__close:hover { color: var(--ink); }
+
+  .demo__stage {
+    padding: 1.4rem 1.1rem;
+    background: var(--raised);
+  }
+
+  .source { border-block-start: 1px solid var(--line); background: var(--sunken); }
+  .source > summary {
+    padding: 0.5rem 1.1rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    cursor: pointer;
+    user-select: none;
+  }
+  .source pre {
+    margin: 0;
+    padding: 0 1.1rem 1rem;
+    overflow-x: auto;
+  }
+  .source code {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    color: light-dark(oklch(35% 0.06 275), oklch(84% 0.05 275));
+  }
+}
+
+@layer demos {
+  /* Neutral ground every demo inherits, so a demo only has to declare what it
+     is actually demonstrating. */
+  .demo__stage {
+    font-size: 0.85rem;
+    line-height: 1.5;
+
+    --swatch: oklch(62% 0.17 275);
+    --swatch-2: oklch(70% 0.16 20);
+    --swatch-3: oklch(72% 0.15 150);
+  }
+  .demo__stage :is(h1, h2, h3, h4) { font-size: 1em; }
+  .demo__stage button, .demo__stage input, .demo__stage select, .demo__stage textarea {
+    font: inherit;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: var(--sunken);
+    color: var(--ink);
+  }
+  .demo__stage button { cursor: pointer; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Unlayered, so it outranks every layered `display` rule above. The filters set
+   the hidden attribute, and `.cards > .card { display: grid }` would otherwise
+   quietly defeat it: author styles beat the UA sheet whatever the specificity. */
+[hidden] {
+  display: none;
+}

@@ -1,0 +1,15 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; text-align: center; }
+  .f { block-size: 3.4rem; border-radius: 6px; }
+  .a { background: linear-gradient(var(--swatch), var(--swatch-2)); }
+  .b { background: radial-gradient(circle at 30% 30%, var(--swatch-3), var(--swatch)); }
+  .c { background: repeating-linear-gradient(45deg, var(--swatch) 0 8px, var(--swatch-2) 8px 16px); }
+  .d { background: linear-gradient(90deg, var(--swatch) 0 33%, var(--swatch-3) 33% 66%, var(--swatch-2) 66%); }
+  figcaption { font-family: var(--mono); font-size: 0.56rem; color: var(--ink-faint); margin-block-start: 0.2rem; }
+</style>
+<div class="row">
+  <figure><div class="f a"></div><figcaption>linear</figcaption></figure>
+  <figure><div class="f b"></div><figcaption>radial</figcaption></figure>
+  <figure><div class="f c"></div><figcaption>repeating</figcaption></figure>
+  <figure><div class="f d"></div><figcaption>hard stops</figcaption></figure>
+</div>

@@ -1,0 +1,17 @@
+<style>
+  @function --pill-bg(--tone) {
+    result: color-mix(in oklab, var(--tone) 20%, transparent);
+  }
+  .row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .pill { padding: 0.3rem 0.7rem; border-radius: 2rem; font-size: 0.75rem; }
+  .a { background: --pill-bg(var(--swatch)); }
+  .b { background: --pill-bg(var(--swatch-2)); }
+  .c { background: --pill-bg(var(--swatch-3)); }
+</style>
+<div class="row">
+  <span class="pill a">--pill-bg(blue)</span>
+  <span class="pill b">--pill-bg(pink)</span>
+  <span class="pill c">--pill-bg(green)</span>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  Author-defined functions with parameters and a <code>result</code>.</p>

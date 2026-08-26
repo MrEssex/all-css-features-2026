@@ -1,0 +1,10 @@
+<style>
+  .f { inline-size: 5rem; aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--swatch), var(--swatch-2));
+    clip-path: shape(from 50% 0%, curve to 100% 50% with 85% 5%, curve to 50% 100% with 85% 95%, curve to 0% 50% with 15% 95%, curve to 50% 0% with 15% 5%); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="f"></div>
+<p class="note"><code>shape()</code> brings SVG path commands into CSS with real
+units and <code>calc()</code>, and unlike <code>path()</code> it responds to the
+element's size.</p>

@@ -1,0 +1,13 @@
+<style>
+  .row { display: grid; gap: 0.3rem; font-size: 1.15rem; }
+  u { text-decoration: underline 2px var(--swatch-2); text-underline-offset: 2px; }
+  .all { text-decoration-skip-ink: all; }
+  span { font-size: 0.6rem; color: var(--ink-faint); font-family: var(--mono); }
+</style>
+<div class="row">
+  <div><u>Typography judging quality</u> <span>auto — skips descenders only</span></div>
+  <div><u class="all">Typography judging quality</u> <span>all — skips every glyph</span></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>all</code> forces the gap even where the glyph would not have collided —
+  used for scripts where any contact reads as wrong.</p>

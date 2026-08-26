@@ -1,0 +1,13 @@
+<style>
+  svg { border: 1px dashed var(--line); border-radius: 6px; }
+  text { font-size: 12px; fill: var(--ink); }
+  tspan { fill: var(--swatch); font-size: 9px; }
+  line { stroke: var(--line); stroke-width: 1; }
+</style>
+<svg width="100%" height="70" viewBox="0 0 260 70" xmlns="http://www.w3.org/2000/svg">
+  <line x1="0" y1="40" x2="260" y2="40"/>
+  <text x="6" y="40">Base <tspan alignment-baseline="hanging">hang</tspan> <tspan alignment-baseline="middle">mid</tspan> <tspan alignment-baseline="text-after-edge">after</tspan></text>
+</svg>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  Aligns an inline SVG run against its parent's baseline — the per-span
+  counterpart to <code>dominant-baseline</code>.</p>

@@ -1,0 +1,29 @@
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "hd hd hd hd"
+      "sb mn mn mn"
+      "ft ft ft ft";
+    gap: 4px;
+  }
+  .grid > * {
+    padding: 0.5rem;
+    border-radius: 4px;
+    background: color-mix(in oklab, var(--swatch) 18%, transparent);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  .hd { grid-area: hd; }
+  .sb { grid-area: sb; }
+  .mn { grid-area: mn; min-block-size: 3.5rem; }
+  .ft { grid-area: ft; }
+</style>
+<div class="grid">
+  <div class="hd">header</div>
+  <div class="sb">sidebar</div>
+  <div class="mn">main</div>
+  <div class="ft">footer</div>
+</div>

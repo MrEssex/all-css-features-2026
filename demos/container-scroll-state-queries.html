@@ -1,0 +1,12 @@
+<style>
+  .wrap { container-type: scroll-state; }
+  .scroller { block-size: 6rem; overflow: auto; border: 1px solid var(--line); border-radius: 6px; }
+  .head { position: sticky; inset-block-start: 0; padding: 0.35rem 0.6rem; background: var(--raised); font-size: 0.75rem; border-block-end: 1px solid var(--line); }
+  @container scroll-state(stuck: top) { .head { background: var(--swatch); color: oklch(100% 0 0); } }
+  .tall { block-size: 16rem; padding: 0.5rem 0.6rem; font-size: 0.75rem; }
+</style>
+<div class="scroller"><div class="wrap">
+  <div class="head">Scroll — I restyle myself when stuck</div>
+  <div class="tall">A sticky header that knows it is stuck, with no scroll listener
+  and no IntersectionObserver sentinel.</div>
+</div></div>

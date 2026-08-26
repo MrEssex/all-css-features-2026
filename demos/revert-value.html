@@ -1,0 +1,12 @@
+<style>
+  .stage button { background: var(--swatch); color: oklch(100% 0 0); border: none; border-radius: 6px; padding: 0.35rem 0.8rem; font-size: 0.78rem; }
+  .stage button.plain { all: revert; }
+  .set { display: flex; gap: 0.5rem; align-items: center; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="stage set">
+  <button type="button">Author styles</button>
+  <button type="button" class="plain">all: revert</button>
+</div>
+<p class="note"><code>revert</code> rolls back to the browser's own stylesheet —
+not to nothing, which is what <code>unset</code> would do.</p>

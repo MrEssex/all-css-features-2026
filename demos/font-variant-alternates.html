@@ -1,0 +1,16 @@
+<style>
+  @font-feature-values "Demo Face" { @styleset { fancy: 1; } @swash { curly: 1; } }
+  .row { display: grid; gap: 0.2rem; font-size: 1.15rem; }
+  .a { font-variant-alternates: styleset(fancy); }
+  .b { font-variant-alternates: swash(curly); }
+  .c { font-variant-alternates: historical-forms; }
+  span { font-size: 0.6rem; color: var(--ink-faint); font-family: var(--mono); }
+</style>
+<div class="row">
+  <div class="a">Alternate styleset <span>styleset(fancy)</span></div>
+  <div class="b">Swash capitals <span>swash(curly)</span></div>
+  <div class="c">Historical forms <span>historical-forms</span></div>
+</div>
+<p style="margin-block-start:.4rem;font-size:.72rem;color:var(--ink-faint)">
+  <code>@font-feature-values</code> gives font-specific alternates readable names.
+  Visible only with a font that ships them.</p>

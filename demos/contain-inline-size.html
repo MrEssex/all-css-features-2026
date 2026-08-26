@@ -1,0 +1,9 @@
+<style>
+  .b { contain: inline-size; inline-size: 100%; border: 1px solid var(--line); border-radius: 5px; padding: 0.4rem; font-size: 0.73rem; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="b">Single-axis containment: the inline size is taken from the parent
+and never from the contents, while the block size still grows normally as text
+wraps onto more lines.</div>
+<code>This is what container queries use — it is why container-type: inline-size
+is safe on ordinary blocks.</code>

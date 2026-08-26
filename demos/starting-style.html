@@ -1,0 +1,23 @@
+<style>
+  .panel {
+    display: none;
+    margin-block-start: 0.5rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    background: color-mix(in oklab, var(--swatch) 18%, transparent);
+    font-size: 0.78rem;
+    opacity: 0;
+    translate: 0 -0.5rem;
+    transition: opacity 300ms ease, translate 300ms ease, display 300ms allow-discrete;
+  }
+  .panel.open { display: block; opacity: 1; translate: 0 0; }
+  @starting-style { .panel.open { opacity: 0; translate: 0 -0.5rem; } }
+</style>
+<button type="button" id="t">Toggle</button>
+<div class="panel" id="p">Animating in from <code>display: none</code> — the entry
+state comes from <code>@starting-style</code>, the exit from
+<code>transition-behavior: allow-discrete</code>.</div>
+<script>
+  const panel = root.querySelector('#p');
+  root.querySelector('#t').addEventListener('click', () => panel.classList.toggle('open'));
+</script>

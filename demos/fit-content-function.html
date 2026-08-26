@@ -1,0 +1,11 @@
+<style>
+  .grid { display: grid; grid-template-columns: fit-content(6rem) fit-content(10rem) 1fr; gap: 4px; }
+  .grid > * { padding: 0.35rem 0.5rem; border-radius: 4px; background: color-mix(in oklab, var(--swatch) 18%, transparent); font-size: 0.72rem; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="grid">
+  <div>Clamped at 6rem however long this gets</div>
+  <div>Clamped at 10rem</div>
+  <div>1fr takes the rest</div>
+</div>
+<code>fit-content(n) — shrink-wrap, but never past n.</code>

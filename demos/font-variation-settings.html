@@ -1,0 +1,26 @@
+<style>
+  .sample {
+    font-family: var(--sans);
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: var(--w, 400);
+    font-stretch: var(--s, 100%);
+    transition: font-weight 120ms linear, font-stretch 120ms linear;
+  }
+  label { display: grid; grid-template-columns: 4.5rem 1fr 3rem; align-items: center; gap: 0.5rem; font-size: 0.72rem; margin-block-start: 0.4rem; }
+  output { font-family: var(--mono); font-size: 0.7rem; }
+</style>
+<div class="sample" id="s">Variable axes</div>
+<label>weight <input type="range" min="100" max="900" step="1" value="400" id="w"> <output id="wo">400</output></label>
+<label>width <input type="range" min="75" max="125" step="1" value="100" id="p"> <output id="po">100%</output></label>
+<script>
+  const s = root.querySelector('#s');
+  root.querySelector('#w').addEventListener('input', (e) => {
+    s.style.setProperty('--w', e.target.value);
+    root.querySelector('#wo').textContent = e.target.value;
+  });
+  root.querySelector('#p').addEventListener('input', (e) => {
+    s.style.setProperty('--s', e.target.value + '%');
+    root.querySelector('#po').textContent = e.target.value + '%';
+  });
+</script>

@@ -1,0 +1,24 @@
+<style>
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
+  .tile { block-size: 2.6rem; border-radius: 6px; background: var(--swatch); view-transition-class: vt-tile; }
+  .grid.shuffled .tile:nth-child(1) { order: 3; background: var(--swatch-2); }
+  .grid.shuffled .tile:nth-child(3) { order: 1; background: var(--swatch-3); }
+  ::view-transition-group(.vt-tile) { animation-duration: 450ms; }
+  button { margin-block-end: 0.5rem; padding: 0.35rem 0.8rem; border-radius: 6px; font-size: 0.78rem; }
+</style>
+<button type="button" id="go">Shuffle</button>
+<div class="grid" id="grid">
+  <div class="tile" style="view-transition-name: vt-t1"></div>
+  <div class="tile" style="view-transition-name: vt-t2"></div>
+  <div class="tile" style="view-transition-name: vt-t3"></div>
+</div>
+<p style="margin-block-start:.5rem;font-size:.72rem;color:var(--ink-faint)">
+  One class targets many transition groups at once, instead of writing a rule per
+  <code>view-transition-name</code>.</p>
+<script>
+  const grid = root.querySelector('#grid');
+  root.querySelector('#go').addEventListener('click', () => {
+    const swap = () => grid.classList.toggle('shuffled');
+    document.startViewTransition ? document.startViewTransition(swap) : swap();
+  });
+</script>

@@ -1,0 +1,12 @@
+<style>
+  .parent { font-size: 1.4rem; }
+  .child { font-size: 0.8em; }
+  .box { padding: 0.5em; border-radius: 0.5em; background: color-mix(in oklab, var(--swatch) 15%, transparent); border: 0.1em solid var(--swatch); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="parent">
+  <div class="box">1.4rem — padding, radius and border all in <code>em</code>
+    <div class="box child">0.8em of the parent — everything scales together</div>
+  </div>
+</div>
+<p class="note">One font-size change rescales the whole component.</p>

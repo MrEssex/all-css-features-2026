@@ -1,0 +1,12 @@
+<style>
+  @keyframes steps-easing-run { to { translate: calc(100cqi - 1.4rem) 0; } }
+  @keyframes steps-easing-type { to { inline-size: 13ch; } }
+  .track { container-type: inline-size; padding-block: 0.3rem; }
+  .ball { inline-size: 1.4rem; aspect-ratio: 1; border-radius: 4px; background: var(--swatch); animation: steps-easing-run 2s steps(5, end) infinite alternate; }
+  .typer { inline-size: 0; overflow: hidden; white-space: nowrap; border-inline-end: 2px solid var(--swatch-2); font-family: var(--mono); font-size: 0.85rem; animation: steps-easing-type 2s steps(13) infinite alternate; }
+  code { display: block; font-size: 0.64rem; color: var(--ink-faint); }
+</style>
+<code>steps(5, end)</code>
+<div class="track"><div class="ball"></div></div>
+<code>steps(13) — the typewriter effect</code>
+<div class="typer">Typed in CSS</div>

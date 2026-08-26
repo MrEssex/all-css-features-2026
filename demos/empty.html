@@ -1,0 +1,14 @@
+<style>
+  .list { display: grid; gap: 3px; }
+  .list div { padding: 0.35rem 0.6rem; border-radius: 4px; background: var(--sunken); font-size: 0.76rem; min-block-size: 1.9rem; }
+  .list div:empty { background: repeating-linear-gradient(45deg, var(--sunken) 0 6px, color-mix(in oklab, var(--swatch-2) 18%, transparent) 6px 12px); }
+  .list div:empty::after { content: "(empty — styled without a class)"; font-size: 0.7rem; color: var(--ink-faint); }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="list">
+  <div>Has content</div>
+  <div></div>
+  <div>Has content</div>
+</div>
+<p class="note">Whitespace counts as content, so <code>:empty</code> only matches
+a genuinely empty element.</p>

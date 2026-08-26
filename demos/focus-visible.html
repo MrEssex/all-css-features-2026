@@ -1,0 +1,14 @@
+<style>
+  .row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+  button { padding: 0.4rem 0.9rem; border-radius: 6px; border: 1px solid var(--line); background: var(--sunken); font-size: 0.8rem; cursor: pointer; }
+  .always:focus { outline: 3px solid var(--swatch-2); outline-offset: 2px; }
+  .smart:focus { outline: none; }
+  .smart:focus-visible { outline: 3px solid var(--swatch-3); outline-offset: 2px; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <button type="button" class="always">:focus — ring on click too</button>
+  <button type="button" class="smart">:focus-visible — ring on keyboard only</button>
+</div>
+<p class="note">Click each, then Tab to each. Only the second tells mouse and
+keyboard apart, which is how you drop the ring without hurting keyboard users.</p>

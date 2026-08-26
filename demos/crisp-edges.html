@@ -1,0 +1,8 @@
+<style>
+  .row { display: flex; gap: 0.6rem; }
+  .f { flex: 1; block-size: 3.4rem; border-radius: 6px; background-image: linear-gradient(90deg, var(--swatch) 0 50%, var(--swatch-3) 50%); background-size: 6px 100%; }
+  .c { image-rendering: crisp-edges; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row"><div class="f"></div><div class="f c"></div></div>
+<code>crisp-edges keeps hard boundaries when scaling, without the blur of smoothing.</code>

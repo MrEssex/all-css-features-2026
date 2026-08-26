@@ -1,0 +1,13 @@
+<style>
+  .frame { border: 1px dashed var(--line); border-radius: 6px; padding: 0.5rem; }
+  .b { inline-size: fit-content; padding: 0.3rem 0.6rem; border-radius: 4px; background: color-mix(in oklab, var(--swatch) 18%, transparent); font-size: 0.74rem; margin-block-end: 4px; }
+  .c { justify-self: center; }
+  .e { justify-self: end; }
+  code { display: block; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="frame">
+  <div class="b">start</div>
+  <div class="b c">justify-self: center</div>
+  <div class="b e">justify-self: end</div>
+</div>
+<code>Alignment for ordinary block children, without margin-inline: auto tricks.</code>

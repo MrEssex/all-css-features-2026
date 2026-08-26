@@ -1,0 +1,12 @@
+<style>
+  .prose :is(h4, h5, h6) { color: var(--swatch); letter-spacing: -0.01em; }
+  .prose :is(ul, ol) :is(li, li > p) { font-size: 0.75rem; }
+  .prose { display: grid; gap: 0.35rem; }
+  code { background: var(--sunken); padding: 0.05em 0.3em; border-radius: 4px; }
+</style>
+<div class="prose">
+  <h4>One selector, many branches</h4>
+  <p><code>:is(h4, h5, h6)</code> replaces three separate rules and takes the
+  specificity of its most specific argument.</p>
+  <ul><li>Shorter rules</li><li>Same cascade weight as the heaviest branch</li></ul>
+</div>

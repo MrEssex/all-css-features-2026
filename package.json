@@ -1,0 +1,18 @@
+{
+  "name": "all-css-features-2026",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Every Baseline-available CSS feature, demonstrated.",
+  "scripts": {
+    "build": "node build/build.mjs",
+    "serve": "node build/serve.mjs",
+    "test": "node --test build/build.test.mjs"
+  },
+  "devDependencies": {
+    "@mdn/browser-compat-data": "^7.2.5",
+    "caniuse-lite": "^1.0.30001810",
+    "esbuild": "^0.28.2",
+    "web-features": "3.35.1"
+  }
+}

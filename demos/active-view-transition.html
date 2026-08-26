@@ -1,0 +1,20 @@
+<style>
+  .stage { display: grid; gap: 0.5rem; }
+  .box { view-transition-name: avt-demo-box; inline-size: 4rem; aspect-ratio: 1; border-radius: 8px; background: var(--swatch); }
+  .stage.wide .box { inline-size: 100%; aspect-ratio: 4; background: var(--swatch-3); }
+  .flag { font-size: 0.72rem; color: var(--ink-faint); }
+  html:active-view-transition .flag::after { content: " — a transition is running"; color: var(--swatch-2); }
+  button { justify-self: start; padding: 0.35rem 0.8rem; border-radius: 6px; font-size: 0.78rem; }
+</style>
+<div class="stage" id="stage">
+  <button type="button" id="go">Animate</button>
+  <div class="box"></div>
+  <span class="flag">idle</span>
+</div>
+<script>
+  const stage = root.querySelector('#stage');
+  root.querySelector('#go').addEventListener('click', () => {
+    const swap = () => stage.classList.toggle('wide');
+    document.startViewTransition ? document.startViewTransition(swap) : swap();
+  });
+</script>

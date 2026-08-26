@@ -1,0 +1,14 @@
+<style>
+  .row { display: flex; gap: 0.8rem; }
+  svg { border: 1px dashed var(--line); border-radius: 6px; overflow: visible; }
+  rect { fill: var(--swatch); rotate: 25deg; transform-origin: center; }
+  .fill-box rect { transform-box: fill-box; }
+  .view-box rect { transform-box: view-box; }
+  code { display: block; margin-block-start: 0.5rem; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="row">
+  <svg class="fill-box" width="90" height="70" xmlns="http://www.w3.org/2000/svg"><rect x="45" y="20" width="34" height="26" rx="4"/></svg>
+  <svg class="view-box" width="90" height="70" xmlns="http://www.w3.org/2000/svg"><rect x="45" y="20" width="34" height="26" rx="4"/></svg>
+</div>
+<code>Same rotation. Left spins about its own centre (fill-box), right about the
+viewBox centre.</code>

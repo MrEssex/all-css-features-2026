@@ -1,0 +1,12 @@
+<style>
+  .stage { color: var(--swatch); }
+  .stage p { color: var(--swatch-2); border: 2px solid var(--swatch-2); padding: 0.3rem 0.5rem; border-radius: 5px; font-size: 0.78rem; }
+  .stage p.u { color: unset; border-color: unset; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="stage">
+  <p>color and border set by the author</p>
+  <p class="u">unset — colour inherits, border-color falls to its initial value</p>
+</div>
+<p class="note"><code>unset</code> is <code>inherit</code> for inherited
+properties and <code>initial</code> for the rest.</p>

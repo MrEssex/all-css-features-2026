@@ -1,0 +1,12 @@
+<style>
+  .stage { position: relative; block-size: 6rem; border-radius: 8px; overflow: clip; background: linear-gradient(90deg, var(--swatch), var(--swatch-3)); isolation: isolate; }
+  .blob { position: absolute; inline-size: 4.5rem; aspect-ratio: 1; border-radius: 50%; mix-blend-mode: var(--m); }
+  .a { background: oklch(80% .19 90); inset-block-start: 0.5rem; inset-inline-start: 1rem; --m: multiply; }
+  .b { background: oklch(75% .2 20); inset-block-start: 1.2rem; inset-inline-start: 3.5rem; --m: screen; }
+  .c { background: oklch(70% .18 200); inset-block-start: 0.3rem; inset-inline-start: 6rem; --m: overlay; }
+  .word { position: absolute; inset-block-end: 0.3rem; inset-inline-start: 0.6rem; font-size: 1.3rem; font-weight: 800; color: oklch(100% 0 0); mix-blend-mode: difference; }
+</style>
+<div class="stage">
+  <div class="blob a"></div><div class="blob b"></div><div class="blob c"></div>
+  <span class="word">difference</span>
+</div>

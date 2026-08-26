@@ -1,0 +1,12 @@
+<style>
+  @keyframes linear-easing-run { to { translate: calc(100cqi - 1.6rem) 0; } }
+  .track { container-type: inline-size; padding-block: 0.35rem; }
+  .ball { inline-size: 1.6rem; aspect-ratio: 1; border-radius: 50%; background: var(--swatch); animation: linear-easing-run 2s infinite alternate; }
+  .bounce { animation-timing-function: linear(0, 0.004, 0.016, 0.325 12.4%, 0.5, 0.73 24.5%, 0.837, 0.902 32.6%, 0.947, 0.979 42%, 0.995 51.4%, 1); background: var(--swatch-2); }
+  .ease { animation-timing-function: ease-in-out; }
+  .l { font-family: var(--mono); font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<span class="l">ease-in-out</span>
+<div class="track"><div class="ball ease"></div></div>
+<span class="l">linear() — a bounce curve approximated with stops</span>
+<div class="track"><div class="ball bounce"></div></div>

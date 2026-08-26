@@ -1,0 +1,14 @@
+<style>
+  .outer { counter-reset: sc 0; }
+  .contained { contain: style; }
+  .item { counter-increment: sc; font-size: 0.75rem; }
+  .item::before { content: "item " counter(sc) " — "; font-family: var(--mono); color: var(--swatch); font-size: 0.7rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="outer">
+  <div class="item">outside the contained subtree</div>
+  <div class="contained"><div class="item">inside — counters cannot escape</div></div>
+  <div class="item">outside again</div>
+</div>
+<p class="note">Style containment stops counters and quotes leaking out of the
+subtree, which is also what makes <code>@container style()</code> queries possible.</p>

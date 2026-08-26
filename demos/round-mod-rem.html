@@ -1,0 +1,15 @@
+<style>
+  .rows { display: grid; gap: 3px; font-family: var(--mono); font-size: 0.7rem; }
+  .rows div { display: grid; grid-template-columns: 13rem 1fr; align-items: center; gap: 0.5rem; }
+  .bar { block-size: 1.2rem; border-radius: 3px; background: var(--swatch); }
+  .r1 { inline-size: round(up, 43%, 25%); }
+  .r2 { inline-size: round(down, 43%, 25%); }
+  .r3 { inline-size: round(nearest, 43%, 25%); }
+  .r4 { inline-size: calc(100% - mod(43%, 25%)); }
+</style>
+<div class="rows">
+  <div><span>round(up, 43%, 25%)</span><span class="bar r1"></span></div>
+  <div><span>round(down, 43%, 25%)</span><span class="bar r2"></span></div>
+  <div><span>round(nearest, 43%, 25%)</span><span class="bar r3"></span></div>
+  <div><span>100% − mod(43%, 25%)</span><span class="bar r4"></span></div>
+</div>

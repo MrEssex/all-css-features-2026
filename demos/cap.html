@@ -1,0 +1,12 @@
+<style>
+  .row { display: flex; align-items: end; gap: 0.5rem; }
+  .sq { inline-size: 1cap; block-size: 1cap; background: var(--swatch); }
+  .letter { font-size: 3rem; line-height: 1; font-weight: 700; }
+  .big { font-size: 3rem; }
+  .note { margin-block-start: 0.5rem; font-size: 0.72rem; color: var(--ink-faint); }
+</style>
+<div class="row big">
+  <span class="letter">H</span><span class="sq"></span>
+</div>
+<p class="note"><code>1cap</code> is the cap height of the font, so the square
+matches the capital exactly whatever typeface loads.</p>

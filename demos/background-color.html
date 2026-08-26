@@ -1,0 +1,10 @@
+<style>
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+  .row i { block-size: 2.4rem; border-radius: 5px; }
+</style>
+<div class="row">
+  <i style="background-color: var(--swatch)"></i>
+  <i style="background-color: color-mix(in oklab, var(--swatch) 50%, transparent)"></i>
+  <i style="background-color: currentcolor; color: var(--swatch-3)"></i>
+  <i style="background-color: transparent; outline: 1px dashed var(--line); outline-offset: -1px"></i>
+</div>

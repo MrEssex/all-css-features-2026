@@ -1,0 +1,30 @@
+<style>
+  .theme {
+    --hue: 275;
+    --btn-bg: oklch(60% 0.18 var(--hue));
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .theme .btn {
+    padding: 0.35rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    background: var(--btn-bg);
+    color: oklch(100% 0 0);
+    font-size: 0.78rem;
+  }
+  .warm { --hue: 40; }
+  .cool { --hue: 200; }
+  .ctl { display: flex; align-items: center; gap: 0.5rem; margin-block-start: 0.6rem; font-size: 0.72rem; }
+</style>
+<div class="theme" id="t">
+  <button type="button" class="btn">Inherited</button>
+  <button type="button" class="btn warm">--hue: 40</button>
+  <button type="button" class="btn cool">--hue: 200</button>
+</div>
+<label class="ctl">root --hue <input type="range" min="0" max="360" value="275" id="h"></label>
+<script>
+  const theme = root.querySelector('#t');
+  root.querySelector('#h').addEventListener('input', (e) => theme.style.setProperty('--hue', e.target.value));
+</script>

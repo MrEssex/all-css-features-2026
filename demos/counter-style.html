@@ -1,0 +1,16 @@
+<style>
+  @counter-style demo-dashes {
+    system: cyclic;
+    symbols: "—" "–" "•";
+    suffix: "  ";
+  }
+  @counter-style demo-brackets {
+    system: extends decimal;
+    prefix: "[";
+    suffix: "] ";
+  }
+  ul { list-style: demo-dashes; font-size: 0.78rem; padding-inline-start: 1.4rem; }
+  ol { list-style: demo-brackets; font-size: 0.78rem; padding-inline-start: 2rem; margin-block-start: 0.5rem; }
+</style>
+<ul><li>Cyclic symbols</li><li>Repeat in order</li><li>Third marker</li></ul>
+<ol><li>Extends decimal</li><li>With a prefix and suffix</li></ol>

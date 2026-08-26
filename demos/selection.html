@@ -1,0 +1,9 @@
+<style>
+  ::selection { background: var(--swatch); color: oklch(100% 0 0); }
+  .alt::selection { background: var(--swatch-3); color: oklch(15% 0 0); }
+  p { font-size: 0.85rem; margin-block-end: 0.35rem; }
+</style>
+<p>Select this text — the highlight uses the page's accent colour.</p>
+<p class="alt">And this paragraph overrides it with its own.</p>
+<p style="font-size:.72rem;color:var(--ink-faint)">Only colour, background and a
+few decoration properties are allowed on <code>::selection</code>.</p>

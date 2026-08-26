@@ -1,0 +1,11 @@
+<style>
+  .b { padding: 0.35rem 0.6rem; border-radius: 5px; font-size: 0.78rem; margin-block-end: 4px; background: var(--sunken); }
+  .over { unicode-bidi: bidi-override; direction: rtl; }
+  .iso { unicode-bidi: isolate; }
+  code { display: block; font-size: 0.66rem; color: var(--ink-faint); }
+</style>
+<div class="b">Normal bidi handling</div>
+<div class="b over">Reversed by bidi-override</div>
+<div class="b iso">Isolated: <span dir="rtl">نص عربي</span> then English again</div>
+<code>unicode-bidi + direction override the Unicode bidi algorithm; isolate keeps
+embedded runs from reordering their surroundings.</code>
