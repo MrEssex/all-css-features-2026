@@ -119,9 +119,13 @@ generate `ads.txt`; leave it `null` and neither is emitted.
 ## Deploying
 
 Pushing to `main` runs `.github/workflows/deploy.yml`, which tests, builds and
-publishes `dist/` to GitHub Pages. Enable Pages in the repository settings with
-**Source: GitHub Actions**, and set `url` in `site.config.json` to the published
+publishes `dist/` to GitHub Pages. `configure-pages` runs with
+`enablement: true`, so it switches Pages on itself and a fork deploys without a
+visit to the settings page. Set `url` in `site.config.json` to the published
 address so the canonical link, sitemap and Open Graph tags are right.
+
+Pull requests run `.github/workflows/ci.yml` — the same test and build, without
+the deploy.
 
 ## Structure
 
@@ -134,8 +138,14 @@ dist/      generated: index.html, og.svg, sitemap.xml, robots.txt, .nojekyll
 
 ## Data sources
 
-- `web-features` — the feature list and Baseline status
-- `@mdn/browser-compat-data` — MDN links, per-key support, browser release dates
-- `caniuse-lite` — per-browser-version usage share
+- `web-features` (Apache-2.0) — the feature list and Baseline status
+- `@mdn/browser-compat-data` (CC0-1.0) — MDN links, per-key support, browser
+  release dates
+- `caniuse-lite` (CC-BY-4.0) — per-browser-version usage share
 
-All three are build-time only. Nothing ships to the browser.
+All three are build-time only; no package ships to the browser, though the
+numbers they produce are baked into the page.
+
+## Licence
+
+[MIT](LICENSE).

@@ -27,6 +27,8 @@ jobs:
       - run: npm test
       - run: npm run build
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true # turns Pages on, so a fresh fork deploys without a settings visit
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
